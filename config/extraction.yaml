@@ -1,0 +1,228 @@
+# How numbers are read from earnings releases (8-K Ex-99.1 / 6-K Ex-99.1). Measurement only:
+# NOT part of the frozen spec. Adding a company = adding a block here (hard rule 10).
+#
+# Each extractor is a regex applied to the release's visible text, whitespace-normalised to one
+# line (src/nowcast/releases.py: normalize). Named groups:
+#   hdr  - column-header text (validates / assigns periods)     vals - the row's numbers
+#   yoys - the row's Y/Y % numbers (one per value column)        yoy  - a single stated Y/Y % (sentence)
+#   dir  - verb of a sentence ("decreased" makes yoy negative)
+# layout.kind: relative (offsets from the release quarter), explicit (periods named in hdr),
+#   consecutive (columns run consecutively and end at the release quarter), year_label_pairs,
+#   years_same_quarter (bare years, quarter-of-year of the release).
+# metric: kpi | revenue.  scale: multiply to the stored unit.  from/to: release quarters where the
+# extractor applies.  required: fail loudly if it does not match a release in [from, to].
+# Precision (decimals) is recorded per number; reconciliation tolerances derive from it.
+
+companies:
+  BKNG:
+    kpi_unit: millions
+    revenue_unit: USD millions
+    extractors:
+      - id: bkng_stat_table_room_nights
+        metric: kpi
+        unit: millions
+        regex: '(?P<hdr>(?:[1-4]Q\d\d\s+){5,}(?:FY\s+20\d\d\s+)*)(?:Units Sold\s+)?Room Nights\s+(?P<vals>(?:\d[\d,]*\s+){5,})Year/Year(?:\s*\(Decline\))?\s*Growth(?:\s*\(Decline\))?\s+(?P<yoys>(?:\(?-?[\d.]+\)?\s*%\s*){5,})'
+        layout: {kind: explicit}
+        required: true
+      - id: bkng_sentence_room_nights_yoy
+        metric: kpi
+        regex: 'Room nights (?:booked )?(?:in the \d\s?(?:st|nd|rd|th) quarter(?: of 20\d\d)? )?(?P<dir>increased|grew|decreased|declined)(?: by)? (?P<yoy>\d+(?:\.\d+)?)%'
+        required: true
+      - id: bkng_income_stmt_total_revenues
+        metric: revenue
+        unit: USD millions
+        regex: 'Three Months Ended (?P<hdr>[A-Za-z]+ \d\d?,).{0,600}?Total revenues (?P<vals>(?:\(?-?\d[\d,]*\)?\s+){2})'
+        layout: {kind: relative, offsets: [0, -4], validate_explicit: false}
+        required: true
+      - id: bkng_sentence_revenue_yoy
+        metric: revenue
+        regex: '(?<!Adjusted )(?:total revenues for the \d\s?(?:st|nd|rd|th) quarter of 20\d\d were|Total revenues were|Revenue) (?:\$[\d.]+ (?:billion|million), an? )?(?P<dir>increase|increased|grew|decline|declined|decrease|decreased)(?: of| by)? \(?(?P<yoy>\d+(?:\.\d+)?)%'
+        required: true
+
+  EXPE:
+    kpi_unit: millions
+    revenue_unit: USD millions
+    extractors:
+      - id: expe_summary_booked_room_nights
+        metric: kpi
+        unit: millions
+        regex: 'Metric (?P<hdr>Q[1-4] 20\d\d Q[1-4] 20\d\d) Δ Y/Y (?:20\d\d 20\d\d Δ Y/Y )?Booked room nights? (?P<vals>\d[\d,]*\.\d \d[\d,]*\.\d) (?P<yoys>\(?-?\d+\)?\s?%)'
+        layout: {kind: explicit}
+        yoy_for: current
+        from: 2022Q2
+        required: true
+      - id: expe_trend_booked_room_nights
+        metric: kpi
+        unit: millions
+        regex: '(?P<hdr>(?:(?:20\d\d|Full Year|Y/Y|Growth|Q[1-4]\d\d|Q[1-4])\s+){6,})(?:Worldwide lodging \(merchant & agency\) |Units sold |Operating metrics )?Booked room nights (?P<vals>(?:\d[\d,]*(?:\.\d)?\s+)+)(?:Booked room night growth (?P<yoys>(?:(?:\(?-?[\d.]+\)?|—)\s?%\s?)+))?'
+        layout: {kind: consecutive, count_from_header: true}
+        from: 2022Q4
+        required: true
+      - id: expe_trend_booked_room_nights_2022
+        metric: kpi
+        unit: millions
+        regex: 'Worldwide lodging \(merchant & agency\) Booked room nights (?P<vals>(?:\d[\d,]*\.\d\s+)+)Booked room night growth (?P<yoys>(?:(?:\(?-?[\d.]+\)?|—)\s?%\s?)+)'
+        layout: {kind: consecutive}
+        from: 2022Q2
+        to: 2022Q3
+        required: true
+      - id: expe_summary_revenue
+        metric: revenue
+        unit: USD millions
+        regex: 'Metric (?P<hdr>Q[1-4] 20\d\d Q[1-4] 20\d\d) Δ Y/Y .{0,400}?Revenue (?P<vals>\$?\d[\d,]* \$?\d[\d,]*) (?P<yoys>\(?-?\d+\)?\s?%)'
+        layout: {kind: explicit}
+        yoy_for: current
+        required: true
+
+  ABNB:
+    kpi_unit: millions
+    revenue_unit: USD millions
+    extractors:
+      - id: abnb_key_business_metrics
+        metric: kpi
+        unit: millions
+        regex: 'Key Business Metrics (?:\(in millions\) )?Three Months (?P<hdr>.{0,120}?)Nights and (?:Experiences|Seats) Booked (?P<vals>\d[\d,.]*\s?M? \d[\d,.]*\s?M?)'
+        layout: {kind: years_same_quarter}
+        required: true
+      - id: abnb_quarterly_summary_nights
+        metric: kpi
+        unit: millions
+        regex: 'Quarterly Summary (?P<hdr>(?:(?:20\d\d|Q[1-4])\s+)+)Nights and (?:Experiences|Seats) Booked (?P<vals>(?:\d[\d.]*M\s+)+)Y/Y (?P<yoys>(?:\(?-?\d+\)?%\s?)+)'
+        layout: {kind: year_groups}         # the 2022 letters skip 2020 (they compare with 2019)
+        yoy_align: right
+      - id: abnb_sentence_nights_yoy
+        metric: kpi
+        reject_groups: [qual]
+        regex: '(?P<qual>(?:Excluding|Outside|In|Within) [A-Z][A-Za-z ]{1,30}, )?(?:Nights and (?:Experiences|Seats) Booked (?:of [\d.]+ million |exceeded [\d.]+ million, )?(?P<dir>grew|increased|growing|decreased|declined) (?:by )?(?P<yoy>\d+(?:\.\d+)?)% (?:year-over-year|year over year|Y/Y))|(?:[\d.]+M Nights and (?:Experiences|Seats) Booked (?P<yoy2>\d+)% Y/Y)'
+      - id: abnb_income_stmt_revenue
+        metric: revenue
+        unit: USD millions
+        regex: 'Statements of Operations Unaudited \(in (?P<unit>thousands|millions)[^)]*\).{0,150}?Three Months (?P<hdr>.{0,120}?)Revenue (?P<vals>\$?\d[\d,]* \$?\d[\d,]*)'
+        unit_scale: {thousands: 0.001, millions: 1}
+        layout: {kind: years_same_quarter}
+        required: true
+      - id: abnb_sentence_revenue_yoy
+        metric: revenue
+        regex: '(?:In Q[1-4] 20\d\d, revenue was|Revenue of) \$[\d.]+ (?:billion|million)(?: in Q[1-4] 20\d\d)?(?:, [^,.]{0,60})?,? represent(?:ing|ed) a year-over-year (?P<dir>increase|decrease) of (?P<yoy>\d+(?:\.\d+)?)%|Q[1-4] revenue (?:was|of) \$[\d.]+ (?:billion|million),? (?P<dir2>up|grew|down|declined) (?P<yoy2>\d+(?:\.\d+)?)% year[- ]over[- ]year'
+        required: true
+
+  UBER:
+    kpi_unit: millions
+    revenue_unit: USD millions
+    extractors:
+      - id: uber_summary_trips
+        metric: kpi
+        unit: millions
+        regex: '\(In millions, except percentages[^)]*\) (?P<hdr>20\d\d 20\d\d) % Change .{0,200}?Trips (?P<vals>\d[\d,]* \d[\d,]*) (?P<yoys>\(?-?\d+\)?\s?%)'
+        layout: {kind: years_same_quarter}
+        yoy_for: current
+        required: true
+      - id: uber_sentence_trips_yoy
+        metric: kpi
+        regex: 'Trips (?:during the quarter )?(?P<dir>grew|increased|decreased|declined) (?P<yoy>\d+(?:\.\d+)?)% (?:YoY|year-over-year)'
+        required: true
+      - id: uber_summary_revenue
+        metric: revenue
+        unit: USD millions
+        regex: '\(In millions, except percentages[^)]*\) (?P<hdr>20\d\d 20\d\d) % Change .{0,500}?Revenue (?P<vals>\$\d[\d,]* \$\d[\d,]*) (?P<yoys>\(?-?\d+\)?\s?%)'
+        layout: {kind: years_same_quarter}
+        yoy_for: current
+        required: true
+      - id: uber_sentence_revenue_yoy
+        metric: revenue
+        regex: '(?<!Mobility )(?<!Delivery )(?<!Freight )(?<!Combined Mobility and Delivery )Revenue (?P<dir>grew|increased|decreased|declined) (?P<yoy>\d+(?:\.\d+)?)% (?:YoY|year-over-year)'
+        required: true
+
+  LYFT:
+    kpi_unit: millions
+    revenue_unit: USD millions
+    extractors:
+      # Rides are first disclosed in the Q3 2023 release (with 2021-2023 history); none before.
+      - id: lyft_history_table_rides
+        metric: kpi
+        unit: millions
+        regex: '(?P<hdr>(?:20\d\d\s+){4,}(?:(?:Total|Q[1-4])\s+){4,})\(in millions, except for Revenue per Active Rider and percentages\) Active Riders (?:[\d.]+\s+)+Rides (?P<vals>(?:\d[\d,]*\.\d\s+)+)'
+        layout: {kind: year_label_pairs}
+        from: 2023Q3
+        to: 2023Q3
+        required: true
+      - id: lyft_summary_table_rides
+        metric: kpi
+        unit: millions
+        regex: 'Three Months Ended (?P<hdr>.{0,140}?)\(in millions, except for percentages\) Active Riders (?:[\d.]+\s+){3}Rides (?P<vals>(?:\d[\d,]*\.\d\s+){3,5})'
+        layout: {kind: explicit}
+        from: 2023Q4
+        required: true
+      - id: lyft_sentence_rides_yoy
+        metric: kpi
+        regex: 'Rides (?:of \d+ million(?: in Q4)? ?: (?:Rides )?)?(?:(?P<dir>grew|Grew|were up|were a company record, up|up|grew to record levels, up|growth accelerated to|accelerated sequentially to record levels, up|decreased|declined) )(?P<yoy>\d+)% year[- ]over[- ]year'
+        from: 2023Q3
+      - id: lyft_summary_table_revenue
+        metric: revenue
+        unit: USD millions
+        regex: 'Three Months Ended (?P<hdr>.{0,140}?)\(in millions, except for percentages\) Active Riders .{0,200}?Revenue (?:\(\d\) )?(?P<vals>(?:\$\d[\d,]*\.\d\s+){3,5})'
+        layout: {kind: explicit}
+        from: 2023Q4
+      - id: lyft_income_stmt_revenue
+        metric: revenue
+        unit: USD millions
+        regex: 'Statements of Operations \(in (?P<unit>thousands|millions)[^)]*\) \(unaudited\) Three Months Ended (?P<hdr>.{0,140}?)Revenue (?P<vals>\$\d[\d,]* \$\d[\d,]*)'
+        unit_scale: {thousands: 0.001, millions: 1}
+        layout: {kind: years_same_quarter}
+        required: true
+        quarters: [1, 2, 3]          # Q4 releases carry only a full-year statement of operations
+      - id: lyft_sentence_revenue_yoy
+        metric: revenue
+        regex: 'Lyft reported (?:Q[1-4] (?:20\d\d )?)?revenue of \$[\d,.]+ (?:million|billion) versus \$[\d,.]+ (?:million|billion) in (?:the )?[^,]{0,40}, an? (?P<dir>increase|decrease) of (?P<yoy>\d+) percent year-over-year|Revenue of \$[\d.]+ (?:million|billion),? (?:was )?(?P<dir2>up|down) (?P<yoy2>\d+)% year[- ]over[- ]year|Revenue of \$[\d.]+ (?:million|billion) (?P<dir3>grew|declined) (?P<yoy3>\d+) percent from'
+      - id: lyft_sentence_q4_revenue_levels
+        metric: revenue
+        unit: USD millions
+        regex: 'Lyft reported Q4 20\d\d revenue of \$(?P<cur>[\d,.]+) (?P<cur_unit>million|billion) versus \$(?P<prior>[\d,.]+) (?P<prior_unit>million|billion) in Q4 20\d\d|Revenue of \$(?P<cur2>[\d.]+) (?P<cur2_unit>million|billion) grew \d+ percent from \$(?P<prior2>[\d,.]+) (?P<prior2_unit>million|billion) in Q4 20\d\d'
+        unit_scale: {million: 1, billion: 1000}
+        from: 2021Q4
+        to: 2022Q4
+        quarters: [4]
+        required: true
+        required: true
+
+  DASH:
+    kpi_unit: millions
+    revenue_unit: USD millions
+    extractors:
+      - id: dash_five_quarter_total_orders
+        metric: kpi
+        unit: millions
+        regex: 'Three Months Ended \(in millions, except percentages\) (?P<hdr>(?:[A-Z][a-z]+\.? ?\d\d?, 20\d\d\s+){5})Total Orders (?P<vals>(?:\d[\d,]*\s+){5})Total Orders Y/Y (?:growth|% change) (?P<yoys>(?:\(?-?\d+\)?\s?%\s?){5})'
+        layout: {kind: explicit}
+        required: true
+      - id: dash_sentence_total_orders_yoy
+        metric: kpi
+        regex: 'Total Orders (?P<dir>grew|increased|decreased|declined) (?P<yoy>\d+)% (?:year-over-year|Y/Y)'
+        required: true
+      - id: dash_five_quarter_revenue
+        metric: revenue
+        unit: USD millions
+        regex: 'Three Months Ended \(in millions, except percentages\) (?P<hdr>(?:[A-Z][a-z]+\.? ?\d\d?, 20\d\d\s+){5}).{0,400}?Revenue (?P<vals>(?:\$\d[\d,]*\s+){5})Revenue Y/Y (?:growth|% change) (?P<yoys>(?:\(?-?\d+\)?\s?%\s?){5})'
+        layout: {kind: explicit}
+        required: true
+      - id: dash_sentence_revenue_yoy
+        metric: revenue
+        regex: '(?<!DoorDash )(?<!Deliveroo, )Revenue (?P<dir>increased|grew|decreased|declined) (?P<yoy>\d+)% (?:Y/Y|year-over-year)'
+        required: true
+
+  TCOM:
+    kpi_unit: null                 # TCOM discloses no volume KPI
+    revenue_unit: RMB millions
+    extractors:
+      # Unaudited Consolidated Statements of Income: columns are [q-4, q-1, q] in RMB, then q in USD
+      # (Q4 / Q2 releases add full-year / half-year columns after them).
+      - id: tcom_income_stmt_net_revenue
+        metric: revenue
+        unit: RMB millions
+        regex: 'Statements of (?:\(Loss\)/)?Income(?:/\(Loss\))? \(In millions, except share and per share data\) (?P<hdr>.{0,600}?)(?:Revenues?|Net Revenues): .{0,900}?(?:Total net revenues|Net revenues?) (?P<vals>(?:\(?-?\d[\d,]*\)?\s+){3})'
+        layout: {kind: relative, offsets: [-4, -1, 0], validate_explicit: true}
+        required: true
+      - id: tcom_sentence_net_revenue_yoy
+        metric: revenue
+        regex: 'Trip\.com Group reported (?:total )?net revenues? of RMB[\d.]+ billion \(US\$[\d.]+ (?:million|billion)\),? (?:representing an? (?P<yoy>\d+(?:\.\d+)?)% (?P<dir>increase|decrease) from the same period|which was (?P<flat>flat))'
+        required: true

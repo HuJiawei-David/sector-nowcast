@@ -1,0 +1,13 @@
+{
+  "accession": "0001792789-26-000012",
+  "bytes_uncompressed": 506360,
+  "document": "prodq4dashex991-pressrelea.htm",
+  "headers": {
+    "User-Agent": "Jiawei Hu <redacted: SEC contact email>"
+  },
+  "pulled_at_utc": "2026-11-10T12:10:34+00:00",
+  "sha256_uncompressed": "8dc1bed6d512d28c73c446607fc93233390b4ecf290a70f7576bc9641213aaa3",
+  "stored_as": "DASH_0001792789-26-000012_prodq4dashex991-pressrelea.htm.gz",
+  "ticker": "DASH",
+  "url": "https://www.sec.gov/Archives/edgar/data/1792789/000179278926000012/prodq4dashex991-pressrelea.htm"
+}

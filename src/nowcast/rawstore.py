@@ -25,11 +25,11 @@ def snapshot_dir(source: str, pull_date: dt.date | None = None) -> Path:
 
 
 def save_snapshot(source: str, name: str, content: bytes, params: dict,
-                  pull_date: dt.date | None = None) -> Path:
-    """Save `content` byte-for-byte (gzip if large) plus `<name>.request.json`."""
+                  pull_date: dt.date | None = None, compress: bool = False) -> Path:
+    """Save `content` byte-for-byte (gzip if large or compress=True) plus `<name>.request.json`."""
     d = snapshot_dir(source, pull_date)
     path = d / name
-    if len(content) > GZIP_THRESHOLD_BYTES:
+    if compress or len(content) > GZIP_THRESHOLD_BYTES:
         path = d / (name + ".gz")
         with gzip.open(path, "wb", compresslevel=9) as f:
             f.write(content)
@@ -52,3 +52,16 @@ def read_snapshot(path: Path) -> bytes:
         with gzip.open(path, "rb") as f:
             return f.read()
     return path.read_bytes()
+
+
+def find_snapshot(source: str, name: str, pull_date: str | None = None) -> Path | None:
+    """Path of snapshot `name` (plain or .gz) in the latest (or given) pull-date folder that has it."""
+    base = RAW_DIR / source
+    if not base.exists():
+        return None
+    dates = [pull_date] if pull_date else sorted((p.name for p in base.iterdir() if p.is_dir()), reverse=True)
+    for d in dates:
+        for cand in (base / d / name, base / d / (name + ".gz")):
+            if cand.exists():
+                return cand
+    return None

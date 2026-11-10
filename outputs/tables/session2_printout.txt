@@ -1,0 +1,135 @@
+====================================================================================================
+REVENUE YoY (%) 2022Q1-2026Q3, like-for-like from the first filing reporting q (US: XBRL 10-Q/10-K; TCOM: 6-K release, RMB)
+  '*' = CLEAN YoY under hard rule 4 (neither q nor q-4 in the exclusion window); 'n/r' = not yet reported
+  source: outputs/tables/revenue_yoy.csv
+quarter      BKNG     EXPE     ABNB     UBER     LYFT     DASH     TCOM
+2022Q1     136.2     80.5     70.1    136.1     43.8     35.2      0.0 
+2022Q2      98.8     50.7     57.6    105.5     29.5     30.1    -31.9 
+2022Q3      29.4     22.2     28.9     72.2     21.9     33.4     29.0 
+2022Q4      35.8     14.9     24.1     49.0     21.1     39.8      7.4 
+2023Q1      40.2*    18.5*    20.5*    28.7*    14.3*    39.8*   123.9 
+2023Q2      27.2*     5.6*    18.1*    14.3*     3.0*    32.6*   180.4 
+2023Q3      21.3*     8.6*    17.8*    11.4*     9.8*    27.2*    99.4 
+2023Q4      18.2*    10.3*    16.6*    15.4*     4.2*    26.7*   105.4 
+2024Q1      16.9*     8.4*    17.8*    14.8*    27.7*    23.5*    29.4*
+2024Q2       7.3*     6.0*    10.6*    15.9*    40.6*    23.3*    13.6*
+2024Q3       8.9*     3.3*     9.9*    20.4*    31.5*    25.0*    15.5*
+2024Q4      14.4*    10.3*    11.8*    20.4*    26.6*    24.8*    23.4*
+2025Q1       7.9*     3.4*     6.1*    13.8*    13.5*    20.7*    16.2*
+2025Q2      16.0*     6.4*    12.7*    18.2*    10.6*    24.9*    16.2*
+2025Q3      12.7*     8.7*     9.7*    20.4*    10.7*    27.3*    15.5*
+2025Q4      16.0*    11.4*    12.0*    20.1*     2.7*    37.7*    20.8*
+2026Q1      16.2*    14.7*    17.9*    14.5*    13.8*    33.1*    17.2*
+2026Q2       8.1*    14.0*    16.5*    12.2*    16.1*    35.6*     5.5*
+2026Q3      -1.3*    11.9*    18.9*     9.6*     8.1*    34.0*      n/r
+
+KPI YoY (%) availability (outputs/tables/kpi_yoy.csv):
+name  status                         
+ABNB  ok                                 19
+BKNG  ok                                 19
+DASH  ok                                 19
+EXPE  ok                                 19
+LYFT  not run (no like-for-like base)     4
+      ok                                 15
+UBER  ok                                 19
+
+====================================================================================================
+SPOT-CHECK (open the URL and find the quoted text): 3 KPI numbers per name, 3 revenue numbers for TCOM
+  BKNG 2022Q2 KPI, millions: 246   filed 2022-08-03   https://www.sec.gov/Archives/edgar/data/1075531/000107553122000031/ex99163022.htm
+      text: "2Q20 3Q20 4Q20 1Q21 2Q21 3Q21 4Q21 1Q22 2Q22 Room Nights 28 127 76 99 157 183 151 198 246 Year/Year (Decline) Growth (86.7) % (43.1) % (60.4) % (20.1) % 457.5 %"
+  BKNG 2024Q2 KPI, millions: 287   filed 2024-08-01   https://www.sec.gov/Archives/edgar/data/1075531/000107553124000039/ex99163024.htm
+      text: "2Q22 3Q22 4Q22 1Q23 2Q23 3Q23 4Q23 1Q24 2Q24 Room Nights 246 240 211 274 268 276 231 297 287 Year/Year Growth 56.3 % 31.5 % 39.5 % 38.3 % 8.8 % 14.9 % 9.2 % 8.5"
+  BKNG 2026Q3 KPI, millions: 345   filed 2026-11-03   https://www.sec.gov/Archives/edgar/data/1075531/000107553126000044/q3-26bkngearningsrelease.htm
+      text: "3Q24 4Q24 1Q25 2Q25 3Q25 4Q25 1Q26 2Q26 3Q26 Units Sold Room Nights 299 261 319 309 323 285 338 325 345 Year/Year Growth 8.1 % 13.2 % 7.2 % 7.7 % 8.2 % 9.0 % 5."
+  EXPE 2022Q2 KPI, millions: 82.5   filed 2022-08-04   https://www.sec.gov/Archives/edgar/data/1324424/000132442422000049/earningsrelease-q22022.htm
+      text: "Metric Q2 2022 Q2 2021 Δ Y/Y Booked room nights 82.5 68.4 21%"
+  EXPE 2024Q2 KPI, millions: 98.9   filed 2024-08-08   https://www.sec.gov/Archives/edgar/data/1324424/000132442424000036/earningsrelease-q22024.htm
+      text: "Metric Q2 2024 Q2 2023 Δ Y/Y Booked room nights 98.9 89.7 10%"
+  EXPE 2026Q3 KPI, millions: 115.7   filed 2026-11-04   https://www.sec.gov/Archives/edgar/data/1324424/000132442426000059/earningsrelease-q32026.htm
+      text: "Metric Q3 2026 Q3 2025 Δ Y/Y Booked Room Nights 115.7 108.2 7%"
+  ABNB 2022Q2 KPI, millions: 103.7   filed 2022-08-02   https://www.sec.gov/Archives/edgar/data/1559720/000119312522210001/d353427dex991.htm
+      text: "Key Business Metrics (in millions) Three Months Ended June 30 Six Months Ended June 30 2021 2022 2021 2022 Nights and Experiences Booked 83.1 103.7 "
+  ABNB 2024Q2 KPI, millions: 125.1   filed 2024-08-06   https://www.sec.gov/Archives/edgar/data/1559720/000119312524194849/d831385dex991.htm
+      text: "Key Business Metrics Three Months Ended June 30 Six Months Ended June 30 2023 2024 2023 2024 Nights and Experiences Booked 115.1M 125.1M"
+  ABNB 2026Q3 KPI, millions: 155   filed 2026-11-05   https://www.sec.gov/Archives/edgar/data/1559720/000119312526449727/d437988dex991.htm
+      text: "Key Business Metrics Three Months Ended September 30 Nine Months Ended September 30 2025 2026 2025 2026 Nights and Seats Booked 133.6M 155.0M"
+  UBER 2022Q2 KPI, millions: 1872   filed 2022-08-02   https://www.sec.gov/Archives/edgar/data/1543151/000154315122000021/uberq222earningspressrelea.htm
+      text: "(In millions, except percentages) 2021 2022 % Change % Change (Constant Currency (1)) Monthly Active Platform Consumers ("MAPCs") 101 122 21 % Trips 1,511 1,872"
+  UBER 2024Q2 KPI, millions: 2765   filed 2024-08-06   https://www.sec.gov/Archives/edgar/data/1543151/000154315124000024/uberq224earningspressrelea.htm
+      text: "(In millions, except percentages) 2023 2024 % Change % Change (Constant Currency (1)) Monthly Active Platform Consumers ("MAPCs") 137 156 14 % Trips 2,282 2,765"
+  UBER 2026Q3 KPI, millions: 4061   filed 2026-11-04   https://www.sec.gov/Archives/edgar/data/1543151/000154315126000039/uberq326earningspressrelea.htm
+      text: "(In millions, except percentages and per share amounts) 2025 2026 % Change % Change (Constant Currency (1)) Monthly Active Platform Consumers ("MAPCs") 189 215 "
+  LYFT 2023Q3 KPI, millions: 187.4   filed 2023-11-08   https://www.sec.gov/Archives/edgar/data/1759509/000175950923000108/lyft-20230930xpressrelease.htm
+      text: "2021 2022 2022 2022 2022 2022 2023 2023 2023 Total Q1 Q2 Q3 Q4 Total Q1 Q2 Q3 (in millions, except for Revenue per Active Rider and percentages) Active Riders 1"
+  LYFT 2024Q2 KPI, millions: 205.3   filed 2024-08-07   https://www.sec.gov/Archives/edgar/data/1759509/000175950924000096/lyft-20240630xpressrelease.htm
+      text: "Three Months Ended Jun. 30, 2024 Mar. 31, 2024 Jun. 30, 2023 (in millions, except for percentages) Active Riders 23.7 21.9 21.5 Rides 205.3 187.7 177.9 "
+  LYFT 2026Q3 KPI, millions: 273.5   filed 2026-11-05   https://www.sec.gov/Archives/edgar/data/1759509/000162828026071043/lyft-20260930xpressrelease.htm
+      text: "Three Months Ended September 30, 2026 June 30, 2026 September 30, 2025 (in millions, except for percentages) Active Riders 31.6 30.5 28.7 Rides 273.5 262.4 248."
+  DASH 2022Q2 KPI, millions: 426   filed 2022-08-04   https://www.sec.gov/Archives/edgar/data/1792789/000162828022021127/dashq22022ex991.htm
+      text: "Three Months Ended (In millions, except percentages) Jun. 30, 2021 Sept. 30, 2021 Dec. 31, 2021 Mar. 31, 2022 Jun. 30, 2022 Total Orders 345 347 369 404 426 Tot"
+  DASH 2024Q2 KPI, millions: 635   filed 2024-08-01   https://www.sec.gov/Archives/edgar/data/1792789/000162828024034129/dashq22024ex991-pressrelea.htm
+      text: "Three Months Ended (in millions, except percentages) Jun. 30, 2023 Sept. 30, 2023 Dec. 31, 2023 Mar. 31, 2024 Jun. 30, 2024 Total Orders 532 543 574 620 635 Tot"
+  DASH 2026Q3 KPI, millions: 993   filed 2026-10-29   https://www.sec.gov/Archives/edgar/data/1792789/000179278926000062/proddashex991-pressrelease.htm
+      text: "Three Months Ended (in millions, except percentages) Sept. 30, 2025 Dec. 31, 2025 Mar. 31, 2026 Jun. 30, 2026 Sept. 30, 2026 Total Orders 776 903 933 970 993 To"
+  TCOM 2022Q2 net revenue, RMB m: 4011   filed 2022-09-22   https://www.sec.gov/Archives/edgar/data/1269238/000119312522248672/d395109dex991.htm
+      text: "Statements of Income/(Loss) (In millions, except share and per share data) Three Months Ended Six Months Ended June 30, 2021 March 31, 2022 June 30, 2022 June 3"
+  TCOM 2024Q2 net revenue, RMB m: 12772   filed 2024-08-27   https://www.sec.gov/Archives/edgar/data/1269238/000119312524207408/d846871dex991.htm
+      text: "Statements of Income (In millions, except share and per share data) Three Months Ended Six Months Ended June 30, 2023 March 31, 2024 June 30, 2024 June 30, 2024"
+  TCOM 2026Q2 net revenue, RMB m: 15663   filed 2026-09-16   https://www.sec.gov/Archives/edgar/data/1269238/000119312526392473/d167816dex991.htm
+      text: "Statements of Income/(Loss) (In millions, except share and per share data) Three Months Ended Six Months Ended June 30, 2025 RMB (million) March 31, 2026 RMB (m"
+
+====================================================================================================
+RECONCILIATION (outputs/tables/reconciliation.csv)
+  checks run: 430; matches: 420; matches after a bug fix: 0; definitional: 10; unclassified: 0
+  bugs fixed (config/reconciliation_notes.yaml, STATUS.md): see bugs_fixed ids there
+                      n  match  definitional
+check                                       
+kpi_restatement      83     83             0
+kpi_yoy              98     88            10
+q4_revenue_derived   28     28             0
+revenue_level        90     90             0
+revenue_yoy         131    131             0
+
+  3 rows per name (for checking by hand):
+  BKNG 2026Q3 revenue_yoy: ours -1.28 vs company -1 (reported Y/Y % stated in the 2026Q3 release (1 precision)); diff -0.28, tol 0.60 -> match
+      https://www.sec.gov/Archives/edgar/data/1075531/000107553126000044/q3-26bkngearningsrelease.htm
+  BKNG 2026Q3 kpi_yoy: ours 6.81 vs company 6.7 (KPI Y/Y % stated in the 2026Q3 release (0.1 precision)); diff +0.11, tol 0.15 -> match
+      https://www.sec.gov/Archives/edgar/data/1075531/000107553126000044/q3-26bkngearningsrelease.htm
+  BKNG 2025Q4 q4_revenue_derived: ours 6349.00 vs company 6349 (Q4 revenue in the Q4 release (1 USD m precision); ours = derived_ytd 0001075531-26-000009); diff +0.00, tol 6.85 -> match
+      https://www.sec.gov/Archives/edgar/data/1075531/000107553126000008/q4-25bkngearningsrelease.htm
+  EXPE 2026Q3 revenue_yoy: ours 11.92 vs company 12 (reported Y/Y % stated in the 2026Q3 release (1 precision)); diff -0.08, tol 0.60 -> match
+      https://www.sec.gov/Archives/edgar/data/1324424/000132442426000059/earningsrelease-q32026.htm
+  EXPE 2026Q3 kpi_yoy: ours 6.93 vs company 7 (KPI Y/Y % stated in the 2026Q3 release (1 precision)); diff -0.07, tol 0.60 -> match
+      https://www.sec.gov/Archives/edgar/data/1324424/000132442426000059/earningsrelease-q32026.htm
+  EXPE 2025Q4 q4_revenue_derived: ours 3547.00 vs company 3547 (Q4 revenue in the Q4 release (1 USD m precision); ours = derived_ytd 0001324424-26-000008); diff +0.00, tol 4.05 -> match
+      https://www.sec.gov/Archives/edgar/data/1324424/000132442426000005/earningsrelease-q42025.htm
+  ABNB 2026Q3 revenue_yoy: ours 18.90 vs company 19 (reported Y/Y % stated in the 2026Q3 release (1 precision)); diff -0.10, tol 0.60 -> match
+      https://www.sec.gov/Archives/edgar/data/1559720/000119312526449727/d437988dex991.htm
+  ABNB 2026Q3 kpi_yoy: ours 16.02 vs company 16 (KPI Y/Y % stated in the 2026Q3 release (1 precision)); diff +0.02, tol 0.60 -> match
+      https://www.sec.gov/Archives/edgar/data/1559720/000119312526449727/d437988dex991.htm
+  ABNB 2025Q4 q4_revenue_derived: ours 2778.00 vs company 2778 (Q4 revenue in the Q4 release (1 USD m precision); ours = derived_ytd 0001559720-26-000004); diff +0.00, tol 3.28 -> match
+      https://www.sec.gov/Archives/edgar/data/1559720/000119312526048670/d58192dex991.htm
+  UBER 2026Q3 revenue_yoy: ours 9.65 vs company 10 (reported Y/Y % stated in the 2026Q3 release (1 precision)); diff -0.35, tol 0.60 -> match
+      https://www.sec.gov/Archives/edgar/data/1543151/000154315126000039/uberq326earningspressrelea.htm
+  UBER 2026Q3 kpi_yoy: ours 15.63 vs company 16 (KPI Y/Y % stated in the 2026Q3 release (1 precision)); diff -0.37, tol 0.60 -> match
+      https://www.sec.gov/Archives/edgar/data/1543151/000154315126000039/uberq326earningspressrelea.htm
+  UBER 2025Q4 q4_revenue_derived: ours 14366.00 vs company 14366 (Q4 revenue in the Q4 release (1 USD m precision); ours = derived_ytd 0001543151-26-000015); diff +0.00, tol 14.87 -> match
+      https://www.sec.gov/Archives/edgar/data/1543151/000154315126000011/uberq425earningspressrelea.htm
+  LYFT 2026Q3 revenue_yoy: ours 8.11 vs company 8 (reported Y/Y % stated in the 2026Q3 release (1 precision)); diff +0.11, tol 0.60 -> match
+      https://www.sec.gov/Archives/edgar/data/1759509/000162828026071043/lyft-20260930xpressrelease.htm
+  LYFT 2026Q3 kpi_yoy: ours 9.93 vs company 10 (KPI Y/Y % stated in the 2026Q3 release (1 precision)); diff -0.07, tol 0.60 -> match
+      https://www.sec.gov/Archives/edgar/data/1759509/000162828026071043/lyft-20260930xpressrelease.htm
+  LYFT 2025Q4 q4_revenue_derived: ours 1592.71 vs company 1592.7 (Q4 revenue in the Q4 release (0.1 USD m precision); ours = derived_ytd 0001628280-26-006960); diff +0.01, tol 1.64 -> match
+      https://www.sec.gov/Archives/edgar/data/1759509/000162828026006817/lyft-2025x12x31pressreleas.htm
+  DASH 2026Q3 revenue_yoy: ours 33.95 vs company 34 (reported Y/Y % stated in the 2026Q3 release (1 precision)); diff -0.05, tol 0.60 -> match
+      https://www.sec.gov/Archives/edgar/data/1792789/000179278926000062/proddashex991-pressrelease.htm
+  DASH 2026Q3 kpi_yoy: ours 27.96 vs company 28 (KPI Y/Y % stated in the 2026Q3 release (1 precision)); diff -0.04, tol 0.60 -> match
+      https://www.sec.gov/Archives/edgar/data/1792789/000179278926000062/proddashex991-pressrelease.htm
+  DASH 2025Q4 q4_revenue_derived: ours 3955.00 vs company 3955 (Q4 revenue in the Q4 release (1 USD m precision); ours = derived_ytd 0001792789-26-000013); diff +0.00, tol 4.46 -> match
+      https://www.sec.gov/Archives/edgar/data/1792789/000179278926000012/prodq4dashex991-pressrelea.htm
+  TCOM 2026Q2 revenue_yoy: ours 5.52 vs company 6 (reported Y/Y % stated in the 2026Q2 release (1 precision)); diff -0.48, tol 0.60 -> match
+      https://www.sec.gov/Archives/edgar/data/1269238/000119312526392473/d167816dex991.htm
+  TCOM 2025Q4 q4_revenue_derived: ours 15398.00 vs company 15398 (Q4 net revenue in the Q4 release; ours = 20-F FY (0001193125-26-183379) minus Q1-Q3 from the 6-K releases); diff +0.00, tol 15.90 -> match
+      https://www.sec.gov/Archives/edgar/data/1269238/000119312526073204/d54719dex991.htm
+  TCOM 2026Q1 revenue_yoy: ours 17.19 vs company 17 (reported Y/Y % stated in the 2026Q1 release (1 precision)); diff +0.19, tol 0.60 -> match
+      https://www.sec.gov/Archives/edgar/data/1269238/000119312526281805/d163607dex991.htm

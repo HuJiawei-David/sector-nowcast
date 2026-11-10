@@ -1,0 +1,12 @@
+{
+  "accession": "0001075531-26-000044",
+  "bytes_uncompressed": 15563,
+  "headers": {
+    "User-Agent": "Jiawei Hu <redacted: SEC contact email>"
+  },
+  "pulled_at_utc": "2026-11-10T12:08:47+00:00",
+  "sha256_uncompressed": "83cbf666950044d944666764c9b25756487f0113eb69b754b2860d4637669680",
+  "stored_as": "BKNG_0001075531-26-000044_index.htm",
+  "ticker": "BKNG",
+  "url": "https://www.sec.gov/Archives/edgar/data/1075531/000107553126000044/0001075531-26-000044-index.htm"
+}

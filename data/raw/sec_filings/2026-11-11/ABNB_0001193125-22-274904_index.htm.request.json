@@ -1,0 +1,12 @@
+{
+  "accession": "0001193125-22-274904",
+  "bytes_uncompressed": 19393,
+  "headers": {
+    "User-Agent": "Jiawei Hu <redacted: SEC contact email>"
+  },
+  "pulled_at_utc": "2026-11-10T12:09:14+00:00",
+  "sha256_uncompressed": "c6770fd308117dccd0b5084578014dd740ecfada6f44ea398ddda38e60eb1d68",
+  "stored_as": "ABNB_0001193125-22-274904_index.htm",
+  "ticker": "ABNB",
+  "url": "https://www.sec.gov/Archives/edgar/data/1559720/000119312522274904/0001193125-22-274904-index.htm"
+}

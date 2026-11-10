@@ -18,7 +18,7 @@ from pathlib import Path
 
 import requests
 
-from .rawstore import REPO_ROOT, save_snapshot
+from .rawstore import REPO_ROOT, find_snapshot, read_snapshot, save_snapshot
 
 ENV_VAR = "SEC_USER_AGENT"
 ENV_FILE = REPO_ROOT / ".env"
@@ -75,12 +75,22 @@ def _get(url: str) -> bytes:
     return r.content
 
 
-def fetch(url: str, source: str, name: str, **params) -> tuple[bytes, object]:
+def fetch(url: str, source: str, name: str, compress: bool = False, **params) -> tuple[bytes, object]:
     """GET `url`, save the unmodified body under data/raw/<source>/<today>/<name>."""
     content = _get(url)
     recorded = {k: redact_email(v) for k, v in sec_headers().items()}
-    path = save_snapshot(source, name, content, {"url": url, "headers": recorded, **params})
+    path = save_snapshot(source, name, content, {"url": url, "headers": recorded, **params},
+                         compress=compress)
     return content, path
+
+
+def fetch_once(url: str, source: str, name: str, pull_date: str, compress: bool = False,
+               **params) -> tuple[bytes, object]:
+    """Like fetch(), but reuse the snapshot if one was already saved under `pull_date` (re-runs)."""
+    existing = find_snapshot(source, name, pull_date)
+    if existing is not None:
+        return read_snapshot(existing), existing
+    return fetch(url, source, name, compress=compress, **params)
 
 
 def companyfacts_url(cik: int) -> str:
@@ -97,3 +107,13 @@ def archive_index_url(cik: int, accession: str) -> str:
 
 def archive_file_url(cik: int, accession: str, filename: str) -> str:
     return f"https://www.sec.gov/Archives/edgar/data/{cik}/{accession.replace('-', '')}/{filename}"
+
+
+def submissions_page_url(filename: str) -> str:
+    """Older submissions pages listed under filings.files (e.g. CIK0001559720-submissions-001.json)."""
+    return f"https://data.sec.gov/submissions/{filename}"
+
+
+def filing_index_url(cik: int, accession: str) -> str:
+    """Human-readable filing index (table with each document's Type, e.g. EX-99.1)."""
+    return f"https://www.sec.gov/Archives/edgar/data/{cik}/{accession.replace('-', '')}/{accession}-index.htm"

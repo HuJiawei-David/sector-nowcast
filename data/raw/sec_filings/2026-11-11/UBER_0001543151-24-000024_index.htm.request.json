@@ -1,0 +1,12 @@
+{
+  "accession": "0001543151-24-000024",
+  "bytes_uncompressed": 10362,
+  "headers": {
+    "User-Agent": "Jiawei Hu <redacted: SEC contact email>"
+  },
+  "pulled_at_utc": "2026-11-10T12:09:42+00:00",
+  "sha256_uncompressed": "e0d3690b6218f4c12a2cae50c2ef59f6bb2edc52e744ff67d7e0dd2f339f432e",
+  "stored_as": "UBER_0001543151-24-000024_index.htm",
+  "ticker": "UBER",
+  "url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315124000024/0001543151-24-000024-index.htm"
+}

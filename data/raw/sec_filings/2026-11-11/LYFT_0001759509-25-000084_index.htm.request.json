@@ -1,0 +1,12 @@
+{
+  "accession": "0001759509-25-000084",
+  "bytes_uncompressed": 10394,
+  "headers": {
+    "User-Agent": "Jiawei Hu <redacted: SEC contact email>"
+  },
+  "pulled_at_utc": "2026-11-10T12:10:10+00:00",
+  "sha256_uncompressed": "5cd663c2f8303ae55ff81f299c0a8c5bc81a5f39e5835b80d68851e9ba6a8e24",
+  "stored_as": "LYFT_0001759509-25-000084_index.htm",
+  "ticker": "LYFT",
+  "url": "https://www.sec.gov/Archives/edgar/data/1759509/000175950925000084/0001759509-25-000084-index.htm"
+}

@@ -1,0 +1,13 @@
+{
+  "accession": "0001324424-24-000005",
+  "bytes_uncompressed": 666389,
+  "document": "earningsrelease-q42023.htm",
+  "headers": {
+    "User-Agent": "Jiawei Hu <redacted: SEC contact email>"
+  },
+  "pulled_at_utc": "2026-11-10T12:08:57+00:00",
+  "sha256_uncompressed": "6bcf5f6775e3bd4838d487e2ab4262f1a106772fc2fd740c1337329baf68e3ed",
+  "stored_as": "EXPE_0001324424-24-000005_earningsrelease-q42023.htm.gz",
+  "ticker": "EXPE",
+  "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442424000005/earningsrelease-q42023.htm"
+}

@@ -1,0 +1,12 @@
+{
+  "accession": "0001792789-26-000062",
+  "bytes_uncompressed": 10767,
+  "headers": {
+    "User-Agent": "Jiawei Hu <redacted: SEC contact email>"
+  },
+  "pulled_at_utc": "2026-11-10T12:10:38+00:00",
+  "sha256_uncompressed": "4d9ce7f1dd2a0edf941d54a5fba56a0a63982080f200d5d229fe1ffe2fafed50",
+  "stored_as": "DASH_0001792789-26-000062_index.htm",
+  "ticker": "DASH",
+  "url": "https://www.sec.gov/Archives/edgar/data/1792789/000179278926000062/0001792789-26-000062-index.htm"
+}

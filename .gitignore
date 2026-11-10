@@ -8,3 +8,5 @@ CLAUDE.md
 STATUS.md
 coach/
 .env
+# derived database, rebuilt by scripts/s2_build.py (no network)
+data/nowcast.db

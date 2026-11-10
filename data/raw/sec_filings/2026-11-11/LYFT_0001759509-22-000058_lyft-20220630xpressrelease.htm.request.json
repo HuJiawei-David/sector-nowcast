@@ -1,0 +1,13 @@
+{
+  "accession": "0001759509-22-000058",
+  "bytes_uncompressed": 261807,
+  "document": "lyft-20220630xpressrelease.htm",
+  "headers": {
+    "User-Agent": "Jiawei Hu <redacted: SEC contact email>"
+  },
+  "pulled_at_utc": "2026-11-10T12:09:56+00:00",
+  "sha256_uncompressed": "0f716ee2886ce44fd43ac297f77cd8dd7e24c1cbbf147efa4fd08f23c8b370c5",
+  "stored_as": "LYFT_0001759509-22-000058_lyft-20220630xpressrelease.htm.gz",
+  "ticker": "LYFT",
+  "url": "https://www.sec.gov/Archives/edgar/data/1759509/000175950922000058/lyft-20220630xpressrelease.htm"
+}

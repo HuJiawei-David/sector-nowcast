@@ -1,0 +1,12 @@
+{
+  "accession": "0001324424-24-000024",
+  "bytes_uncompressed": 10684,
+  "headers": {
+    "User-Agent": "Jiawei Hu <redacted: SEC contact email>"
+  },
+  "pulled_at_utc": "2026-11-10T12:08:57+00:00",
+  "sha256_uncompressed": "0b5a8296cce20c596d874a26c06932b3258c5013609e9c5e89aba9fb8706f41b",
+  "stored_as": "EXPE_0001324424-24-000024_index.htm",
+  "ticker": "EXPE",
+  "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442424000024/0001324424-24-000024-index.htm"
+}

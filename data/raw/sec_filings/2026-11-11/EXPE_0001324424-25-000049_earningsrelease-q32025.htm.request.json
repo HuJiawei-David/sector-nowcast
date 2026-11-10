@@ -1,0 +1,13 @@
+{
+  "accession": "0001324424-25-000049",
+  "bytes_uncompressed": 818484,
+  "document": "earningsrelease-q32025.htm",
+  "headers": {
+    "User-Agent": "Jiawei Hu <redacted: SEC contact email>"
+  },
+  "pulled_at_utc": "2026-11-10T12:09:05+00:00",
+  "sha256_uncompressed": "1473020283b85fa09e10cb08f96ba6792faa07f7585f6cb64c5b01fef3fd090b",
+  "stored_as": "EXPE_0001324424-25-000049_earningsrelease-q32025.htm.gz",
+  "ticker": "EXPE",
+  "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442425000049/earningsrelease-q32025.htm"
+}

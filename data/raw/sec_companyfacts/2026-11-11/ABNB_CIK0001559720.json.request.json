@@ -1,0 +1,12 @@
+{
+  "bytes_uncompressed": 1316924,
+  "cik": 1559720,
+  "headers": {
+    "User-Agent": "Jiawei Hu <redacted: SEC contact email>"
+  },
+  "pulled_at_utc": "2026-11-10T12:09:10+00:00",
+  "sha256_uncompressed": "84c3ff1f4d1c2a59b9ec83e7712f507ba202df8dab48dabd673a7856a5795b28",
+  "stored_as": "ABNB_CIK0001559720.json.gz",
+  "ticker": "ABNB",
+  "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001559720.json"
+}

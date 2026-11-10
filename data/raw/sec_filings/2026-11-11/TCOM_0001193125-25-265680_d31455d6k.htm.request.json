@@ -1,0 +1,13 @@
+{
+  "accession": "0001193125-25-265680",
+  "bytes_uncompressed": 8347,
+  "document": "d31455d6k.htm",
+  "headers": {
+    "User-Agent": "Jiawei Hu <redacted: SEC contact email>"
+  },
+  "pulled_at_utc": "2026-11-10T12:11:54+00:00",
+  "sha256_uncompressed": "45726140efd8ea63b7ad73299bdbe7c00a733248fb57e0539eeb638872e8df9e",
+  "stored_as": "TCOM_0001193125-25-265680_d31455d6k.htm.gz",
+  "ticker": "TCOM",
+  "url": "https://www.sec.gov/Archives/edgar/data/1269238/000119312525265680/d31455d6k.htm"
+}

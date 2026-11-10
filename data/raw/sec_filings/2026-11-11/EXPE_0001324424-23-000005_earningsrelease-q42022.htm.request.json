@@ -1,0 +1,13 @@
+{
+  "accession": "0001324424-23-000005",
+  "bytes_uncompressed": 981863,
+  "document": "earningsrelease-q42022.htm",
+  "headers": {
+    "User-Agent": "Jiawei Hu <redacted: SEC contact email>"
+  },
+  "pulled_at_utc": "2026-11-10T12:08:52+00:00",
+  "sha256_uncompressed": "97b3c215ab4a96d394a80bbc3c52f28ab6467fd54758962a3de11d955107d670",
+  "stored_as": "EXPE_0001324424-23-000005_earningsrelease-q42022.htm.gz",
+  "ticker": "EXPE",
+  "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442423000005/earningsrelease-q42022.htm"
+}

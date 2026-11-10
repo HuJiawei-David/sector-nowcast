@@ -1,0 +1,12 @@
+{
+  "bytes_uncompressed": 1449125,
+  "cik": 1792789,
+  "headers": {
+    "User-Agent": "Jiawei Hu <redacted: SEC contact email>"
+  },
+  "pulled_at_utc": "2026-11-10T12:10:18+00:00",
+  "sha256_uncompressed": "7d0e4e8f4132bbe2a2546386b03cd778b93274953f56271152e616f55da42aab",
+  "stored_as": "DASH_CIK0001792789.json.gz",
+  "ticker": "DASH",
+  "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001792789.json"
+}

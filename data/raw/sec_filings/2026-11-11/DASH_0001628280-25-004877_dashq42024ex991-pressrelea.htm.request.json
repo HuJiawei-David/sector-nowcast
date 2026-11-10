@@ -1,0 +1,13 @@
+{
+  "accession": "0001628280-25-004877",
+  "bytes_uncompressed": 451198,
+  "document": "dashq42024ex991-pressrelea.htm",
+  "headers": {
+    "User-Agent": "Jiawei Hu <redacted: SEC contact email>"
+  },
+  "pulled_at_utc": "2026-11-10T12:10:31+00:00",
+  "sha256_uncompressed": "6870efbb366c84949eea04c6657f48726922ebdc80e16fada216107c46f90c88",
+  "stored_as": "DASH_0001628280-25-004877_dashq42024ex991-pressrelea.htm.gz",
+  "ticker": "DASH",
+  "url": "https://www.sec.gov/Archives/edgar/data/1792789/000162828025004877/dashq42024ex991-pressrelea.htm"
+}

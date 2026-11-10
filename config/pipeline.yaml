@@ -1,0 +1,21 @@
+# Measurement-pipeline settings (Session 2+). NOT part of the frozen spec: these say how data are
+# pulled and parsed, not which series/models/windows are used (those are fixed in hypotheses.md).
+# Adding a company = companies.yaml entry + its extraction block in config/extraction.yaml.
+
+releases_since: "2022-01-01"          # earnings 8-K / 6-K pulled from this filing date on (covers the 2021Q4 releases)
+data_first_quarter: 2021Q1             # revenue versions must exist from here (q-4 base of 2022Q1) through the last reported quarter
+kpi_first_quarter: 2022Q1              # KPI extraction range starts here (task S2); the release for q carries the q-4 comparative
+report_first_quarter: 2022Q1           # printed / reconciled range
+report_last_quarter: 2026Q3
+
+# TCOM: a 6-K is a quarterly results release if its exhibit index says so
+tcom_results_release_regex: "Reports\\s+Unaudited\\s+.{0,80}?Financial\\s+Results"
+
+fy_sum_tolerance: 0.005                # rule 9: |Q1+Q2+Q3+Q4 - FY| / FY <= 0.5%
+
+xbrl:
+  # duration (days) bands used to classify a fact's period
+  quarter_days: [84, 98]
+  half_days: [175, 190]
+  nine_month_days: [266, 280]
+  year_days: [357, 373]

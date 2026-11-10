@@ -1,0 +1,41 @@
+# Classification of reconciliation mismatches (outputs/tables/reconciliation.csv).
+# NOT part of the frozen spec. Never edit a data value to make a check pass: only code is fixed.
+#
+# bugs_fixed: pipeline errors found by the reconciliation, fixed in code, then rerun. Each lists the
+#   checks it affected and the before/after values (also logged in STATUS.md).
+# definitional: mismatches that are not pipeline errors, with the reason and the evidence.
+#   (Rounding mismatches are classified automatically by src/nowcast/reconcile.py.)
+
+bugs_fixed:
+  - id: B1
+    found_by: kpi_yoy check ABNB 2025Q1 (ours 7.92% vs company 11%, UNCLASSIFIED)
+    description: >-
+      The ABNB KPI-sentence regex matched "Excluding North America, Nights and Experiences Booked grew
+      11% year-over-year in Q1 2025" (a regional figure) as the company-wide stated Y/Y. Fix: the
+      engine now skips sentence matches whose qualifier group fires (reject_groups: [qual] in
+      config/extraction.yaml; src/nowcast/releases.py extract()).
+    before: {name: ABNB, quarter: 2025Q1, check: kpi_yoy, ours: 7.9186, company: 11.0, status: UNCLASSIFIED}
+    after: >-
+      The 2025Q1 release states no company-wide Nights and Experiences Booked Y/Y %, so the check is
+      no longer run (ours, 143.1M vs 132.6M = +7.92%, is unchanged).
+    affected:
+      - {name: ABNB, quarter: 2025Q1, check: kpi_yoy}
+  - id: B2
+    found_by: >-
+      cross-release consistency scan (now permanent: validate.consistent_across_releases): ABNB
+      Nights for 2020Q1-2020Q4 read as 81.3/83.9/85.9/75.8 from the Q1 2022 letter but 57.1/28.0/61.8/46.3
+      from the Q4 2021 and Q2 2022 letters
+    description: >-
+      The ABNB "Quarterly Summary" parser assumed the quarter columns run consecutively up to the
+      release quarter. The Q1 2022 letter's summary lists 2019, 2021 and 2022 (it skips 2020 and
+      compares with 2019), so 2019 values were labelled 2020 and 2019 was missing. Fix: new layout
+      kind `year_groups` (src/nowcast/releases.py periods_for) assigns each listed year to its own
+      run of Q columns and checks the last column is the release quarter.
+    before: {ABNB 2020Q1: 81.3, ABNB 2020Q2: 83.9, ABNB 2020Q3: 85.9, ABNB 2020Q4: 75.8, source: Q1 2022 letter}
+    after: {ABNB 2019Q1: 81.3, ABNB 2019Q2: 83.9, ABNB 2019Q3: 85.9, ABNB 2019Q4: 75.8, ABNB 2020: no value in that letter}
+    affected: []        # no reconciliation check used these values (they are outside 2022Q1-2026Q3)
+
+# restatements: documented cases where a release changes a previously reported number (both kept).
+restatements: []
+
+definitional: []

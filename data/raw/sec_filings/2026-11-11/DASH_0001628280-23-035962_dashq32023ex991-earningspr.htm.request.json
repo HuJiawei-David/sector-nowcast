@@ -1,0 +1,13 @@
+{
+  "accession": "0001628280-23-035962",
+  "bytes_uncompressed": 425593,
+  "document": "dashq32023ex991-earningspr.htm",
+  "headers": {
+    "User-Agent": "Jiawei Hu <redacted: SEC contact email>"
+  },
+  "pulled_at_utc": "2026-11-10T12:10:25+00:00",
+  "sha256_uncompressed": "80df0fc4da3f776ee17f94a39cd020d3468ae2229a6198c76dd8c787dbbea09d",
+  "stored_as": "DASH_0001628280-23-035962_dashq32023ex991-earningspr.htm.gz",
+  "ticker": "DASH",
+  "url": "https://www.sec.gov/Archives/edgar/data/1792789/000162828023035962/dashq32023ex991-earningspr.htm"
+}

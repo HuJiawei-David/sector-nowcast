@@ -1,0 +1,12 @@
+{
+  "bytes_uncompressed": 3515785,
+  "cik": 1324424,
+  "headers": {
+    "User-Agent": "Jiawei Hu <redacted: SEC contact email>"
+  },
+  "pulled_at_utc": "2026-11-10T12:08:49+00:00",
+  "sha256_uncompressed": "9750f86952d20e12f9c8a4d0516c37d4be37a5737e783897d61504b612fc3afe",
+  "stored_as": "EXPE_CIK0001324424.json.gz",
+  "ticker": "EXPE",
+  "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001324424.json"
+}

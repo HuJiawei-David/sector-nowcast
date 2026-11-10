@@ -1,0 +1,13 @@
+{
+  "accession": "0001075531-25-000009",
+  "bytes_uncompressed": 37203,
+  "document": "bnkgq42024earningspressr.htm",
+  "headers": {
+    "User-Agent": "Jiawei Hu <redacted: SEC contact email>"
+  },
+  "pulled_at_utc": "2026-11-10T12:08:39+00:00",
+  "sha256_uncompressed": "d85474f57dca59fb65e03cab79735f474b4c353227b8dc95864003986f8c5ac4",
+  "stored_as": "BKNG_0001075531-25-000009_bnkgq42024earningspressr.htm.gz",
+  "ticker": "BKNG",
+  "url": "https://www.sec.gov/Archives/edgar/data/1075531/000107553125000009/bnkgq42024earningspressr.htm"
+}
