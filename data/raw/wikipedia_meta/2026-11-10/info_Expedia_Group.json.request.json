@@ -1,0 +1,18 @@
+{
+  "bytes_uncompressed": 261,
+  "headers": {
+    "User-Agent": "sector-nowcast-research/0.1 (non-commercial research tool; python-requests)"
+  },
+  "params": {
+    "action": "query",
+    "format": "json",
+    "formatversion": "2",
+    "prop": "info",
+    "redirects": 1,
+    "titles": "Expedia Group"
+  },
+  "pulled_at_utc": "2026-11-10T04:53:43+00:00",
+  "sha256_uncompressed": "7911b90020dc72e724bc2fc6fa9e6c50cf18d6c1f00c0d6f4f6fccdea803ec19",
+  "stored_as": "info_Expedia_Group.json",
+  "url": "https://en.wikipedia.org/w/api.php?format=json&formatversion=2&action=query&titles=Expedia+Group&redirects=1&prop=info"
+}

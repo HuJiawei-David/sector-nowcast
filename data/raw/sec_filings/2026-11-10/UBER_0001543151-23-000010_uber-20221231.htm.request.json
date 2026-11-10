@@ -1,0 +1,11 @@
+{
+  "bytes_uncompressed": 4465023,
+  "headers": {
+    "User-Agent": "Jiawei Hu <redacted: SEC contact email>"
+  },
+  "pulled_at_utc": "2026-11-10T05:33:16+00:00",
+  "purpose": "S1b materiality evidence: Transplace",
+  "sha256_uncompressed": "44cab234c47ae6e4a7a842a0eb44e4bd88b7035b1caa690d3068f1d76958d8b6",
+  "stored_as": "UBER_0001543151-23-000010_uber-20221231.htm.gz",
+  "url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315123000010/uber-20221231.htm"
+}

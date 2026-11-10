@@ -1,0 +1,11 @@
+{
+  "bytes_uncompressed": 34175,
+  "headers": {
+    "User-Agent": "Jiawei Hu <redacted: SEC contact email>"
+  },
+  "pulled_at_utc": "2026-11-10T05:33:22+00:00",
+  "purpose": "S1b materiality evidence: Trendyol",
+  "sha256_uncompressed": "b4ab47bc65b395265302faf8657e321b4b8e82d859fdf94746bd0164468e8f6d",
+  "stored_as": "UBER_0001552781-25-000160_e25191_uber-8k.htm",
+  "url": "https://www.sec.gov/Archives/edgar/data/1543151/000155278125000160/e25191_uber-8k.htm"
+}

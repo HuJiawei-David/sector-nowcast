@@ -1,0 +1,18 @@
+{
+  "bytes_uncompressed": 1815,
+  "headers": {
+    "User-Agent": "Jiawei Hu <redacted: SEC contact email>"
+  },
+  "pulled_at_utc": "2026-11-10T04:52:07+00:00",
+  "query": {
+    "ciks": "0001759509",
+    "dateRange": "custom",
+    "enddt": "2026-03-31",
+    "forms": "8-K",
+    "q": "\"regulatory reserve changes\"",
+    "startdt": "2025-01-01"
+  },
+  "sha256_uncompressed": "cbe3be1e413ff12a86d67b008a2ea1d29fd73d8cf42e139e9335c499b477f9e0",
+  "stored_as": "efts_432057c8fe.json",
+  "url": "https://efts.sec.gov/LATEST/search-index?q=%22regulatory+reserve+changes%22&ciks=0001759509&forms=8-K&dateRange=custom&startdt=2025-01-01&enddt=2026-03-31"
+}

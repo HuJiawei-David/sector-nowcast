@@ -1,0 +1,273 @@
+# Structural breaks a demand proxy cannot see (CLAUDE.md "STRUCTURAL BREAKS"; docs/drivers.md).
+# Frozen at the `prereg` tag. Scope: events whose effect on YoY growth falls in 2022Q1-2026Q3.
+#
+# affected_yoy_quarters = quarters q whose YoY value (y_q and/or k_q, per `targets`) is mechanically
+# shifted by the event. Rules used to derive them (applied by hand, checked by tests/test_config.py):
+#   acquisition / disposal / accounting-model change effective on date D in quarter c:
+#       c .. c+4  (c+4 because its base quarter c holds only part of the event),
+#       or c .. c+3 when D falls in the first 7 days of quarter c (base c+4 then holds ~all of it).
+#   one-off revenue item booked in quarter q: q and q+4 (base effect one year later).
+#   explicit: quarters named by the company's own filings (rule = "explicit").
+# materiality (docs/hypotheses.md section 3.8), assigned by this rule only:
+#   MAJOR if (a) type is accounting_model_change, one_off_revenue, kpi_definition or
+#   business_practice_change; or (b) the company quantifies the event's effect on revenue, the KPI
+#   or growth in a filing or earnings release, or reports a figure "excluding" it; otherwise MINOR.
+#   For (b), materiality_quote is the justifying sentence, verbatim from materiality_source (saved
+#   under data/raw/sec_filings/; checked by tests/test_config.py).
+# Robustness (pre-registered): a direction call for target quarter q is dropped if y_q or y_{q-1}
+# (k_q or k_{q-1} for the KPI target) is listed in a MAJOR break for that name and target.
+# MINOR breaks stay listed but are not dropped.
+# `clean_only_note`: true when every listed quarter is already outside the clean set (hard rule 4),
+# i.e. listed for completeness only.
+
+breaks:
+  - name: BKNG
+    event: Acquisition of Getaroom (B2B hotel distributor) completed December 2021
+    type: acquisition
+    effective: "2021-12"
+    targets: [y]
+    affected_yoy_quarters: [2021Q4, 2022Q1, 2022Q2, 2022Q3, 2022Q4]
+    rule: c..c+4
+    materiality: minor
+    materiality_basis: "neither (a) nor (b): no company-quantified effect on revenue, KPI or growth and no 'excluding' figure found (EDGAR full-text search for the acquiree's name, 8-K/10-Q/10-K, scripts/s1b_materiality_search.py)"
+    clean_only_note: true
+    source: https://www.sec.gov/Archives/edgar/data/1075531/000107553122000008/bkng-20211231.htm
+  - name: BKNG
+    event: "FTC matter: $900 million reduction in revenue recorded in Q3 2026 (excluded from Adjusted Revenue); GAAP revenue -1% Y/Y vs Adjusted Revenue +9%"
+    type: one_off_revenue
+    effective: 2026Q3
+    targets: [y]
+    affected_yoy_quarters: [2026Q3, 2027Q3]
+    rule: q,q+4
+    materiality: major
+    materiality_basis: "(a) type one_off_revenue"
+    source: https://www.sec.gov/Archives/edgar/data/1075531/000107553126000044/q3-26bkngearningsrelease.htm
+
+  - name: EXPE
+    event: Sale of Egencia (corporate travel) to GBT completed 2021-11-01; deconsolidated
+    type: disposal
+    effective: "2021-11-01"
+    targets: [y, k]
+    affected_yoy_quarters: [2021Q4, 2022Q1, 2022Q2, 2022Q3, 2022Q4]
+    rule: c..c+4
+    materiality: minor
+    materiality_basis: "neither (a) nor (b): no company-quantified effect on revenue, KPI or growth and no 'excluding' figure found (EDGAR full-text search for the acquiree's name, 8-K/10-Q/10-K, scripts/s1b_materiality_search.py)"
+    clean_only_note: true
+    source: https://www.sec.gov/Archives/edgar/data/1324424/000132442423000007/expe-20221231.htm
+
+  - name: ABNB
+    event: "KPI redefined: 'Nights and Experiences Booked' became 'Nights and Seats Booked' (adds seats for experiences and services; services launched in Q2 2025). First used in the Q2 2025 10-Q; company says substantially all bookings are nights"
+    type: kpi_definition
+    effective: 2025Q2
+    targets: [k]
+    affected_yoy_quarters: [2025Q2, 2025Q3, 2025Q4, 2026Q1, 2026Q2]
+    rule: c..c+4
+    materiality: major
+    materiality_basis: "(a) type kpi_definition"
+    source: https://www.sec.gov/Archives/edgar/data/1559720/000155972025000025/abnb-20250630.htm
+
+  - name: UBER
+    event: Acquisition of Transplace (Freight) in Q4 2021
+    type: acquisition
+    effective: "2021-11"
+    targets: [y]
+    affected_yoy_quarters: [2021Q4, 2022Q1, 2022Q2, 2022Q3, 2022Q4]
+    rule: c..c+4
+    materiality: major
+    materiality_basis: "(b) company quantifies the effect"
+    materiality_quote: "Excluding Transplace, the organic Freight business revenue grew 27% to $396 million."
+    materiality_source: https://www.sec.gov/Archives/edgar/data/1543151/000154315122000004/uberq421earningspressrelea.htm
+    clean_only_note: true
+    source: https://www.sec.gov/Archives/edgar/data/1543151/000154315122000024/uber-20220630.htm
+  - name: UBER
+    event: "UK business model change effective 2022-03-14 (Mobility revenue reported gross); Q1 2022 benefit $200m vs Q1 2023 $1.1bn, Q2 2022 $1.1bn"
+    type: accounting_model_change
+    effective: "2022-03-14"
+    targets: [y]
+    affected_yoy_quarters: [2022Q1, 2022Q2, 2022Q3, 2022Q4, 2023Q1]
+    rule: c..c+4
+    materiality: major
+    materiality_basis: "(a) type accounting_model_change"
+    source: https://www.sec.gov/Archives/edgar/data/1543151/000154315123000013/uberq123earningspressrelea.htm
+  - name: UBER
+    event: "Business model changes in some countries classifying certain sales and marketing costs as contra revenue (Delivery from Q2 2023, Mobility from Q3 2023); company quantifies the negative Y/Y revenue impact through Q3 2024 (e.g. -8pp total revenue growth in Q1 2024, -7pp in Q2 2024)"
+    type: accounting_model_change
+    effective: 2023Q2
+    targets: [y]
+    affected_yoy_quarters: [2023Q2, 2023Q3, 2023Q4, 2024Q1, 2024Q2, 2024Q3]
+    rule: explicit
+    materiality: major
+    materiality_basis: "(a) type accounting_model_change"
+    source: https://www.sec.gov/Archives/edgar/data/1543151/000154315124000024/uberq224earningspressrelea.htm
+    other_sources:
+      - https://www.sec.gov/Archives/edgar/data/1543151/000154315123000021/uberq223earningspressrelea.htm
+      - https://www.sec.gov/Archives/edgar/data/1543151/000154315123000036/uberq323earningspressrelea.htm
+      - https://www.sec.gov/Archives/edgar/data/1543151/000154315124000017/uberq124earningspressrelea.htm
+      - https://www.sec.gov/Archives/edgar/data/1543151/000154315124000033/uberq324earningspressrelea.htm
+  - name: UBER
+    event: Acquisition of 85% of Trendyol GO (Turkey delivery) completed 2025-06-17
+    type: acquisition
+    effective: "2025-06-17"
+    targets: [y, k]
+    affected_yoy_quarters: [2025Q2, 2025Q3, 2025Q4, 2026Q1, 2026Q2]
+    rule: c..c+4
+    materiality: major
+    materiality_basis: "(b) company quantifies the effect"
+    materiality_quote: "As a reminder, our outlook includes the contribution from the close of the Trendyol Go acquisition; excluding this, our growth outlook would be 16% to 20% YoY on a constant-currency basis (consistent with the prior quarter)."
+    materiality_source: https://www.sec.gov/Archives/edgar/data/1543151/000154315125000020/uberq225earningspressrelea.htm
+    source: https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm
+  - name: UBER
+    event: "UK business model change effective 2026-01-02 (Uber no longer responsible for Mobility services in certain UK markets; driver payments become a reduction of revenue); company: -$1.0bn revenue in Q1 2026, -8 to -9pp on total revenue Y/Y growth in Q1-Q3 2026"
+    type: accounting_model_change
+    effective: "2026-01-02"
+    targets: [y]
+    affected_yoy_quarters: [2026Q1, 2026Q2, 2026Q3, 2026Q4]
+    rule: c..c+3
+    materiality: major
+    materiality_basis: "(a) type accounting_model_change"
+    source: https://www.sec.gov/Archives/edgar/data/1543151/000154315126000022/uber-20260331.htm
+    other_sources:
+      - https://www.sec.gov/Archives/edgar/data/1543151/000154315126000039/uberq326earningspressrelea.htm
+  - name: UBER
+    event: Acquisition of SpotHero (parking reservations) completed 2026-04-16
+    type: acquisition
+    effective: "2026-04-16"
+    targets: [y, k]
+    affected_yoy_quarters: [2026Q2, 2026Q3, 2026Q4, 2027Q1, 2027Q2]
+    rule: c..c+4
+    materiality: minor
+    materiality_basis: "neither (a) nor (b): the company says SpotHero contributed an immaterial amount of revenue (not quantified); no 'excluding' figure found (EDGAR full-text search, scripts/s1b_materiality_search.py)"
+    source: https://www.sec.gov/Archives/edgar/data/1543151/000154315126000041/uber-20260930.htm
+  - name: UBER
+    event: Acquisition of Getir's food delivery business (Turkey) completed 2026-07-01
+    type: acquisition
+    effective: "2026-07-01"
+    targets: [y, k]
+    affected_yoy_quarters: [2026Q3, 2026Q4, 2027Q1, 2027Q2]
+    rule: c..c+3
+    materiality: minor
+    materiality_basis: "neither (a) nor (b): no company-quantified effect on revenue, KPI or growth and no 'excluding' figure found (EDGAR full-text search for the acquiree's name, 8-K/10-Q/10-K, scripts/s1b_materiality_search.py)"
+    source: https://www.sec.gov/Archives/edgar/data/1543151/000154315126000041/uber-20260930.htm
+  - name: UBER
+    event: Control of Careem Technologies obtained 2026-07-31 (~60% stake); consolidated from that date
+    type: acquisition
+    effective: "2026-07-31"
+    targets: [y, k]
+    affected_yoy_quarters: [2026Q3, 2026Q4, 2027Q1, 2027Q2, 2027Q3]
+    rule: c..c+4
+    materiality: minor
+    materiality_basis: "neither (a) nor (b): the company says Careem Technologies contributed an immaterial amount of revenue (not quantified); no 'excluding' figure found (EDGAR full-text search, scripts/s1b_materiality_search.py)"
+    source: https://www.sec.gov/Archives/edgar/data/1543151/000154315126000041/uber-20260930.htm
+
+  - name: LYFT
+    event: Acquisition of Freenow (European taxi/multimodal app) completed 2025-07-31
+    type: acquisition
+    effective: "2025-07-31"
+    targets: [y, k]
+    affected_yoy_quarters: [2025Q3, 2025Q4, 2026Q1, 2026Q2, 2026Q3]
+    rule: c..c+4
+    materiality: minor
+    materiality_basis: "neither (a) nor (b): no company-quantified effect on revenue, KPI or growth and no 'excluding' figure found (EDGAR full-text search for the acquiree's name, 8-K/10-Q/10-K, scripts/s1b_materiality_search.py); the 10-K says Freenow 'did not contribute a significant amount of revenue'"
+    source: https://www.sec.gov/Archives/edgar/data/1759509/000162828026006960/lyft-20251231.htm
+  - name: LYFT
+    event: Acquisition of TBR Global Chauffeuring completed 2025-10-14
+    type: acquisition
+    effective: "2025-10-14"
+    targets: [y, k]
+    affected_yoy_quarters: [2025Q4, 2026Q1, 2026Q2, 2026Q3, 2026Q4]
+    rule: c..c+4
+    materiality: minor
+    materiality_basis: "neither (a) nor (b): the company says TBR contributed an immaterial amount of revenue (not quantified); no 'excluding' figure found (EDGAR full-text search, scripts/s1b_materiality_search.py)"
+    source: https://www.sec.gov/Archives/edgar/data/1759509/000162828026006960/lyft-20251231.htm
+  - name: LYFT
+    event: "Legal, tax and regulatory reserve changes and settlements recorded as a reduction to revenue: $168m in Q4 2025 (revenue +3% Y/Y as reported)"
+    type: one_off_revenue
+    effective: 2025Q4
+    targets: [y]
+    affected_yoy_quarters: [2025Q4, 2026Q4]
+    rule: q,q+4
+    materiality: major
+    materiality_basis: "(a) type one_off_revenue"
+    source: https://www.sec.gov/Archives/edgar/data/1759509/000162828026006817/lyft-2025x12x31pressreleas.htm
+  - name: LYFT
+    event: "Legal, tax and regulatory reserve changes and settlements: $69.1m recorded as a reduction to revenue in Q3 2026"
+    type: one_off_revenue
+    effective: 2026Q3
+    targets: [y]
+    affected_yoy_quarters: [2026Q3, 2027Q3]
+    rule: q,q+4
+    materiality: major
+    materiality_basis: "(a) type one_off_revenue"
+    source: https://www.sec.gov/Archives/edgar/data/1759509/000162828026071043/lyft-20260930xpressrelease.htm
+
+  - name: DASH
+    event: Acquisition of Wolt completed 2022-05-31
+    type: acquisition
+    effective: "2022-05-31"
+    targets: [y, k]
+    affected_yoy_quarters: [2022Q2, 2022Q3, 2022Q4, 2023Q1, 2023Q2]
+    rule: c..c+4
+    materiality: major
+    materiality_basis: "(b) company quantifies the effect"
+    materiality_quote: "Revenue increased 33% Y/Y to $1.7 billion in Q3 2022 from $1.3 billion, driven by 25% Y/Y growth in DoorDash revenue and the addition of Wolt."
+    materiality_source: https://www.sec.gov/Archives/edgar/data/1792789/000162828022028194/dashq32022ex991-shareholde.htm
+    source: https://www.sec.gov/Archives/edgar/data/1792789/000162828022015815/dash-20220531.htm
+  - name: DASH
+    event: Acquisition of Symbiosys (retail media) completed 2025-05-28
+    type: acquisition
+    effective: "2025-05-28"
+    targets: [y]
+    affected_yoy_quarters: [2025Q2, 2025Q3, 2025Q4, 2026Q1, 2026Q2]
+    rule: c..c+4
+    materiality: minor
+    materiality_basis: "neither (a) nor (b): no company-quantified effect on revenue, KPI or growth and no 'excluding' figure found (EDGAR full-text search for the acquiree's name, 8-K/10-Q/10-K, scripts/s1b_materiality_search.py)"
+    source: https://www.sec.gov/Archives/edgar/data/1792789/000179278926000013/dash-20251231.htm
+  - name: DASH
+    event: Acquisition of SevenRooms (restaurant reservation software) completed 2025-06-13
+    type: acquisition
+    effective: "2025-06-13"
+    targets: [y]
+    affected_yoy_quarters: [2025Q2, 2025Q3, 2025Q4, 2026Q1, 2026Q2]
+    rule: c..c+4
+    materiality: minor
+    materiality_basis: "neither (a) nor (b): no company-quantified effect on revenue, KPI or growth and no 'excluding' figure found (EDGAR full-text search for the acquiree's name, 8-K/10-Q/10-K, scripts/s1b_materiality_search.py); the FY2025 10-K gives one figure for SevenRooms and Deliveroo together (3% of 2025 revenue), which does not isolate SevenRooms"
+    source: https://www.sec.gov/Archives/edgar/data/1792789/000179278926000013/dash-20251231.htm
+  - name: DASH
+    event: "Acquisition of Deliveroo completed 2025-10-02 ($3,724m); Q3 2026 revenue +34% Y/Y reported vs +23% excluding Deliveroo"
+    type: acquisition
+    effective: "2025-10-02"
+    targets: [y, k]
+    affected_yoy_quarters: [2025Q4, 2026Q1, 2026Q2, 2026Q3]
+    rule: c..c+3
+    materiality: major
+    materiality_basis: "(b) company quantifies the effect"
+    materiality_quote: "Excluding Deliveroo, revenue increased 23% Y/Y in Q3 2026."
+    materiality_source: https://www.sec.gov/Archives/edgar/data/1792789/000179278926000062/proddashex991-pressrelease.htm
+    source: https://www.sec.gov/Archives/edgar/data/1792789/000179278926000013/dash-20251231.htm
+    other_sources:
+      - https://www.sec.gov/Archives/edgar/data/1792789/000179278926000062/proddashex991-pressrelease.htm
+
+  - name: TCOM
+    event: "SAMR anti-monopoly case (investigation notified 2026-01-14; decision 2026-07-25): contra-revenue imposed by SAMR reduced Q2 2026 accommodation revenue; RMB5.2bn penalty (expense, not revenue)"
+    type: one_off_revenue
+    effective: 2026Q2
+    targets: [y]
+    affected_yoy_quarters: [2026Q2, 2027Q2]
+    rule: q,q+4
+    materiality: major
+    materiality_basis: "(a) type one_off_revenue"
+    source: https://www.sec.gov/Archives/edgar/data/1269238/000119312526392473/d167816dex991.htm
+    other_sources:
+      - https://www.sec.gov/Archives/edgar/data/1269238/000119312526316761/d256213d6k.htm
+  - name: TCOM
+    event: "'Operational adjustments ... to align with evolving industry standards and compliance frameworks' cited by the company as lowering growth from Q2 2026 (Q1 2026 release outlook; Q2 2026 release)"
+    type: business_practice_change
+    effective: 2026Q2
+    targets: [y]
+    affected_yoy_quarters: [2026Q2, 2026Q3, 2026Q4, 2027Q1, 2027Q2]
+    rule: c..c+4
+    materiality: major
+    materiality_basis: "(a) type business_practice_change"
+    source: https://www.sec.gov/Archives/edgar/data/1269238/000119312526281805/d163607dex991.htm
+    other_sources:
+      - https://www.sec.gov/Archives/edgar/data/1269238/000119312526392473/d167816dex991.htm

@@ -1,0 +1,17 @@
+{
+  "bytes_uncompressed": 4454,
+  "headers": {
+    "User-Agent": "sector-nowcast-research/0.1 (non-commercial research tool; python-requests)"
+  },
+  "params": {
+    "action": "query",
+    "format": "json",
+    "formatversion": "2",
+    "prop": "info|pageprops|description",
+    "titles": "Booking Holdings|Booking.com|Expedia Group|Expedia|Airbnb|Uber|Lyft|DoorDash|Trip.com Group|Trip.com"
+  },
+  "pulled_at_utc": "2026-11-10T04:57:14+00:00",
+  "sha256_uncompressed": "c248f6284d5b79384fcaaf65b95dffc3f5dcd1dfab53b11e09bb2e8b1fe72df9",
+  "stored_as": "pageprops_candidates.json",
+  "url": "https://en.wikipedia.org/w/api.php?format=json&formatversion=2&action=query&titles=Booking+Holdings%7CBooking.com%7CExpedia+Group%7CExpedia%7CAirbnb%7CUber%7CLyft%7CDoorDash%7CTrip.com+Group%7CTrip.com&prop=info%7Cpageprops%7Cdescription"
+}

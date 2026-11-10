@@ -1,0 +1,18 @@
+{
+  "bytes_uncompressed": 6128,
+  "headers": {
+    "User-Agent": "Jiawei Hu <redacted: SEC contact email>"
+  },
+  "pulled_at_utc": "2026-11-10T05:32:51+00:00",
+  "query": {
+    "ciks": "0001075531",
+    "dateRange": "custom",
+    "enddt": "2023-03-31",
+    "forms": "8-K,10-Q,10-K",
+    "q": "\"Getaroom\"",
+    "startdt": "2021-11-01"
+  },
+  "sha256_uncompressed": "0a23520bf9be9573767a4a509885bc2bdee60a959f9546d825d3d90da627f8f8",
+  "stored_as": "efts_31e6376378.json",
+  "url": "https://efts.sec.gov/LATEST/search-index?q=%22Getaroom%22&ciks=0001075531&forms=8-K%2C10-Q%2C10-K&dateRange=custom&startdt=2021-11-01&enddt=2023-03-31"
+}

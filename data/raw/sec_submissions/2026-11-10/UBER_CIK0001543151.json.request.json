@@ -1,0 +1,12 @@
+{
+  "bytes_uncompressed": 163573,
+  "cik": 1543151,
+  "headers": {
+    "User-Agent": "Jiawei Hu <redacted: SEC contact email>"
+  },
+  "pulled_at_utc": "2026-11-10T04:43:32+00:00",
+  "sha256_uncompressed": "7bdff2bf2d466d623c1c914b86536e5a6dfb2e867033e3c3d880b64e016fb97e",
+  "stored_as": "UBER_CIK0001543151.json",
+  "ticker": "UBER",
+  "url": "https://data.sec.gov/submissions/CIK0001543151.json"
+}

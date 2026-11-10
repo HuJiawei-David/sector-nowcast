@@ -1,0 +1,64 @@
+# Alternative-data and fundamentals sources (hard rule 7: official/public endpoints only).
+# Adding a source = adding an entry here (hard rule 10). Frozen at the `prereg` tag.
+# publication_rule implements hard rule 2 (point-in-time).
+# Raw pulls go to data/raw/<raw_dir>/<pull_date>/ with request parameters (hard rule 8).
+
+sources:
+  tsa:
+    description: TSA checkpoint travel numbers, national daily throughput (persons screened)
+    url: https://www.tsa.gov/travel/passenger-volumes          # yearly archive pages: .../passenger-volumes/<YYYY>
+    frequency: daily
+    publication_rule: {type: daily_lag, lag_days: 1}           # observation date + 1 day
+    series: national daily throughput (single national series)
+    applies_to: [BKNG, EXPE, ABNB, UBER, LYFT, DASH]
+    identical_across_names: true                               # never pooled across names as independent
+    raw_dir: tsa
+    history_start: "2019-01-01"
+
+  wikipedia:
+    description: Wikimedia Pageviews REST API, English Wikipedia, per-article daily views
+    url_template: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/{title}/daily/{start}/{end}
+    frequency: daily
+    publication_rule: {type: daily_lag, lag_days: 1}           # observation date + 1 day
+    titles: config/companies.yaml (wikipedia_articles, all titles held since 2019-01-01)
+    combine: sum over all articles and titles of a name
+    earnings_window_robustness_days: 7                         # drop 7 days starting on each earnings release date, both years
+    applies_to: [BKNG, EXPE, ABNB, UBER, LYFT, DASH, TCOM]
+    user_agent: descriptive, no personal contact details, see src/nowcast/wikimedia.py
+    raw_dir: wikipedia_pageviews
+    history_start: "2019-01-01"
+
+  caac:
+    description: Civil Aviation Administration of China monthly statistics, civil aviation passenger traffic (旅客运输量), national total
+    url: http://www.caac.gov.cn/XXGK/XXGK/TJSJ/                  # statistics listing; monthly bulletin pages
+    frequency: monthly
+    publication_rule: {type: monthly_release, release_date: recorded_from_source_page, fallback_lag_days_after_month_end: 45}
+    applies_to: [TCOM]
+    raw_dir: caac
+    history_start: "2019-01"
+
+  hkia:
+    description: Hong Kong International Airport monthly passenger statistics (Airport Authority Hong Kong)
+    url: https://www.hongkongairport.com/en/the-airport/hkia-at-a-glance/fact-figures.page
+    frequency: monthly
+    publication_rule: {type: monthly_release, release_date: recorded_from_source_page, fallback_lag_days_after_month_end: 45}
+    applies_to: [TCOM]
+    role: pre-registered fallback for CAAC (trigger rule in docs/hypotheses.md)
+    raw_dir: hkia
+    history_start: "2019-01"
+
+  sec_edgar:
+    description: SEC EDGAR companyfacts (XBRL revenue), submissions, filing archives (8-K/6-K Ex-99.1 releases, 10-K/10-Q/20-F)
+    endpoints:
+      companyfacts: https://data.sec.gov/api/xbrl/companyfacts/CIK{cik:010d}.json
+      submissions: https://data.sec.gov/submissions/CIK{cik:010d}.json
+      archives: https://www.sec.gov/Archives/edgar/data/{cik}/{accession_nodash}/
+      full_text_search: https://efts.sec.gov/LATEST/search-index
+    user_agent: real name + email from env var SEC_USER_AGENT or the gitignored .env file (template .env.example), see src/nowcast/sec.py (SEC fair-access policy)
+    request_records: "*.request.json sidecars redact the contact email as '<redacted: SEC contact email>'; response bodies are saved unmodified"
+    publication_rule: {type: filed_date}                       # fact usable only if filed < asof
+    raw_dirs: [sec_companyfacts, sec_submissions, sec_filings, sec_efts]
+
+  google_trends:
+    description: optional exploratory session only; never part of the pre-registered results
+    status: exploratory_only

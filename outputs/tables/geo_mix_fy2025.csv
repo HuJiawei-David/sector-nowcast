@@ -1,0 +1,24 @@
+name,basis,segment,value,unit,total,share_pct,source
+BKNG,entity domicile (not traveller location),U.S.,2579,USD m,26917,9.6,https://www.sec.gov/Archives/edgar/data/1075531/000107553126000009/bkng-20251231.htm
+BKNG,entity domicile (not traveller location),Outside the U.S.,24338,USD m,26917,90.4,https://www.sec.gov/Archives/edgar/data/1075531/000107553126000009/bkng-20251231.htm
+BKNG,entity domicile (not traveller location),of which entity domiciled in the Netherlands,21700,USD m,26917,80.6,https://www.sec.gov/Archives/edgar/data/1075531/000107553126000009/bkng-20251231.htm
+EXPE,location of websites / points of sale,United States,8710,USD m,14733,59.1,https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm
+EXPE,location of websites / points of sale,All other countries,6023,USD m,14733,40.9,https://www.sec.gov/Archives/edgar/data/1324424/000132442426000008/expe-20251231.htm
+ABNB,location of host's listing,United States,4814,USD m,12241,39.3,https://www.sec.gov/Archives/edgar/data/1559720/000155972026000004/abnb-20251231.htm
+ABNB,location of host's listing,International,7427,USD m,12241,60.7,https://www.sec.gov/Archives/edgar/data/1559720/000155972026000004/abnb-20251231.htm
+UBER,region,US & Canada,26469,USD m,52017,50.9,https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm
+UBER,region,Latin America,3327,USD m,52017,6.4,https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm
+UBER,region,EMEA,16364,USD m,52017,31.5,https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm
+UBER,region,APAC,5857,USD m,52017,11.3,https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm
+UBER,country,United States,23771,USD m,52017,45.7,https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm
+UBER,country,United Kingdom,10609,USD m,52017,20.4,https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm
+LYFT,where transaction occurred / contracting entity,United States,6060220,USD k,6316261,95.9,https://www.sec.gov/Archives/edgar/data/1759509/000162828026006960/lyft-20251231.htm
+LYFT,where transaction occurred / contracting entity,International,256041,USD k,6316261,4.1,https://www.sec.gov/Archives/edgar/data/1759509/000162828026006960/lyft-20251231.htm
+DASH,merchant address (consumer address for memberships),United States,11460,USD m,13717,83.5,https://www.sec.gov/Archives/edgar/data/1792789/000179278926000013/dash-20251231.htm
+DASH,merchant address (consumer address for memberships),International,2257,USD m,13717,16.5,https://www.sec.gov/Archives/edgar/data/1792789/000179278926000013/dash-20251231.htm
+TCOM,product line,Accommodation reservation,26.1,RMB bn,62.5,41.8,https://www.sec.gov/Archives/edgar/data/1269238/000119312526183379/d27369d20f.htm
+TCOM,product line,Transportation ticketing,22.5,RMB bn,62.5,36.0,https://www.sec.gov/Archives/edgar/data/1269238/000119312526183379/d27369d20f.htm
+TCOM,product line,Packaged tours,4.7,RMB bn,62.5,7.5,https://www.sec.gov/Archives/edgar/data/1269238/000119312526183379/d27369d20f.htm
+TCOM,product line,Corporate travel,2.8,RMB bn,62.5,4.5,https://www.sec.gov/Archives/edgar/data/1269238/000119312526183379/d27369d20f.htm
+TCOM,implied by SAMR fine (7.5% of 2025 PRC sales revenue),PRC (implied),46947,RMB m,62500,75.1,https://www.sec.gov/Archives/edgar/data/1269238/000119312526316761/d256213d6k.htm
+TCOM,product line,Accommodation + transportation ticketing,48.6,RMB bn,62.5,77.8,https://www.sec.gov/Archives/edgar/data/1269238/000119312526183379/d27369d20f.htm

@@ -1,0 +1,161 @@
+# Company universe. Adding a company = adding an entry here (hard rule 10).
+# All quarters are calendar quarters ("YYYYQn"). Windows are inclusive.
+# Frozen at the `prereg` tag together with docs/hypotheses.md.
+
+defaults:
+  fiscal_year_end: "12-31"            # all seven names report on calendar quarters
+  wikipedia:
+    project: en.wikipedia             # English Wikipedia only
+    access: all-access
+    agent: user                       # exclude spiders/automated agents
+    titles_checked_since: "2019-01-01"
+    move_check: "data/raw/wikipedia_meta/2026-11-10/ (revision-history move edits + move log)"
+    combine: sum                      # one series per name = daily sum over all listed articles and all their titles
+
+companies:
+  BKNG:
+    name: Booking Holdings Inc.
+    cik: 1075531
+    region: US
+    revenue:
+      source: xbrl                    # SEC companyfacts, us-gaap
+      xbrl_tags: [Revenues]           # first tag with a fact for the period wins
+      currency: USD
+    kpi:
+      name: Room nights
+      unit: millions
+      source: earnings press release (8-K Item 2.02, Ex-99.1)
+    wikipedia_articles:
+      - current_title: Booking Holdings
+        titles_since_2019: [Booking Holdings]
+      - current_title: Booking.com
+        titles_since_2019: [Booking.com]
+    volume_source: tsa
+    exclusion_window: [2020Q1, 2021Q4]
+    headline_window: [2023Q2, 2026Q3]
+    robustness_window: [2024Q1, 2026Q3]
+
+  EXPE:
+    name: Expedia Group, Inc.
+    cik: 1324424
+    region: US
+    revenue:
+      source: xbrl
+      xbrl_tags: [RevenueFromContractWithCustomerExcludingAssessedTax]
+      currency: USD
+    kpi:
+      name: Booked Room Nights
+      unit: millions
+      source: earnings press release (8-K Item 2.02, Ex-99.1)
+    wikipedia_articles:
+      - current_title: Expedia Group
+        titles_since_2019: [Expedia Group]
+      - current_title: Expedia
+        titles_since_2019: [Expedia]
+    volume_source: tsa
+    exclusion_window: [2020Q1, 2021Q4]
+    headline_window: [2023Q2, 2026Q3]
+    robustness_window: [2024Q1, 2026Q3]
+
+  ABNB:
+    name: Airbnb, Inc.
+    cik: 1559720
+    region: US
+    revenue:
+      source: xbrl
+      xbrl_tags: [RevenueFromContractWithCustomerExcludingAssessedTax]
+      currency: USD
+    kpi:
+      name: Nights and Seats Booked
+      former_name: Nights and Experiences Booked   # renamed/redefined from 2025Q2 (see config/breaks.yaml)
+      unit: millions
+      source: earnings press release (8-K Item 2.02, Ex-99.1)
+    wikipedia_articles:
+      - current_title: Airbnb
+        titles_since_2019: [Airbnb]
+    volume_source: tsa
+    exclusion_window: [2020Q1, 2021Q4]
+    headline_window: [2023Q2, 2026Q3]
+    robustness_window: [2024Q1, 2026Q3]
+
+  UBER:
+    name: Uber Technologies, Inc.
+    cik: 1543151
+    region: US
+    revenue:
+      source: xbrl
+      xbrl_tags: [Revenues]
+      currency: USD
+    kpi:
+      name: Trips
+      unit: millions
+      source: earnings press release (8-K Item 2.02, Ex-99.1)
+    wikipedia_articles:
+      - current_title: Uber
+        titles_since_2019: [Uber]
+    volume_source: tsa
+    exclusion_window: [2020Q1, 2021Q4]
+    headline_window: [2023Q2, 2026Q3]
+    robustness_window: [2024Q1, 2026Q3]
+
+  LYFT:
+    name: Lyft, Inc.
+    cik: 1759509
+    region: US
+    revenue:
+      source: xbrl
+      xbrl_tags: [Revenues, RevenueFromContractWithCustomerExcludingAssessedTax]
+      currency: USD
+    kpi:
+      name: Rides
+      unit: millions
+      source: earnings press release (8-K Item 2.02, Ex-99.1)
+    wikipedia_articles:
+      - current_title: Lyft
+        titles_since_2019: [Lyft]
+    volume_source: tsa
+    exclusion_window: [2020Q1, 2021Q4]
+    headline_window: [2023Q2, 2026Q3]
+    robustness_window: [2024Q1, 2026Q3]
+
+  DASH:
+    name: DoorDash, Inc.
+    cik: 1792789
+    region: US
+    revenue:
+      source: xbrl
+      xbrl_tags: [RevenueFromContractWithCustomerExcludingAssessedTax]
+      currency: USD
+    kpi:
+      name: Total Orders
+      unit: millions
+      source: earnings press release (8-K Item 2.02, Ex-99.1)
+    wikipedia_articles:
+      - current_title: DoorDash
+        titles_since_2019: [DoorDash]
+    volume_source: tsa
+    exclusion_window: [2020Q1, 2021Q4]
+    headline_window: [2023Q2, 2026Q3]
+    robustness_window: [2024Q1, 2026Q3]
+
+  TCOM:
+    name: Trip.com Group Limited
+    cik: 1269238
+    region: Asia
+    revenue:
+      source: press_release           # quarterly revenue from 6-K Ex-99.1 results releases
+      metric: Total net revenues
+      currency: RMB
+      pit_date: 6-K filing date
+      annual_check_xbrl_tags: [Revenues, RevenueFromContractWithCustomerIncludingAssessedTax]  # 20-F annual, for Q1+Q2+Q3+Q4 == FY
+    kpi: null                         # TCOM discloses no volume KPI: revenue only
+    wikipedia_articles:
+      - current_title: Trip.com Group
+        titles_since_2019: [Ctrip, Trip.com Group]   # moved Ctrip -> Trip.com Group on 2019-11-07
+      - current_title: Trip.com
+        titles_since_2019: [Trip.com]
+    volume_source: caac
+    volume_source_fallback: hkia
+    exclusion_window: [2020Q1, 2022Q4]
+    headline_window: [2024Q2, 2026Q2]   # fixed at prereg (hypotheses.md 3.5); 2026Q3 is scored only as live call (b)
+    robustness_window: null             # none: the headline already starts after a full reopening year (hypotheses.md 3.7)

@@ -1,0 +1,21 @@
+{
+  "bytes_uncompressed": 74,
+  "headers": {
+    "User-Agent": "sector-nowcast-research/0.1 (non-commercial research tool; python-requests)"
+  },
+  "params": {
+    "action": "query",
+    "format": "json",
+    "formatversion": "2",
+    "ledir": "newer",
+    "lelimit": "max",
+    "lestart": "2019-01-01T00:00:00Z",
+    "letitle": "Trip.com Group",
+    "letype": "move",
+    "list": "logevents"
+  },
+  "pulled_at_utc": "2026-11-10T04:57:03+00:00",
+  "sha256_uncompressed": "23a4c857ad3258272d90f009196350d6c126875c433c85be61a83491a59e243e",
+  "stored_as": "movelog_Trip_com_Group.json",
+  "url": "https://en.wikipedia.org/w/api.php?format=json&formatversion=2&action=query&list=logevents&letype=move&letitle=Trip.com+Group&lestart=2019-01-01T00%3A00%3A00Z&ledir=newer&lelimit=max"
+}

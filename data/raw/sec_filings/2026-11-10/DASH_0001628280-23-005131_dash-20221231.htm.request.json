@@ -1,0 +1,11 @@
+{
+  "bytes_uncompressed": 3158115,
+  "headers": {
+    "User-Agent": "Jiawei Hu <redacted: SEC contact email>"
+  },
+  "pulled_at_utc": "2026-11-10T05:33:42+00:00",
+  "purpose": "S1b materiality evidence: Wolt",
+  "sha256_uncompressed": "8653dbaada7f2882d3a420a3e1381e8306815430de3fa1b59ef9d762ba934bd4",
+  "stored_as": "DASH_0001628280-23-005131_dash-20221231.htm.gz",
+  "url": "https://www.sec.gov/Archives/edgar/data/1792789/000162828023005131/dash-20221231.htm"
+}

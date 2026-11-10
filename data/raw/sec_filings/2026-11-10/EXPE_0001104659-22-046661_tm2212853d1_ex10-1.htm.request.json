@@ -1,0 +1,11 @@
+{
+  "bytes_uncompressed": 1301713,
+  "headers": {
+    "User-Agent": "Jiawei Hu <redacted: SEC contact email>"
+  },
+  "pulled_at_utc": "2026-11-10T05:33:10+00:00",
+  "purpose": "S1b materiality evidence: Egencia",
+  "sha256_uncompressed": "d3f4c56367e0b18f303bf873a429c9123a5e378d359ee03b5aafcbb4f2dcc939",
+  "stored_as": "EXPE_0001104659-22-046661_tm2212853d1_ex10-1.htm.gz",
+  "url": "https://www.sec.gov/Archives/edgar/data/1324424/000110465922046661/tm2212853d1_ex10-1.htm"
+}

@@ -1,0 +1,18 @@
+{
+  "bytes_uncompressed": 2348,
+  "headers": {
+    "User-Agent": "Jiawei Hu <redacted: SEC contact email>"
+  },
+  "pulled_at_utc": "2026-11-10T05:33:30+00:00",
+  "query": {
+    "ciks": "0001543151",
+    "dateRange": "custom",
+    "enddt": "2026-11-10",
+    "forms": "8-K,10-Q,10-K",
+    "q": "\"Careem\"",
+    "startdt": "2026-07-01"
+  },
+  "sha256_uncompressed": "098cc0f8883db299fc2288b66cd5e0342a4efec4aad13fde6389531b3aeb02fc",
+  "stored_as": "efts_6bb3eba28c.json",
+  "url": "https://efts.sec.gov/LATEST/search-index?q=%22Careem%22&ciks=0001543151&forms=8-K%2C10-Q%2C10-K&dateRange=custom&startdt=2026-07-01&enddt=2026-11-10"
+}

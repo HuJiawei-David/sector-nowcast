@@ -1,0 +1,18 @@
+{
+  "bytes_uncompressed": 3457,
+  "headers": {
+    "User-Agent": "Jiawei Hu <redacted: SEC contact email>"
+  },
+  "pulled_at_utc": "2026-11-10T04:48:29+00:00",
+  "query": {
+    "ciks": "0001543151",
+    "dateRange": "custom",
+    "enddt": "2026-11-10",
+    "forms": "10-K,10-Q",
+    "q": "\"business model changes\"",
+    "startdt": "2025-01-01"
+  },
+  "sha256_uncompressed": "edf0c1ef7dcc59c500f183b7e0c9d9cd7992657d3f16744e966196dc90693f42",
+  "stored_as": "efts_3e5d4b787f.json",
+  "url": "https://efts.sec.gov/LATEST/search-index?q=%22business+model+changes%22&ciks=0001543151&forms=10-K%2C10-Q&dateRange=custom&startdt=2025-01-01&enddt=2026-11-10"
+}

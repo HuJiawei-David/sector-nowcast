@@ -1,0 +1,18 @@
+{
+  "bytes_uncompressed": 5601,
+  "headers": {
+    "User-Agent": "Jiawei Hu <redacted: SEC contact email>"
+  },
+  "pulled_at_utc": "2026-11-10T04:47:03+00:00",
+  "query": {
+    "ciks": "0001792789",
+    "dateRange": "custom",
+    "enddt": "2023-12-31",
+    "forms": "10-K,10-Q,8-K",
+    "q": "\"Wolt\" \"May 31, 2022\"",
+    "startdt": "2022-01-01"
+  },
+  "sha256_uncompressed": "a8eb06496d33a7b203dac77efed110cec27c22e46cc346db5932301796e7886f",
+  "stored_as": "efts_c2dcbdc8c9.json",
+  "url": "https://efts.sec.gov/LATEST/search-index?q=%22Wolt%22+%22May+31%2C+2022%22&ciks=0001792789&forms=10-K%2C10-Q%2C8-K&dateRange=custom&startdt=2022-01-01&enddt=2023-12-31"
+}

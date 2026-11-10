@@ -1,0 +1,18 @@
+{
+  "bytes_uncompressed": 255,
+  "headers": {
+    "User-Agent": "sector-nowcast-research/0.1 (non-commercial research tool; python-requests)"
+  },
+  "params": {
+    "action": "query",
+    "format": "json",
+    "formatversion": "2",
+    "prop": "info",
+    "redirects": 1,
+    "titles": "Airbnb"
+  },
+  "pulled_at_utc": "2026-11-10T04:54:07+00:00",
+  "sha256_uncompressed": "8fe52f9abf7bb1b7efa0ddf75ebbc68c97cacc0be954c170ab89482ba7fb54ba",
+  "stored_as": "info_Airbnb.json",
+  "url": "https://en.wikipedia.org/w/api.php?format=json&formatversion=2&action=query&titles=Airbnb&redirects=1&prop=info"
+}

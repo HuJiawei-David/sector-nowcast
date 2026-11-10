@@ -1,0 +1,18 @@
+{
+  "bytes_uncompressed": 3445,
+  "headers": {
+    "User-Agent": "Jiawei Hu <redacted: SEC contact email>"
+  },
+  "pulled_at_utc": "2026-11-10T04:51:43+00:00",
+  "query": {
+    "ciks": "0001759509",
+    "dateRange": "custom",
+    "enddt": "2026-11-10",
+    "forms": "10-Q,10-K",
+    "q": "\"reduction to revenue\" \"regulatory reserve\"",
+    "startdt": "2023-01-01"
+  },
+  "sha256_uncompressed": "5c18f7a6fc34e3d20f27e3264844326c2ee42989e86acafb71fe6f7b955423bd",
+  "stored_as": "efts_5c9a19a9b8.json",
+  "url": "https://efts.sec.gov/LATEST/search-index?q=%22reduction+to+revenue%22+%22regulatory+reserve%22&ciks=0001759509&forms=10-Q%2C10-K&dateRange=custom&startdt=2023-01-01&enddt=2026-11-10"
+}

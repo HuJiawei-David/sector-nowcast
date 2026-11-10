@@ -1,0 +1,18 @@
+{
+  "bytes_uncompressed": 7231,
+  "headers": {
+    "User-Agent": "Jiawei Hu <redacted: SEC contact email>"
+  },
+  "pulled_at_utc": "2026-11-10T04:47:02+00:00",
+  "query": {
+    "ciks": "0001543151",
+    "dateRange": "custom",
+    "enddt": "2024-12-31",
+    "forms": "10-K,10-Q",
+    "q": "\"business model changes\" \"United Kingdom\"",
+    "startdt": "2022-01-01"
+  },
+  "sha256_uncompressed": "9ed80cf78c2fc93baa80557ea2c95b2d2dfdceb64275178b10f8eede6de2d3da",
+  "stored_as": "efts_f84cea5ed2.json",
+  "url": "https://efts.sec.gov/LATEST/search-index?q=%22business+model+changes%22+%22United+Kingdom%22&ciks=0001543151&forms=10-K%2C10-Q&dateRange=custom&startdt=2022-01-01&enddt=2024-12-31"
+}

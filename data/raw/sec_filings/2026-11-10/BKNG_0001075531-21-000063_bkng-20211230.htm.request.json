@@ -1,0 +1,11 @@
+{
+  "bytes_uncompressed": 56907,
+  "headers": {
+    "User-Agent": "Jiawei Hu <redacted: SEC contact email>"
+  },
+  "pulled_at_utc": "2026-11-10T05:32:54+00:00",
+  "purpose": "S1b materiality evidence: Getaroom",
+  "sha256_uncompressed": "3347ba4f7c355b1b092bfca435f4e0436d94444a5e27b96e4d5a7ef528a8284e",
+  "stored_as": "BKNG_0001075531-21-000063_bkng-20211230.htm",
+  "url": "https://www.sec.gov/Archives/edgar/data/1075531/000107553121000063/bkng-20211230.htm"
+}

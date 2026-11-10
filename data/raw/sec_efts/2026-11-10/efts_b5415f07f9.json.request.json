@@ -1,0 +1,18 @@
+{
+  "bytes_uncompressed": 2351,
+  "headers": {
+    "User-Agent": "Jiawei Hu <redacted: SEC contact email>"
+  },
+  "pulled_at_utc": "2026-11-10T04:48:28+00:00",
+  "query": {
+    "ciks": "0001543151",
+    "dateRange": "custom",
+    "enddt": "2026-11-10",
+    "forms": "10-Q",
+    "q": "\"business combination\"",
+    "startdt": "2026-01-01"
+  },
+  "sha256_uncompressed": "e9e6e21cac761be9ffd6e521d70984ec55587f0ef76d14ca4fc87e5d2a1f456b",
+  "stored_as": "efts_b5415f07f9.json",
+  "url": "https://efts.sec.gov/LATEST/search-index?q=%22business+combination%22&ciks=0001543151&forms=10-Q&dateRange=custom&startdt=2026-01-01&enddt=2026-11-10"
+}

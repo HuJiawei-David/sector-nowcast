@@ -1,0 +1,11 @@
+{
+  "bytes_uncompressed": 520391,
+  "headers": {
+    "User-Agent": "Jiawei Hu <redacted: SEC contact email>"
+  },
+  "pulled_at_utc": "2026-11-10T05:33:12+00:00",
+  "purpose": "S1b materiality evidence: Transplace",
+  "sha256_uncompressed": "0f9f0e614196eaba6821993b5058bfb93d45efce2207035785acd72e78267ba4",
+  "stored_as": "UBER_0001543151-22-000004_uberq421earningspressrelea.htm",
+  "url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315122000004/uberq421earningspressrelea.htm"
+}

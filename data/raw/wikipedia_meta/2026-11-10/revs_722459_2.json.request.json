@@ -1,0 +1,23 @@
+{
+  "bytes_uncompressed": 57591,
+  "headers": {
+    "User-Agent": "sector-nowcast-research/0.1 (non-commercial research tool; python-requests)"
+  },
+  "params": {
+    "action": "query",
+    "continue": "||",
+    "format": "json",
+    "formatversion": "2",
+    "pageids": 722459,
+    "prop": "revisions",
+    "rvcontinue": "20211013155612|1049742675",
+    "rvdir": "newer",
+    "rvlimit": "max",
+    "rvprop": "timestamp|comment",
+    "rvstart": "2019-01-01T00:00:00Z"
+  },
+  "pulled_at_utc": "2026-11-10T04:55:04+00:00",
+  "sha256_uncompressed": "1d69724fbce4f6f57c0beba002968576ef5acf767e19bc76fdca4cee96f2bedc",
+  "stored_as": "revs_722459_2.json",
+  "url": "https://en.wikipedia.org/w/api.php?format=json&formatversion=2&action=query&pageids=722459&prop=revisions&rvprop=timestamp%7Ccomment&rvlimit=max&rvdir=newer&rvstart=2019-01-01T00%3A00%3A00Z&rvcontinue=20211013155612%7C1049742675&continue=%7C%7C"
+}

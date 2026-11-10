@@ -1,0 +1,18 @@
+{
+  "bytes_uncompressed": 2882,
+  "headers": {
+    "User-Agent": "Jiawei Hu <redacted: SEC contact email>"
+  },
+  "pulled_at_utc": "2026-11-10T05:33:29+00:00",
+  "query": {
+    "ciks": "0001543151",
+    "dateRange": "custom",
+    "enddt": "2026-11-10",
+    "forms": "8-K,10-Q,10-K",
+    "q": "\"Getir\"",
+    "startdt": "2026-04-01"
+  },
+  "sha256_uncompressed": "5be4db6bc4926860030d27d4dc7611a8e86fd85bb78e75b3dfb1f38979fa183f",
+  "stored_as": "efts_90e592619f.json",
+  "url": "https://efts.sec.gov/LATEST/search-index?q=%22Getir%22&ciks=0001543151&forms=8-K%2C10-Q%2C10-K&dateRange=custom&startdt=2026-04-01&enddt=2026-11-10"
+}

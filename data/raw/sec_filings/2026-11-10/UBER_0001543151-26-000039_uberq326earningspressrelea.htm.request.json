@@ -1,0 +1,13 @@
+{
+  "accession": "0001543151-26-000039",
+  "bytes_uncompressed": 452120,
+  "document": "uberq326earningspressrelea.htm",
+  "headers": {
+    "User-Agent": "Jiawei Hu <redacted: SEC contact email>"
+  },
+  "pulled_at_utc": "2026-11-10T04:44:01+00:00",
+  "sha256_uncompressed": "b53b122348ecd24f5c0e0cdb5452efb36e70c95ce235932a8a77873c7f2b5e89",
+  "stored_as": "UBER_0001543151-26-000039_uberq326earningspressrelea.htm",
+  "ticker": "UBER",
+  "url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000039/uberq326earningspressrelea.htm"
+}

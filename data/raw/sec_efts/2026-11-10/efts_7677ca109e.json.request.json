@@ -1,0 +1,18 @@
+{
+  "bytes_uncompressed": 2888,
+  "headers": {
+    "User-Agent": "Jiawei Hu <redacted: SEC contact email>"
+  },
+  "pulled_at_utc": "2026-11-10T05:33:28+00:00",
+  "query": {
+    "ciks": "0001543151",
+    "dateRange": "custom",
+    "enddt": "2026-11-10",
+    "forms": "8-K,10-Q,10-K",
+    "q": "\"SpotHero\"",
+    "startdt": "2026-04-01"
+  },
+  "sha256_uncompressed": "d306cea003197453d5be450403159d526098a9ccb29c7cf265aa930663a10401",
+  "stored_as": "efts_7677ca109e.json",
+  "url": "https://efts.sec.gov/LATEST/search-index?q=%22SpotHero%22&ciks=0001543151&forms=8-K%2C10-Q%2C10-K&dateRange=custom&startdt=2026-04-01&enddt=2026-11-10"
+}

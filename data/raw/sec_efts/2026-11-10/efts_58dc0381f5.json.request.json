@@ -1,0 +1,18 @@
+{
+  "bytes_uncompressed": 5595,
+  "headers": {
+    "User-Agent": "Jiawei Hu <redacted: SEC contact email>"
+  },
+  "pulled_at_utc": "2026-11-10T05:33:31+00:00",
+  "query": {
+    "ciks": "0001759509",
+    "dateRange": "custom",
+    "enddt": "2026-11-10",
+    "forms": "8-K,10-Q,10-K",
+    "q": "\"Freenow\"",
+    "startdt": "2025-07-01"
+  },
+  "sha256_uncompressed": "1d1c782fc301dac4d53c3c6067c6be8bf5616ff6ced11992f4bc59c881504f88",
+  "stored_as": "efts_58dc0381f5.json",
+  "url": "https://efts.sec.gov/LATEST/search-index?q=%22Freenow%22&ciks=0001759509&forms=8-K%2C10-Q%2C10-K&dateRange=custom&startdt=2025-07-01&enddt=2026-11-10"
+}

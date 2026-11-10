@@ -1,0 +1,18 @@
+{
+  "bytes_uncompressed": 4504,
+  "headers": {
+    "User-Agent": "Jiawei Hu <redacted: SEC contact email>"
+  },
+  "pulled_at_utc": "2026-11-10T05:33:35+00:00",
+  "query": {
+    "ciks": "0001759509",
+    "dateRange": "custom",
+    "enddt": "2026-11-10",
+    "forms": "8-K,10-Q,10-K",
+    "q": "\"TBR\"",
+    "startdt": "2025-10-01"
+  },
+  "sha256_uncompressed": "e31a9b2de755160410029012434e5e4bd9f88ebe39ef55fedaf5781f6bae7ad2",
+  "stored_as": "efts_42b250add9.json",
+  "url": "https://efts.sec.gov/LATEST/search-index?q=%22TBR%22&ciks=0001759509&forms=8-K%2C10-Q%2C10-K&dateRange=custom&startdt=2025-10-01&enddt=2026-11-10"
+}

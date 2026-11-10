@@ -1,0 +1,18 @@
+{
+  "bytes_uncompressed": 10724,
+  "headers": {
+    "User-Agent": "Jiawei Hu <redacted: SEC contact email>"
+  },
+  "pulled_at_utc": "2026-11-10T05:34:00+00:00",
+  "query": {
+    "ciks": "0001792789",
+    "dateRange": "custom",
+    "enddt": "2026-11-10",
+    "forms": "8-K,10-Q,10-K",
+    "q": "\"Deliveroo\"",
+    "startdt": "2025-10-01"
+  },
+  "sha256_uncompressed": "fffdeb83947f14e07595b65da90e0d5e68a3087b9bf45fe5551076db987076af",
+  "stored_as": "efts_98ba712e37.json",
+  "url": "https://efts.sec.gov/LATEST/search-index?q=%22Deliveroo%22&ciks=0001792789&forms=8-K%2C10-Q%2C10-K&dateRange=custom&startdt=2025-10-01&enddt=2026-11-10"
+}

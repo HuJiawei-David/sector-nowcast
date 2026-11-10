@@ -1,0 +1,18 @@
+{
+  "bytes_uncompressed": 2377,
+  "headers": {
+    "User-Agent": "Jiawei Hu <redacted: SEC contact email>"
+  },
+  "pulled_at_utc": "2026-11-10T04:47:04+00:00",
+  "query": {
+    "ciks": "0001759509",
+    "dateRange": "custom",
+    "enddt": "2026-11-10",
+    "forms": "8-K",
+    "q": "\"reduction to revenue\"",
+    "startdt": "2022-01-01"
+  },
+  "sha256_uncompressed": "e416c5e37cfecf1733c8d2586549ca08be77baba01ecd3a35cbf1a05a3b74b11",
+  "stored_as": "efts_173508d8e2.json",
+  "url": "https://efts.sec.gov/LATEST/search-index?q=%22reduction+to+revenue%22&ciks=0001759509&forms=8-K&dateRange=custom&startdt=2022-01-01&enddt=2026-11-10"
+}

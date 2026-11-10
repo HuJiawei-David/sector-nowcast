@@ -1,0 +1,18 @@
+{
+  "bytes_uncompressed": 265,
+  "headers": {
+    "User-Agent": "sector-nowcast-research/0.1 (non-commercial research tool; python-requests)"
+  },
+  "params": {
+    "action": "query",
+    "format": "json",
+    "formatversion": "2",
+    "prop": "info",
+    "redirects": 1,
+    "titles": "Booking Holdings"
+  },
+  "pulled_at_utc": "2026-11-10T04:53:35+00:00",
+  "sha256_uncompressed": "3279ea738715157bd200e22cf60b6a6fa8ad558ef01d1c3d91b6a77f67a136a1",
+  "stored_as": "info_Booking_Holdings.json",
+  "url": "https://en.wikipedia.org/w/api.php?format=json&formatversion=2&action=query&titles=Booking+Holdings&redirects=1&prop=info"
+}

@@ -1,0 +1,11 @@
+{
+  "bytes_uncompressed": 31335,
+  "headers": {
+    "User-Agent": "Jiawei Hu <redacted: SEC contact email>"
+  },
+  "pulled_at_utc": "2026-11-10T05:33:57+00:00",
+  "purpose": "S1b materiality evidence: SevenRooms",
+  "sha256_uncompressed": "2d35995aa6bc3c55604449078ffae79e350f295c925bc552b138a29ffd03b9ca",
+  "stored_as": "DASH_0001140361-26-041111_ef20084547_ex99-1.htm",
+  "url": "https://www.sec.gov/Archives/edgar/data/1792789/000114036126041111/ef20084547_ex99-1.htm"
+}

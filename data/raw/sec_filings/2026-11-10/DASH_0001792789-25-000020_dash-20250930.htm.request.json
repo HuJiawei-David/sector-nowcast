@@ -1,0 +1,11 @@
+{
+  "bytes_uncompressed": 2187737,
+  "headers": {
+    "User-Agent": "Jiawei Hu <redacted: SEC contact email>"
+  },
+  "pulled_at_utc": "2026-11-10T05:33:51+00:00",
+  "purpose": "S1b materiality evidence: Symbiosys",
+  "sha256_uncompressed": "c6393b1dc9a84854908177d2d6af76126ad0ccb7f88097ad13d1cc5d4205f8a5",
+  "stored_as": "DASH_0001792789-25-000020_dash-20250930.htm.gz",
+  "url": "https://www.sec.gov/Archives/edgar/data/1792789/000179278925000020/dash-20250930.htm"
+}

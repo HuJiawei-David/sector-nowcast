@@ -1,0 +1,18 @@
+{
+  "bytes_uncompressed": 253,
+  "headers": {
+    "User-Agent": "sector-nowcast-research/0.1 (non-commercial research tool; python-requests)"
+  },
+  "params": {
+    "action": "query",
+    "format": "json",
+    "formatversion": "2",
+    "prop": "info",
+    "redirects": 1,
+    "titles": "Lyft"
+  },
+  "pulled_at_utc": "2026-11-10T04:55:10+00:00",
+  "sha256_uncompressed": "11f04c29ff7c18abcfbee47a21fea27a9c09551c2faad830e66c2f87428201ea",
+  "stored_as": "info_Lyft.json",
+  "url": "https://en.wikipedia.org/w/api.php?format=json&formatversion=2&action=query&titles=Lyft&redirects=1&prop=info"
+}

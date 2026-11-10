@@ -1,0 +1,18 @@
+{
+  "bytes_uncompressed": 257,
+  "headers": {
+    "User-Agent": "sector-nowcast-research/0.1 (non-commercial research tool; python-requests)"
+  },
+  "params": {
+    "action": "query",
+    "format": "json",
+    "formatversion": "2",
+    "prop": "info",
+    "redirects": 1,
+    "titles": "DoorDash"
+  },
+  "pulled_at_utc": "2026-11-10T04:55:17+00:00",
+  "sha256_uncompressed": "d1c020d195e64b1862b1bf5044ac20c132e6822135efa91cf8860941f3a9ac16",
+  "stored_as": "info_DoorDash.json",
+  "url": "https://en.wikipedia.org/w/api.php?format=json&formatversion=2&action=query&titles=DoorDash&redirects=1&prop=info"
+}

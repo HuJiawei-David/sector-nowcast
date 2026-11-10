@@ -1,0 +1,18 @@
+{
+  "bytes_uncompressed": 252,
+  "headers": {
+    "User-Agent": "sector-nowcast-research/0.1 (non-commercial research tool; python-requests)"
+  },
+  "params": {
+    "action": "query",
+    "format": "json",
+    "formatversion": "2",
+    "prop": "info",
+    "redirects": 1,
+    "titles": "Uber"
+  },
+  "pulled_at_utc": "2026-11-10T04:54:18+00:00",
+  "sha256_uncompressed": "30a0e56c4147a6b3584e870e0c4b2df8c48b668e249b49c4d083427567a373c5",
+  "stored_as": "info_Uber.json",
+  "url": "https://en.wikipedia.org/w/api.php?format=json&formatversion=2&action=query&titles=Uber&redirects=1&prop=info"
+}

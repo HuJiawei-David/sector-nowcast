@@ -1,0 +1,12 @@
+{
+  "bytes_uncompressed": 101668,
+  "cik": 1269238,
+  "headers": {
+    "User-Agent": "Jiawei Hu <redacted: SEC contact email>"
+  },
+  "pulled_at_utc": "2026-11-10T04:43:33+00:00",
+  "sha256_uncompressed": "0f8ef95e8d9b71136e0b36cf2e4ea144c5ecf12bb526c935366547809cc8f6a1",
+  "stored_as": "TCOM_CIK0001269238.json",
+  "ticker": "TCOM",
+  "url": "https://data.sec.gov/submissions/CIK0001269238.json"
+}

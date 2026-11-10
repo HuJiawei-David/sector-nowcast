@@ -1,0 +1,11 @@
+{
+  "bytes_uncompressed": 974066,
+  "headers": {
+    "User-Agent": "Jiawei Hu <redacted: SEC contact email>"
+  },
+  "pulled_at_utc": "2026-11-10T05:33:01+00:00",
+  "purpose": "S1b materiality evidence: Egencia",
+  "sha256_uncompressed": "49e590e3e6fd3e291864b81ebd59a8ce798dc1d424d90df128e4e75d2dbfe6ca",
+  "stored_as": "EXPE_0001324424-22-000006_earningsrelease-q42021.htm",
+  "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442422000006/earningsrelease-q42021.htm"
+}

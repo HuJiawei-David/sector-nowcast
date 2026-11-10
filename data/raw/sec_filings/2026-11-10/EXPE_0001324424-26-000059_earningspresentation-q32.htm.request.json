@@ -1,0 +1,13 @@
+{
+  "accession": "0001324424-26-000059",
+  "bytes_uncompressed": 33246,
+  "document": "earningspresentation-q32.htm",
+  "headers": {
+    "User-Agent": "Jiawei Hu <redacted: SEC contact email>"
+  },
+  "pulled_at_utc": "2026-11-10T04:49:03+00:00",
+  "sha256_uncompressed": "c3d10e3460b70d3b5bbd89e73d3c14a138c500305caefe31e8e3938722752773",
+  "stored_as": "EXPE_0001324424-26-000059_earningspresentation-q32.htm",
+  "ticker": "EXPE",
+  "url": "https://www.sec.gov/Archives/edgar/data/1324424/000132442426000059/earningspresentation-q32.htm"
+}

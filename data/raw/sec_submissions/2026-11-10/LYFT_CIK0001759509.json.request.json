@@ -1,0 +1,12 @@
+{
+  "bytes_uncompressed": 138061,
+  "cik": 1759509,
+  "headers": {
+    "User-Agent": "Jiawei Hu <redacted: SEC contact email>"
+  },
+  "pulled_at_utc": "2026-11-10T04:43:32+00:00",
+  "sha256_uncompressed": "b1a0855f6bc4034325058de61f65e4e291e2af86602cf9dde25f3b9c7013224a",
+  "stored_as": "LYFT_CIK0001759509.json",
+  "ticker": "LYFT",
+  "url": "https://data.sec.gov/submissions/CIK0001759509.json"
+}

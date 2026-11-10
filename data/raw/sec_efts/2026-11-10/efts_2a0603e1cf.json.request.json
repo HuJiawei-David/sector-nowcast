@@ -1,0 +1,18 @@
+{
+  "bytes_uncompressed": 7789,
+  "headers": {
+    "User-Agent": "Jiawei Hu <redacted: SEC contact email>"
+  },
+  "pulled_at_utc": "2026-11-10T04:49:42+00:00",
+  "query": {
+    "ciks": "0001559720",
+    "dateRange": "custom",
+    "enddt": "2026-11-10",
+    "forms": "8-K,10-Q,10-K",
+    "q": "\"Nights and Seats Booked\"",
+    "startdt": "2024-01-01"
+  },
+  "sha256_uncompressed": "e6227b62c92feeeb65c767ebfc9e847bd30d6adee2ab7c16cbbbd391c3d93c36",
+  "stored_as": "efts_2a0603e1cf.json",
+  "url": "https://efts.sec.gov/LATEST/search-index?q=%22Nights+and+Seats+Booked%22&ciks=0001559720&forms=8-K%2C10-Q%2C10-K&dateRange=custom&startdt=2024-01-01&enddt=2026-11-10"
+}

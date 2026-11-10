@@ -1,0 +1,18 @@
+{
+  "bytes_uncompressed": 7313,
+  "headers": {
+    "User-Agent": "Jiawei Hu <redacted: SEC contact email>"
+  },
+  "pulled_at_utc": "2026-11-10T05:33:21+00:00",
+  "query": {
+    "ciks": "0001543151",
+    "dateRange": "custom",
+    "enddt": "2026-11-10",
+    "forms": "8-K,10-Q,10-K",
+    "q": "\"Trendyol\"",
+    "startdt": "2025-05-01"
+  },
+  "sha256_uncompressed": "c03035d307fe20ec8994b0802b84c0d96b7b4d45522d315bfcfb33c0fa0ce2b7",
+  "stored_as": "efts_cb2921e891.json",
+  "url": "https://efts.sec.gov/LATEST/search-index?q=%22Trendyol%22&ciks=0001543151&forms=8-K%2C10-Q%2C10-K&dateRange=custom&startdt=2025-05-01&enddt=2026-11-10"
+}

@@ -1,0 +1,21 @@
+{
+  "bytes_uncompressed": 373,
+  "headers": {
+    "User-Agent": "sector-nowcast-research/0.1 (non-commercial research tool; python-requests)"
+  },
+  "params": {
+    "action": "query",
+    "format": "json",
+    "formatversion": "2",
+    "ledir": "newer",
+    "lelimit": "max",
+    "lestart": "2019-01-01T00:00:00Z",
+    "letitle": "Ctrip",
+    "letype": "move",
+    "list": "logevents"
+  },
+  "pulled_at_utc": "2026-11-10T04:57:01+00:00",
+  "sha256_uncompressed": "da17602336aa76edfb3a19c65520c7586396501cae68a85dd265952fbf37f61b",
+  "stored_as": "movelog_Ctrip.json",
+  "url": "https://en.wikipedia.org/w/api.php?format=json&formatversion=2&action=query&list=logevents&letype=move&letitle=Ctrip&lestart=2019-01-01T00%3A00%3A00Z&ledir=newer&lelimit=max"
+}

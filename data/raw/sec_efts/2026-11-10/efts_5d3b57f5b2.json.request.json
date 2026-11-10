@@ -1,0 +1,18 @@
+{
+  "bytes_uncompressed": 1782,
+  "headers": {
+    "User-Agent": "Jiawei Hu <redacted: SEC contact email>"
+  },
+  "pulled_at_utc": "2026-11-10T04:52:31+00:00",
+  "query": {
+    "ciks": "0001559720",
+    "dateRange": "custom",
+    "enddt": "2026-11-10",
+    "forms": "10-K,10-Q",
+    "q": "\"completed the acquisition\"",
+    "startdt": "2022-01-01"
+  },
+  "sha256_uncompressed": "d3ef92851981eefb986a1fab1f1684fb038eac9d95f93e8f39c1b359c2b84c98",
+  "stored_as": "efts_5d3b57f5b2.json",
+  "url": "https://efts.sec.gov/LATEST/search-index?q=%22completed+the+acquisition%22&ciks=0001559720&forms=10-K%2C10-Q&dateRange=custom&startdt=2022-01-01&enddt=2026-11-10"
+}

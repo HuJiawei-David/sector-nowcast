@@ -1,0 +1,18 @@
+{
+  "bytes_uncompressed": 316,
+  "headers": {
+    "User-Agent": "sector-nowcast-research/0.1 (non-commercial research tool; python-requests)"
+  },
+  "params": {
+    "action": "query",
+    "format": "json",
+    "formatversion": "2",
+    "prop": "info",
+    "redirects": 1,
+    "titles": "Ctrip"
+  },
+  "pulled_at_utc": "2026-11-10T04:56:18+00:00",
+  "sha256_uncompressed": "f36795cb2782169fa1c9bf0b483d34c0534c2af3e2adade1439e2ea03d57bbd8",
+  "stored_as": "info_Ctrip.json",
+  "url": "https://en.wikipedia.org/w/api.php?format=json&formatversion=2&action=query&titles=Ctrip&redirects=1&prop=info"
+}

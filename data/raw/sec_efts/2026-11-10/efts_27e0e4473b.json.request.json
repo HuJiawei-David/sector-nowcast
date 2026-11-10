@@ -1,0 +1,18 @@
+{
+  "bytes_uncompressed": 9509,
+  "headers": {
+    "User-Agent": "Jiawei Hu <redacted: SEC contact email>"
+  },
+  "pulled_at_utc": "2026-11-10T05:33:54+00:00",
+  "query": {
+    "ciks": "0001792789",
+    "dateRange": "custom",
+    "enddt": "2026-11-10",
+    "forms": "8-K,10-Q,10-K",
+    "q": "\"SevenRooms\"",
+    "startdt": "2025-05-01"
+  },
+  "sha256_uncompressed": "1eeceaab1abf2a3637dd256fbcb7ce66c249ea0b4797f2d4d6bc622600e922f9",
+  "stored_as": "efts_27e0e4473b.json",
+  "url": "https://efts.sec.gov/LATEST/search-index?q=%22SevenRooms%22&ciks=0001792789&forms=8-K%2C10-Q%2C10-K&dateRange=custom&startdt=2025-05-01&enddt=2026-11-10"
+}

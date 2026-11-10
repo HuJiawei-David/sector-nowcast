@@ -1,0 +1,12 @@
+{
+  "bytes_uncompressed": 158726,
+  "cik": 1075531,
+  "headers": {
+    "User-Agent": "Jiawei Hu <redacted: SEC contact email>"
+  },
+  "pulled_at_utc": "2026-11-10T04:43:30+00:00",
+  "sha256_uncompressed": "408f27febbf78196d581019dab83fb137ccbd6b30b5c09ae0b7e2c06276332ed",
+  "stored_as": "BKNG_CIK0001075531.json",
+  "ticker": "BKNG",
+  "url": "https://data.sec.gov/submissions/CIK0001075531.json"
+}

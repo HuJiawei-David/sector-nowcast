@@ -1,0 +1,11 @@
+{
+  "bytes_uncompressed": 35417,
+  "headers": {
+    "User-Agent": "Jiawei Hu <redacted: SEC contact email>"
+  },
+  "pulled_at_utc": "2026-11-10T05:34:01+00:00",
+  "purpose": "S1b materiality evidence: Deliveroo",
+  "sha256_uncompressed": "6ecab2edc192fc81374aafa957dfac829c40778e0dcf88534a604a41f2389a39",
+  "stored_as": "DASH_0001140361-25-037039_ef20056500_8k.htm",
+  "url": "https://www.sec.gov/Archives/edgar/data/1792789/000114036125037039/ef20056500_8k.htm"
+}

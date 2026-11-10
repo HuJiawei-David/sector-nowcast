@@ -1,0 +1,18 @@
+{
+  "bytes_uncompressed": 260,
+  "headers": {
+    "User-Agent": "sector-nowcast-research/0.1 (non-commercial research tool; python-requests)"
+  },
+  "params": {
+    "action": "query",
+    "format": "json",
+    "formatversion": "2",
+    "prop": "info",
+    "redirects": 1,
+    "titles": "Booking.com"
+  },
+  "pulled_at_utc": "2026-11-10T04:53:38+00:00",
+  "sha256_uncompressed": "1f7f0d9cb87f7f3197cccae648ce5c7dc33e11198d83525c38ba873598739d80",
+  "stored_as": "info_Booking_com.json",
+  "url": "https://en.wikipedia.org/w/api.php?format=json&formatversion=2&action=query&titles=Booking.com&redirects=1&prop=info"
+}

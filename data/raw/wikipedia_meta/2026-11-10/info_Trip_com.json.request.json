@@ -1,0 +1,18 @@
+{
+  "bytes_uncompressed": 257,
+  "headers": {
+    "User-Agent": "sector-nowcast-research/0.1 (non-commercial research tool; python-requests)"
+  },
+  "params": {
+    "action": "query",
+    "format": "json",
+    "formatversion": "2",
+    "prop": "info",
+    "redirects": 1,
+    "titles": "Trip.com"
+  },
+  "pulled_at_utc": "2026-11-10T04:56:11+00:00",
+  "sha256_uncompressed": "822385d35b9d5c432f974ecc43009f8b408cdd8351ad18eb9d5826376cce7d14",
+  "stored_as": "info_Trip_com.json",
+  "url": "https://en.wikipedia.org/w/api.php?format=json&formatversion=2&action=query&titles=Trip.com&redirects=1&prop=info"
+}

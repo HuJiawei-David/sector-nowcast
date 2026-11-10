@@ -1,0 +1,1 @@
+{"batchcomplete":true,"limits":{"logevents":500},"query":{"logevents":[{"logid":103344745,"ns":0,"title":"Ctrip","pageid":62279534,"logpage":29920769,"revid":925066324,"params":{"target_ns":0,"target_title":"Trip.com Group","suppressredirect":false},"type":"move","action":"move","user":"Wikieditor600","timestamp":"2019-11-07T16:57:22Z","comment":"Company name change"}]}}
