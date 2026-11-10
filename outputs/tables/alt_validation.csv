@@ -1,0 +1,10 @@
+series_id,frequency,first_obs,last_obs,n_obs,gaps,zero_or_negative,duplicate_dates,last_published
+tsa,daily,2019-01-01,2026-11-09,2870,0,0,0,2026-11-10
+wikipedia:ABNB,daily,2019-01-01,2026-11-09,2870,0,0,0,2026-11-10
+wikipedia:BKNG,daily,2019-01-01,2026-11-09,2870,0,0,0,2026-11-10
+wikipedia:DASH,daily,2019-01-01,2026-11-09,2870,0,0,0,2026-11-10
+wikipedia:EXPE,daily,2019-01-01,2026-11-09,2870,0,0,0,2026-11-10
+wikipedia:LYFT,daily,2019-01-01,2026-11-09,2870,0,0,0,2026-11-10
+wikipedia:TCOM,daily,2019-01-01,2026-11-09,2870,0,0,0,2026-11-10
+wikipedia:UBER,daily,2019-01-01,2026-11-09,2870,0,0,0,2026-11-10
+caac,monthly,2019-01-01,2026-09-01,93,0,0,0,2026-10-20

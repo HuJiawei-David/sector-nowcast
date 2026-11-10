@@ -1,0 +1,17 @@
+{
+  "access": "all-access",
+  "agent": "user",
+  "bytes_uncompressed": 423493,
+  "end": "20261110",
+  "headers": {
+    "User-Agent": "sector-nowcast-research/0.1 (non-commercial research tool; python-requests)"
+  },
+  "name": "BKNG",
+  "project": "en.wikipedia",
+  "pulled_at_utc": "2026-11-10T13:15:48+00:00",
+  "sha256_uncompressed": "ed4cc337951581cf845de21201534f3e6ede6572cc757d71db5811a7e51d6da0",
+  "start": "20190101",
+  "stored_as": "Booking.com__20190101_20261110.json",
+  "title": "Booking.com",
+  "url": "https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Booking.com/daily/20190101/20261110"
+}

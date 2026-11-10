@@ -1,0 +1,12 @@
+{
+  "bytes_uncompressed": 190171,
+  "capture_method": "scripted (requests)",
+  "headers": {
+    "User-Agent": "sector-nowcast-research/0.1 (non-commercial research tool; python-requests)"
+  },
+  "http_status": 200,
+  "pulled_at_utc": "2026-11-10T13:37:47+00:00",
+  "sha256_uncompressed": "b1ebbec7f43847d604ce0bd9effc9bd650b12594c0efc832653cc197f7d0ad92",
+  "stored_as": "passenger-volumes_2019.html",
+  "url": "https://www.tsa.gov/travel/passenger-volumes/2019"
+}

@@ -1,0 +1,17 @@
+{
+  "access": "all-access",
+  "agent": "user",
+  "bytes_uncompressed": 410416,
+  "end": "20261110",
+  "headers": {
+    "User-Agent": "sector-nowcast-research/0.1 (non-commercial research tool; python-requests)"
+  },
+  "name": "ABNB",
+  "project": "en.wikipedia",
+  "pulled_at_utc": "2026-11-10T13:15:54+00:00",
+  "sha256_uncompressed": "c30202417163ac7a08951576a68472575f0ca378c39d948a1266dd4a2daf75f3",
+  "start": "20190101",
+  "stored_as": "Airbnb__20190101_20261110.json",
+  "title": "Airbnb",
+  "url": "https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Airbnb/daily/20190101/20261110"
+}
