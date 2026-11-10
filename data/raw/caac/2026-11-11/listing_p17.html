@@ -1,0 +1,697 @@
+﻿
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+    <title></title>
+	<link href="css/was.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet"  type="text/css" href="css/base.css" />
+    <link rel="stylesheet"  type="text/css" href="css/all_xxgk.css" />
+	<style type="text/css">
+	#outlinebar span [style]{
+	background: none repeat scroll 0 0 #1881ea !important;
+    border: 1px solid #1881ea;
+    color: #fff;
+	}
+	#outlinebar span {
+	   background: none repeat scroll 0 0 #1881ea !important;
+		border: 1px solid #1881ea;
+		color: #fff;
+	}
+	#outlinebar a, #outlinebar span {
+		
+		border: 1px solid #ccc;
+		display: inline-block;
+		height: 18px;
+		line-height: 18px;
+		margin: 0 3px;
+		position: relative;
+		width: 20px;
+		float:none;
+	}
+	#outlinebar .first-page, #outlinebar .last-page {
+	   border: medium none;
+	}
+
+
+	#outlinebar .prev-page,#outlinebar .next-page {
+		border: medium none;
+		width: 4em;
+	}
+	</style>
+    <script type="text/javascript" src="js/yahoo-dom-event.js"></script>
+    <script type="text/javascript" src="js/suggest-yui2.js"></script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>	
+    <script type="text/javascript" src="js/jquery.cookie.min.js"></script>	
+	<script type="text/javascript" src="js/My97DatePicker/WdatePicker.js"></script>
+	<script type="text/javascript" src="js/all.js"></script>
+    <script type="text/javascript">
+        window.onload = function()
+        {
+            var ispromptshown = $.cookie('ispromptshown');
+            if (ispromptshown == "false") return ;
+
+            var dataUrl = 'searchsuggest?result=false';
+            new TRSWAS.Suggest('textfield', dataUrl,
+                    {
+                        useShim:false,
+                        resultFormat: '约%result%条结果'
+                    });
+			
+					
+        };
+    </script>
+    <script type="text/javascript">       
+        //String.prototype.trim = function () {
+        //    return this.replace(/^\s*/, "").replace(/\s*$/, "");
+        /*}
+        function checkInput()
+        {
+            if (document.searchform.searchword.value.trim()==''){
+                document.searchform.searchword.focus();
+                return false;
+            }
+            else{
+                return true;
+            }
+        }*/
+    </script>
+    
+	 <script type="text/javascript">
+	jQuery(document).ready(function() {
+	                var strzfl="";
+	                if(strzfl=="6"||strzfl=="7"||strzfl=="8"){
+					}
+					else{
+	                   parent.scrollTo(0,0);
+					}
+	                document.searchform.perpage.value = 20; 
+					var selST="All";                      
+				    $("#selSTID").val(selST);	
+                    var strFL="112"; 	
+					//通知通告
+				    if(strFL=="9"||strFL=="28")	
+                    {
+					  $(".t_l_content").removeClass("t_l_content").addClass("strFL");
+					  $(".strFL").hide();					  
+					}	
+                    
+                     if(strFL!="14")	
+                    {					  
+					  $(".strGF").hide();					  
+					}	
+
+                    if(jQuery.browser.version == 8.0){		 
+						
+						if(strFL!="14"){
+                           $(".tdMC").css("width","50%");						
+						   $(".tdRQ").css("width","20%");
+						   $(".strFL").css("width","20%");
+						}
+						if(strFL=="9"||strFL=="28")	
+						{
+						  $(".tdMC").css("width","70%");
+						  $(".tdRQ").css("width","50%"); 					  
+						}	
+					}
+						
+                });
+
+					window.onload=sethash;
+
+function gotoPage(nCount) {
+
+//判断是否为数字
+theNum=document.getElementById("page").value;
+var perpage=document.getElementById("perpage").value;
+if(perpage.length<1){
+    document.getElementById("perpage").value=20;
+}
+var re = /^[0-9]+.?[0-9]*$/;
+ if (!re.test(theNum) || theNum<1 || theNum>nCount)
+ {
+  alert("请输入正确页码");
+ }else
+ {
+        $("#frmPage1").submit();
+ }
+
+}
+//-->
+</script>   
+</head>
+<body>
+<iframe id="iframeC" name="iframeC" src="" width="0" height="0" style="display:none;" ></iframe>
+<div id="main">
+<div id="header">
+    <form name="searchform" action="search" method="post" style="margin-bottom:15px;"  onsubmit="return checkInput();">        
+        <div style="clear: both;"></div>
+		
+        <table class="c_table" style="width:705px">           
+            <tr>
+			    <td class="t_r">关&nbsp;&nbsp;键&nbsp;&nbsp;字：</td>
+                <td class="clearfix"><input type="hidden" name="channelid" value="211383">
+                    <input type="text" id="textfield" name="sw" class="input_txt" value="" style="display:block;float:left"/>	
+                    <select name="selST" id="selSTID" style="display:block;float:right">
+					  <option value ="All" selected="true">全部</option>
+					  <option value ="title">标题</option>
+					  <option value="content">正文</option>					  
+					</select>					
+                    <input type="hidden" name="perpage" value="">
+                    <input type="hidden" name="templet" value="">
+                    <input type="hidden" name="token" value="">
+					<input type="hidden" name="zfl" value="">					
+                    <input type="hidden" name="fl" value="112">	
+					<input type="hidden" name="distinct" value="">		
+                    <input type="hidden" name="doS" value="">					
+                </td>				
+				<td class="t_r">文&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;号：</td>
+				<td><input type="text" class="input_txt" name="wh" value=""></td>
+		    </tr>
+		  <tr>
+		    <td class="t_r">办文单位：</td>
+			<td><input type="text" class="input_txt" name="dw" value=''></td>
+			<td class="t_r">发文日期：</td>
+			<td><input type="text" class="date_txt" name="st" onClick="WdatePicker({readOnly:true})" value="" /></td>
+			<td class="t_r">至：</td>
+			<td><input type="text" class="date_txt" name="et" onClick="WdatePicker({readOnly:true})" value=""/></td>
+		  </tr>
+		  <tr>
+		    <td colspan="6" class="t_c"><input type="submit" value="检索"  class="c_btn"/></td>
+		  </tr>
+        </table>
+        <div style="clear: both; margin-bottom: 6px;"></div>
+    </form>
+</div>
+<div class="column" id="column1" style="width: 720px;">
+<div class="outline">
+
+
+<div style="clear: both;"></div>
+<table id="tbRe">
+    <tr>
+        <td class="searchresult">
+            <table class="t_table">
+					 <thead>
+						<tr>
+						  <th >序号</th>
+						  <th class="tdMC">名称</th>
+						  <th class="tdRQ">发文日期</th>
+						  <th class="strFL">文号</th>	
+
+                          <th class="strGF">有效性</th>
+				  
+						</tr>
+					  </thead>	
+            
+			
+<tbody>					  
+            			
+                
+                    
+<tr>
+<td style="width:5%" >
+<!-- 321--> 
+161
+</td>
+<td style="width:30%" class="t_l tdMC">
+<a href="http://www.caac.gov.cn/XXGK/XXGK/TJSJ/201511/t20151102_8817.html" target="_blank" name="中国民航2013年03月份主要运输生产指标统计">中国民航2013年03月份主要运输生产指标统计</a>
+<div class="t_l_content">
+                      <ul>
+                          <li class="t_l_content_left"><b>办文单位：</b>发展计划司</li>
+                          <li><b>发文日期：</b>2013年04月25日</li>
+                      </ul>
+                      <ul>
+                          <li style="text-align: right;width: 16%;"><b>名&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;称：</b></li><li style="width: 82%;">中国民航2013年03月份主要运输生产指标统计</li>
+                          <li><b></b></li>
+                      </ul>
+                      <ul>
+                          <li class="t_l_content_left"><b>文&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;号：</b></li>
+                          <li><b>有&nbsp;&nbsp;效&nbsp;&nbsp;性：</b>有效</li>
+                      </ul>
+</div>
+</td>
+<td style="width:10%" class="tdRQ">
+2013年04月25日
+</td>
+<td style="width:10%" class="strFL">
+
+</td>
+
+                          <td style="width:5%" class="strGF"><span class="" >
+有效</span>
+</td>
+	
+</span>
+</td></tr>
+
+                				
+            			
+                
+                    
+<tr>
+<td style="width:5%" >
+<!-- 322--> 
+162
+</td>
+<td style="width:30%" class="t_l tdMC">
+<a href="http://www.caac.gov.cn/XXGK/XXGK/TJSJ/201511/t20151102_8816.html" target="_blank" name="中国民航2013年02月份主要运输生产指标统计">中国民航2013年02月份主要运输生产指标统计</a>
+<div class="t_l_content">
+                      <ul>
+                          <li class="t_l_content_left"><b>办文单位：</b>发展计划司</li>
+                          <li><b>发文日期：</b>2013年03月22日</li>
+                      </ul>
+                      <ul>
+                          <li style="text-align: right;width: 16%;"><b>名&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;称：</b></li><li style="width: 82%;">中国民航2013年02月份主要运输生产指标统计</li>
+                          <li><b></b></li>
+                      </ul>
+                      <ul>
+                          <li class="t_l_content_left"><b>文&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;号：</b></li>
+                          <li><b>有&nbsp;&nbsp;效&nbsp;&nbsp;性：</b>有效</li>
+                      </ul>
+</div>
+</td>
+<td style="width:10%" class="tdRQ">
+2013年03月22日
+</td>
+<td style="width:10%" class="strFL">
+
+</td>
+
+                          <td style="width:5%" class="strGF"><span class="" >
+有效</span>
+</td>
+	
+</span>
+</td></tr>
+
+                				
+            			
+                
+                    
+<tr>
+<td style="width:5%" >
+<!-- 323--> 
+163
+</td>
+<td style="width:30%" class="t_l tdMC">
+<a href="http://www.caac.gov.cn/XXGK/XXGK/TJSJ/201511/t20151102_8814.html" target="_blank" name="中国民航2013年01月份主要运输生产指标统计">中国民航2013年01月份主要运输生产指标统计</a>
+<div class="t_l_content">
+                      <ul>
+                          <li class="t_l_content_left"><b>办文单位：</b>发展计划司</li>
+                          <li><b>发文日期：</b>2013年02月21日</li>
+                      </ul>
+                      <ul>
+                          <li style="text-align: right;width: 16%;"><b>名&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;称：</b></li><li style="width: 82%;">中国民航2013年01月份主要运输生产指标统计</li>
+                          <li><b></b></li>
+                      </ul>
+                      <ul>
+                          <li class="t_l_content_left"><b>文&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;号：</b></li>
+                          <li><b>有&nbsp;&nbsp;效&nbsp;&nbsp;性：</b>有效</li>
+                      </ul>
+</div>
+</td>
+<td style="width:10%" class="tdRQ">
+2013年02月21日
+</td>
+<td style="width:10%" class="strFL">
+
+</td>
+
+                          <td style="width:5%" class="strGF"><span class="" >
+有效</span>
+</td>
+	
+</span>
+</td></tr>
+
+                				
+            			
+                
+                    
+<tr>
+<td style="width:5%" >
+<!-- 324--> 
+164
+</td>
+<td style="width:30%" class="t_l tdMC">
+<a href="http://www.caac.gov.cn/XXGK/XXGK/TJSJ/201511/t20151102_8811.html" target="_blank" name="中国民航2012年12月份主要运输生产指标统计">中国民航2012年12月份主要运输生产指标统计</a>
+<div class="t_l_content">
+                      <ul>
+                          <li class="t_l_content_left"><b>办文单位：</b>发展计划司</li>
+                          <li><b>发文日期：</b>2013年01月21日</li>
+                      </ul>
+                      <ul>
+                          <li style="text-align: right;width: 16%;"><b>名&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;称：</b></li><li style="width: 82%;">中国民航2012年12月份主要运输生产指标统计</li>
+                          <li><b></b></li>
+                      </ul>
+                      <ul>
+                          <li class="t_l_content_left"><b>文&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;号：</b></li>
+                          <li><b>有&nbsp;&nbsp;效&nbsp;&nbsp;性：</b>有效</li>
+                      </ul>
+</div>
+</td>
+<td style="width:10%" class="tdRQ">
+2013年01月21日
+</td>
+<td style="width:10%" class="strFL">
+
+</td>
+
+                          <td style="width:5%" class="strGF"><span class="" >
+有效</span>
+</td>
+	
+</span>
+</td></tr>
+
+                				
+            			
+                
+                    
+<tr>
+<td style="width:5%" >
+<!-- 325--> 
+165
+</td>
+<td style="width:30%" class="t_l tdMC">
+<a href="http://www.caac.gov.cn/XXGK/XXGK/TJSJ/201511/t20151102_8810.html" target="_blank" name="中国民航2012年11月份主要运输生产指标统计">中国民航2012年11月份主要运输生产指标统计</a>
+<div class="t_l_content">
+                      <ul>
+                          <li class="t_l_content_left"><b>办文单位：</b>发展计划司</li>
+                          <li><b>发文日期：</b>2012年12月25日</li>
+                      </ul>
+                      <ul>
+                          <li style="text-align: right;width: 16%;"><b>名&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;称：</b></li><li style="width: 82%;">中国民航2012年11月份主要运输生产指标统计</li>
+                          <li><b></b></li>
+                      </ul>
+                      <ul>
+                          <li class="t_l_content_left"><b>文&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;号：</b></li>
+                          <li><b>有&nbsp;&nbsp;效&nbsp;&nbsp;性：</b>有效</li>
+                      </ul>
+</div>
+</td>
+<td style="width:10%" class="tdRQ">
+2012年12月25日
+</td>
+<td style="width:10%" class="strFL">
+
+</td>
+
+                          <td style="width:5%" class="strGF"><span class="" >
+有效</span>
+</td>
+	
+</span>
+</td></tr>
+
+                				
+            			
+                
+                    
+<tr>
+<td style="width:5%" >
+<!-- 326--> 
+166
+</td>
+<td style="width:30%" class="t_l tdMC">
+<a href="http://www.caac.gov.cn/XXGK/XXGK/TJSJ/201511/t20151102_8809.html" target="_blank" name="中国民航2012年10月份主要运输生产指标统计">中国民航2012年10月份主要运输生产指标统计</a>
+<div class="t_l_content">
+                      <ul>
+                          <li class="t_l_content_left"><b>办文单位：</b>发展计划司</li>
+                          <li><b>发文日期：</b>2012年11月20日</li>
+                      </ul>
+                      <ul>
+                          <li style="text-align: right;width: 16%;"><b>名&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;称：</b></li><li style="width: 82%;">中国民航2012年10月份主要运输生产指标统计</li>
+                          <li><b></b></li>
+                      </ul>
+                      <ul>
+                          <li class="t_l_content_left"><b>文&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;号：</b></li>
+                          <li><b>有&nbsp;&nbsp;效&nbsp;&nbsp;性：</b>有效</li>
+                      </ul>
+</div>
+</td>
+<td style="width:10%" class="tdRQ">
+2012年11月20日
+</td>
+<td style="width:10%" class="strFL">
+
+</td>
+
+                          <td style="width:5%" class="strGF"><span class="" >
+有效</span>
+</td>
+	
+</span>
+</td></tr>
+
+                				
+            			
+                
+                    
+<tr>
+<td style="width:5%" >
+<!-- 327--> 
+167
+</td>
+<td style="width:30%" class="t_l tdMC">
+<a href="http://www.caac.gov.cn/XXGK/XXGK/TJSJ/201511/t20151102_8808.html" target="_blank" name="中国民航2012年9月份主要运输生产指标统计">中国民航2012年9月份主要运输生产指标统计</a>
+<div class="t_l_content">
+                      <ul>
+                          <li class="t_l_content_left"><b>办文单位：</b>发展计划司</li>
+                          <li><b>发文日期：</b>2012年10月17日</li>
+                      </ul>
+                      <ul>
+                          <li style="text-align: right;width: 16%;"><b>名&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;称：</b></li><li style="width: 82%;">中国民航2012年9月份主要运输生产指标统计</li>
+                          <li><b></b></li>
+                      </ul>
+                      <ul>
+                          <li class="t_l_content_left"><b>文&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;号：</b></li>
+                          <li><b>有&nbsp;&nbsp;效&nbsp;&nbsp;性：</b>有效</li>
+                      </ul>
+</div>
+</td>
+<td style="width:10%" class="tdRQ">
+2012年10月17日
+</td>
+<td style="width:10%" class="strFL">
+
+</td>
+
+                          <td style="width:5%" class="strGF"><span class="" >
+有效</span>
+</td>
+	
+</span>
+</td></tr>
+
+                				
+            			
+                
+                    
+<tr>
+<td style="width:5%" >
+<!-- 328--> 
+168
+</td>
+<td style="width:30%" class="t_l tdMC">
+<a href="http://www.caac.gov.cn/XXGK/XXGK/TJSJ/201511/t20151102_8804.html" target="_blank" name="中国民航2012年8月份主要运输生产指标统计">中国民航2012年8月份主要运输生产指标统计</a>
+<div class="t_l_content">
+                      <ul>
+                          <li class="t_l_content_left"><b>办文单位：</b>发展计划司</li>
+                          <li><b>发文日期：</b>2012年09月24日</li>
+                      </ul>
+                      <ul>
+                          <li style="text-align: right;width: 16%;"><b>名&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;称：</b></li><li style="width: 82%;">中国民航2012年8月份主要运输生产指标统计</li>
+                          <li><b></b></li>
+                      </ul>
+                      <ul>
+                          <li class="t_l_content_left"><b>文&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;号：</b></li>
+                          <li><b>有&nbsp;&nbsp;效&nbsp;&nbsp;性：</b>有效</li>
+                      </ul>
+</div>
+</td>
+<td style="width:10%" class="tdRQ">
+2012年09月24日
+</td>
+<td style="width:10%" class="strFL">
+
+</td>
+
+                          <td style="width:5%" class="strGF"><span class="" >
+有效</span>
+</td>
+	
+</span>
+</td></tr>
+
+                				
+            			
+                
+                    
+<tr>
+<td style="width:5%" >
+<!-- 329--> 
+169
+</td>
+<td style="width:30%" class="t_l tdMC">
+<a href="http://www.caac.gov.cn/XXGK/XXGK/TJSJ/201511/t20151102_8802.html" target="_blank" name="中国民航2012年7月份主要运输生产指标统计">中国民航2012年7月份主要运输生产指标统计</a>
+<div class="t_l_content">
+                      <ul>
+                          <li class="t_l_content_left"><b>办文单位：</b>发展计划司</li>
+                          <li><b>发文日期：</b>2012年08月22日</li>
+                      </ul>
+                      <ul>
+                          <li style="text-align: right;width: 16%;"><b>名&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;称：</b></li><li style="width: 82%;">中国民航2012年7月份主要运输生产指标统计</li>
+                          <li><b></b></li>
+                      </ul>
+                      <ul>
+                          <li class="t_l_content_left"><b>文&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;号：</b></li>
+                          <li><b>有&nbsp;&nbsp;效&nbsp;&nbsp;性：</b>有效</li>
+                      </ul>
+</div>
+</td>
+<td style="width:10%" class="tdRQ">
+2012年08月22日
+</td>
+<td style="width:10%" class="strFL">
+
+</td>
+
+                          <td style="width:5%" class="strGF"><span class="" >
+有效</span>
+</td>
+	
+</span>
+</td></tr>
+
+                				
+            			
+                
+                    
+<tr>
+<td style="width:5%" >
+<!-- 330--> 
+170
+</td>
+<td style="width:30%" class="t_l tdMC">
+<a href="http://www.caac.gov.cn/XXGK/XXGK/TJSJ/201511/t20151102_8801.html" target="_blank" name="中国民航2012年6月份主要运输生产指标统计">中国民航2012年6月份主要运输生产指标统计</a>
+<div class="t_l_content">
+                      <ul>
+                          <li class="t_l_content_left"><b>办文单位：</b>发展计划司</li>
+                          <li><b>发文日期：</b>2012年07月24日</li>
+                      </ul>
+                      <ul>
+                          <li style="text-align: right;width: 16%;"><b>名&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;称：</b></li><li style="width: 82%;">中国民航2012年6月份主要运输生产指标统计</li>
+                          <li><b></b></li>
+                      </ul>
+                      <ul>
+                          <li class="t_l_content_left"><b>文&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;号：</b></li>
+                          <li><b>有&nbsp;&nbsp;效&nbsp;&nbsp;性：</b>有效</li>
+                      </ul>
+</div>
+</td>
+<td style="width:10%" class="tdRQ">
+2012年07月24日
+</td>
+<td style="width:10%" class="strFL">
+
+</td>
+
+                          <td style="width:5%" class="strGF"><span class="" >
+有效</span>
+</td>
+	
+</span>
+</td></tr>
+
+                				
+            
+			</tbody>
+                    </table>
+					
+					<form name="frmPage" action="outline" id="frmPage1">
+		
+			<div style="max-width: 100%;" id="outlinebar">
+			 共25页
+			 <a class="first-page" href="search?page=1&channelid=211383&orderby=-fabuDate&was_custom_expr=+PARENTID%3D%27112%27+or+CLASSINFOID%3D%27112%27+&perpage=10&outlinepage=7&orderby=-fabuDate&selST=All&fl=112" target="_self">首页</a>&nbsp;<a class="prev-page" href="search?page=16&channelid=211383&orderby=-fabuDate&was_custom_expr=+PARENTID%3D%27112%27+or+CLASSINFOID%3D%27112%27+&perpage=10&outlinepage=7&orderby=-fabuDate&selST=All&fl=112" target="_self">上一页</a>&nbsp;<a target="_self" href="search?page=14&channelid=211383&orderby=-fabuDate&was_custom_expr=+PARENTID%3D%27112%27+or+CLASSINFOID%3D%27112%27+&perpage=10&outlinepage=7&orderby=-fabuDate&selST=All&fl=112">14</a>&nbsp;<a target="_self" href="search?page=15&channelid=211383&orderby=-fabuDate&was_custom_expr=+PARENTID%3D%27112%27+or+CLASSINFOID%3D%27112%27+&perpage=10&outlinepage=7&orderby=-fabuDate&selST=All&fl=112">15</a>&nbsp;<a target="_self" href="search?page=16&channelid=211383&orderby=-fabuDate&was_custom_expr=+PARENTID%3D%27112%27+or+CLASSINFOID%3D%27112%27+&perpage=10&outlinepage=7&orderby=-fabuDate&selST=All&fl=112">16</a>&nbsp;<span style="font-weight: bold;border: none;background: none">17</span>&nbsp;<a target="_self" href="search?page=18&channelid=211383&orderby=-fabuDate&was_custom_expr=+PARENTID%3D%27112%27+or+CLASSINFOID%3D%27112%27+&perpage=10&outlinepage=7&orderby=-fabuDate&selST=All&fl=112">18</a>&nbsp;<a target="_self" href="search?page=19&channelid=211383&orderby=-fabuDate&was_custom_expr=+PARENTID%3D%27112%27+or+CLASSINFOID%3D%27112%27+&perpage=10&outlinepage=7&orderby=-fabuDate&selST=All&fl=112">19</a>&nbsp;<a target="_self" href="search?page=20&channelid=211383&orderby=-fabuDate&was_custom_expr=+PARENTID%3D%27112%27+or+CLASSINFOID%3D%27112%27+&perpage=10&outlinepage=7&orderby=-fabuDate&selST=All&fl=112">20</a>&nbsp;<a class="next-page" href="search?page=18&channelid=211383&orderby=-fabuDate&was_custom_expr=+PARENTID%3D%27112%27+or+CLASSINFOID%3D%27112%27+&perpage=10&outlinepage=7&orderby=-fabuDate&selST=All&fl=112" target="_self">下一页</a>&nbsp;<a class="last-page" href="search?page=25&channelid=211383&orderby=-fabuDate&was_custom_expr=+PARENTID%3D%27112%27+or+CLASSINFOID%3D%27112%27+&perpage=10&outlinepage=7&orderby=-fabuDate&selST=All&fl=112" target="_self">尾页</a>&nbsp;
+           <label for="page">跳转到第</label>
+                <input name="page" id="page" type="text" title="请输入要跳转的页码" size="3">
+				页
+				
+				<input type="hidden" name="channelid" value="211383">
+                    <input type="hidden" id="textfield" name="sw" class="input_txt" value=""/>									
+                    <input type="hidden" id="perpage" name="perpage" value="">
+                    <input type="hidden" name="templet" value="">
+                    <input type="hidden" name="token" value="">
+					<input type="hidden" name="zfl" value="">
+                    <input type="hidden" name="fl" value="112">					
+				 <input type="hidden" class="input_txt" name="wh" value="">
+		         <input type="hidden" class="input_txt" name="dw" value="">
+		         <input type="hidden" name="st"  value="" />
+		         <input type="hidden" name="et"  value=""/>	
+                 <input type="hidden" name="doS" value="">		
+                 <input type="hidden" name="distinct" value="">				 
+                <input name="imageField2" type="image" onclick="javascript:gotoPage(25);return false;" alt="点击按钮进行跳转" title="点击按钮进行跳转" src="images//go.jpg" align="middle" width="21" height="15" border="0">
+                
+	   
+			</div>
+
+			
+           
+		</form>
+            
+            
+                         
+            <br/>
+            
+        </td>
+    </tr>
+</table>
+</div>
+</div>
+
+
+
+</div>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?4014848c4e18723269ffe0193734e573";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</body>
+</html>
+

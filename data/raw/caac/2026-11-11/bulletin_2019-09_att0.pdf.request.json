@@ -1,0 +1,11 @@
+{
+  "bulletin_url": "http://www.caac.gov.cn/XXGK/XXGK/TJSJ/201911/t20191120_199551.html",
+  "bytes_uncompressed": 46913,
+  "headers": {
+    "User-Agent": "sector-nowcast-research/0.1 (non-commercial research tool; python-requests)"
+  },
+  "pulled_at_utc": "2026-11-10T13:36:16+00:00",
+  "sha256_uncompressed": "b37853ff52e8a511207aa9406473424242dd9606ba6a98e7cbf96b5e4a45553e",
+  "stored_as": "bulletin_2019-09_att0.pdf",
+  "url": "http://www.caac.gov.cn/XXGK/XXGK/TJSJ/201911/P020191120572647980099.pdf"
+}
