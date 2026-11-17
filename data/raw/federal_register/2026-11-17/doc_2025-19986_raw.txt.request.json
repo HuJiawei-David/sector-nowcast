@@ -1,0 +1,12 @@
+{
+  "bytes_uncompressed": 23301,
+  "headers": {
+    "User-Agent": "sector-nowcast-research/0.1 (non-commercial research tool; python-requests)"
+  },
+  "http_status": 200,
+  "pulled_at_utc": "2026-11-17T03:58:21+00:00",
+  "purpose": "citation for base-period events",
+  "sha256_uncompressed": "64e134db27cbbb78624a113a5136edbf7638ffe590cf45db58b0bb9815bc21b5",
+  "stored_as": "doc_2025-19986_raw.txt",
+  "url": "https://www.federalregister.gov/documents/full_text/text/2025/11/17/2025-19986.txt"
+}

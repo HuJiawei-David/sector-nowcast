@@ -56,7 +56,7 @@ DIRECTIONS = ("accelerate", "decelerate")
 
 
 def load_inputs() -> dict:
-    series = F.load_series()
+    series = F.load_series(snapshots=F.backtest_snapshots())   # pinned S3 snapshots
     versions = pd.read_csv(REPO_ROOT / "data/processed/revenue_pit.csv", dtype={"accession": str})
     values = pd.read_csv(REPO_ROOT / "data/processed/release_values.csv", dtype={"accession": str})
     releases = pd.read_csv(REPO_ROOT / "data/processed/earnings_releases.csv", dtype={"accession": str})

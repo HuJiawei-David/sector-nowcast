@@ -18,7 +18,7 @@ import pandas as pd
 sys.path.insert(0, "src")
 from nowcast import config, features as F, wiki  # noqa: E402
 from nowcast.quarters import Quarter  # noqa: E402
-from nowcast.rawstore import REPO_ROOT  # noqa: E402
+from nowcast.rawstore import RAW_DIR, REPO_ROOT  # noqa: E402
 
 PROC = REPO_ROOT / "data" / "processed"
 TABLES = REPO_ROOT / "outputs" / "tables"
@@ -26,7 +26,7 @@ TABLES = REPO_ROOT / "outputs" / "tables"
 
 def main():
     pipe = config.load_yaml("pipeline.yaml")
-    series = F.load_series()
+    series = F.load_series(snapshots=F.backtest_snapshots())
     run_date = F.data_run_date(series)
     print("run date (live as-of):", run_date)
 
@@ -35,7 +35,7 @@ def main():
     print(val.to_string(index=False))
 
     series["tsa"].obs.to_csv(PROC / "tsa_daily.csv", index=False)
-    tv = wiki.load_title_views()
+    tv = wiki.load_title_views(RAW_DIR / "wikipedia_pageviews" / F.backtest_snapshots()["wikipedia_pageviews"])
     per_title = tv.pivot_table(index=["name", "date"], columns="title", values="views").reset_index()
     wd = pd.concat([s.obs.assign(name=k.split(":")[1]) for k, s in series.items() if k.startswith("wikipedia:")])
     wd = wd.merge(per_title.rename(columns={"date": "obs_date"}), on=["name", "obs_date"], how="left")

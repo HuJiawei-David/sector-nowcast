@@ -11,6 +11,14 @@ report_last_quarter: 2026Q3
 # TCOM: a 6-K is a quarterly results release if its exhibit index says so
 tcom_results_release_regex: "Reports\\s+Unaudited\\s+.{0,80}?Financial\\s+Results"
 
+# Alt-data snapshot folders (data/raw/<raw_dir>/<pull_date>/) that the walk-forward backtest (Sessions 4-5)
+# and the locked TCOM 2026Q3 forward call (Session L) were computed from. Pinned so that later refreshes
+# (Session 6 live calls) cannot silently change committed backtest results. Live calls read the latest pull.
+backtest_snapshots:
+  tsa: "2026-11-11"
+  wikipedia_pageviews: "2026-11-11"
+  caac: "2026-11-11"
+
 fy_sum_tolerance: 0.005                # rule 9: |Q1+Q2+Q3+Q4 - FY| / FY <= 0.5%
 
 xbrl:

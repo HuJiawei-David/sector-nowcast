@@ -15,7 +15,7 @@ Q = Quarter(2026, 3)
 
 @pytest.fixture(scope="module")
 def inputs():
-    series = F.load_series()
+    series = F.load_series(snapshots=F.backtest_snapshots())
     versions = pd.read_csv("data/processed/revenue_pit.csv", dtype={"accession": str})
     releases = pd.read_csv("data/processed/earnings_releases.csv", dtype={"accession": str})
     return series, versions, releases, config.companies()

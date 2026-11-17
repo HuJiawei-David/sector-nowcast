@@ -1,0 +1,12 @@
+{
+  "bytes_uncompressed": 5001,
+  "headers": {
+    "User-Agent": "sector-nowcast-research/0.1 (non-commercial research tool; python-requests)"
+  },
+  "http_status": 200,
+  "pulled_at_utc": "2026-11-17T03:58:20+00:00",
+  "purpose": "citation for base-period events",
+  "sha256_uncompressed": "2cc514d6c597f0ee5de29f2421d4ebd8e9dad97e8eb73f609e598dc7717643c5",
+  "stored_as": "doc_2025-19986.json",
+  "url": "https://www.federalregister.gov/api/v1/documents/2025-19986.json"
+}

@@ -1,0 +1,17 @@
+{
+  "access": "all-access",
+  "agent": "user",
+  "bytes_uncompressed": 403274,
+  "end": "20261116",
+  "headers": {
+    "User-Agent": "sector-nowcast-research/0.1 (non-commercial research tool; python-requests)"
+  },
+  "name": "LYFT",
+  "project": "en.wikipedia",
+  "pulled_at_utc": "2026-11-17T03:56:17+00:00",
+  "sha256_uncompressed": "2ad07616d67af7c1de58672d7b73863fd63ec2bc6fd07bd9e826761fcfc6e2a8",
+  "start": "20190101",
+  "stored_as": "Lyft__20190101_20261116.json",
+  "title": "Lyft",
+  "url": "https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Lyft/daily/20190101/20261116"
+}

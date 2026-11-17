@@ -1,0 +1,17 @@
+{
+  "access": "all-access",
+  "agent": "user",
+  "bytes_uncompressed": 437449,
+  "end": "20261116",
+  "headers": {
+    "User-Agent": "sector-nowcast-research/0.1 (non-commercial research tool; python-requests)"
+  },
+  "name": "BKNG",
+  "project": "en.wikipedia",
+  "pulled_at_utc": "2026-11-17T03:56:05+00:00",
+  "sha256_uncompressed": "373806fa6e13e54ae46bbed0e412c39af0e969e52acae9c5b54f662a96cd31a7",
+  "start": "20190101",
+  "stored_as": "Booking_Holdings__20190101_20261116.json",
+  "title": "Booking Holdings",
+  "url": "https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Booking_Holdings/daily/20190101/20261116"
+}

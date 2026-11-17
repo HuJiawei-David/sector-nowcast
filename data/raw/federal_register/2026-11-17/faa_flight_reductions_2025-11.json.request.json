@@ -1,0 +1,19 @@
+{
+  "bytes_uncompressed": 187,
+  "headers": {
+    "User-Agent": "sector-nowcast-research/0.1 (non-commercial research tool; python-requests)"
+  },
+  "http_status": 200,
+  "params": {
+    "conditions[agencies][]": "federal-aviation-administration",
+    "conditions[publication_date][gte]": "2025-11-01",
+    "conditions[publication_date][lte]": "2025-12-31",
+    "conditions[term]": "\"high-volume airports\" reduction scheduled operations",
+    "per_page": "20"
+  },
+  "pulled_at_utc": "2026-11-17T03:58:16+00:00",
+  "purpose": "citation for base-period events",
+  "sha256_uncompressed": "37ae5cb9eb903c1a5c94de98c97e5cf78dcf84013fb018facb15be19eeaba4b7",
+  "stored_as": "faa_flight_reductions_2025-11.json",
+  "url": "https://www.federalregister.gov/api/v1/documents.json?conditions%5Bterm%5D=%22high-volume+airports%22+reduction+scheduled+operations&conditions%5Bagencies%5D%5B%5D=federal-aviation-administration&conditions%5Bpublication_date%5D%5Bgte%5D=2025-11-01&conditions%5Bpublication_date%5D%5Blte%5D=2025-12-31&per_page=20"
+}

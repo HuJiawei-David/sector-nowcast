@@ -1,0 +1,17 @@
+{
+  "access": "all-access",
+  "agent": "user",
+  "bytes_uncompressed": 429009,
+  "end": "20261116",
+  "headers": {
+    "User-Agent": "sector-nowcast-research/0.1 (non-commercial research tool; python-requests)"
+  },
+  "name": "EXPE",
+  "project": "en.wikipedia",
+  "pulled_at_utc": "2026-11-17T03:56:09+00:00",
+  "sha256_uncompressed": "6ff44bcc169f88c21e7263907556ec06e93657893f97d04f79df0424b32af333",
+  "start": "20190101",
+  "stored_as": "Expedia_Group__20190101_20261116.json",
+  "title": "Expedia Group",
+  "url": "https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Expedia_Group/daily/20190101/20261116"
+}

@@ -208,18 +208,26 @@ def data_run_date(series: dict[str, Series]) -> dt.date:
 # Building the series from snapshots (no network)
 
 
-def load_series(run_end: dt.date | None = None) -> dict[str, Series]:
-    """All configured alt series, keyed by series_id: 'tsa', 'caac', 'wikipedia:<NAME>'."""
-    from . import caac, tsa, wiki
+def backtest_snapshots() -> dict[str, str]:
+    """Snapshot folders the backtest and the locked forward call use (config/pipeline.yaml)."""
+    return dict(config.load_yaml("pipeline.yaml")["backtest_snapshots"])
 
+
+def load_series(run_end: dt.date | None = None, snapshots: dict[str, str] | None = None) -> dict[str, Series]:
+    """All configured alt series, keyed by series_id: 'tsa', 'caac', 'wikipedia:<NAME>'.
+    snapshots: {raw_dir: pull_date} to read specific snapshot folders (default: latest pull of each)."""
+    from . import caac, tsa, wiki
+    from .rawstore import RAW_DIR
+
+    snap = lambda raw: (RAW_DIR / raw / snapshots[raw]) if snapshots and raw in snapshots else None
     src = config.sources()
     out = {}
-    t = tsa.parse()
+    t = tsa.parse(snap("tsa"))
     t = t.rename(columns={"date": "obs_date"})
     t["published"] = t.obs_date.map(lambda d: publication_date(d, src["tsa"]["publication_rule"]))
     out["tsa"] = Series("tsa", "tsa", "daily", src["tsa"]["publication_rule"], t[["obs_date", "value", "published"]])
 
-    tv = wiki.load_title_views()
+    tv = wiki.load_title_views(snap("wikipedia_pageviews"))
     start = dt.date.fromisoformat(src["wikipedia"]["history_start"])
     end = run_end or tv.date.max()
     ws = wiki.daily_series(tv, start, end)
@@ -229,7 +237,7 @@ def load_series(run_end: dt.date | None = None) -> dict[str, Series]:
         out[f"wikipedia:{name}"] = Series(f"wikipedia:{name}", "wikipedia", "daily",
                                           src["wikipedia"]["publication_rule"], g[["obs_date", "value", "published"]].reset_index(drop=True))
 
-    c = caac.parse(fallback_lag_days=src["caac"]["publication_rule"]["fallback_lag_days_after_month_end"])
+    c = caac.parse(snap("caac"), fallback_lag_days=src["caac"]["publication_rule"]["fallback_lag_days_after_month_end"])
     out["caac"] = Series("caac", "caac", "monthly", src["caac"]["publication_rule"],
                          c[["obs_date", "value", "published"]], meta={"table": c})
     return out

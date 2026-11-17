@@ -1,0 +1,17 @@
+{
+  "access": "all-access",
+  "agent": "user",
+  "bytes_uncompressed": 384947,
+  "end": "20261116",
+  "headers": {
+    "User-Agent": "sector-nowcast-research/0.1 (non-commercial research tool; python-requests)"
+  },
+  "name": "TCOM",
+  "project": "en.wikipedia",
+  "pulled_at_utc": "2026-11-17T03:56:23+00:00",
+  "sha256_uncompressed": "4bd9189f28704d299ff8e55d16055c0253f660f79fd21a3a06ea4e97b8cba6a3",
+  "start": "20190101",
+  "stored_as": "Trip.com_Group__20190101_20261116.json",
+  "title": "Trip.com Group",
+  "url": "https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Trip.com_Group/daily/20190101/20261116"
+}

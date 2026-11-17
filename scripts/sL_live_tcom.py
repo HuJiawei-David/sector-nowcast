@@ -29,7 +29,7 @@ ADJUSTED_NOTE = ("3.12: q-1 = 2026Q2 contains the MAJOR one_off_revenue SAMR bre
 
 
 def main() -> None:
-    series = F.load_series()
+    series = F.load_series(snapshots=F.backtest_snapshots())
     run_date = F.data_run_date(series)
     if run_date != ASOF:
         raise SystemExit(f"S3 snapshots' data run date is {run_date}, expected {ASOF}")

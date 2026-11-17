@@ -1,0 +1,13 @@
+{
+  "bytes_uncompressed": 101852,
+  "cik": 1269238,
+  "headers": {
+    "User-Agent": "Jiawei Hu <redacted: SEC contact email>"
+  },
+  "pulled_at_utc": "2026-11-17T03:56:09+00:00",
+  "purpose": "S6: has TCOM filed its Q3 2026 results 6-K?",
+  "sha256_uncompressed": "3a8283e4980017e759f022f06a3f423d04b535e242da7795df112f47f709a09b",
+  "stored_as": "TCOM_CIK0001269238.json",
+  "ticker": "TCOM",
+  "url": "https://data.sec.gov/submissions/CIK0001269238.json"
+}

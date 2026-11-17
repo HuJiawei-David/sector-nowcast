@@ -1,0 +1,134 @@
+# Company guidance for the live-call quarter (CLAUDE.md "GUIDANCE BENCHMARK"), extracted BY HAND from the
+# latest earnings release filed before the live-call run date (Session 6). Measurement data, not the frozen
+# spec. Every number is quoted verbatim (`quote`, `prev_quote`) from the saved release snapshot named in
+# `snapshot`; tests/test_live6.py checks each quote against that snapshot's text.
+#
+# Fields: metric (company's name), target (y / k if the guided metric IS a model target, else null),
+# basis (reported / constant currency), low/high_yoy_pct (company-stated growth range) OR low/high_level with
+# base_level (q-4 level, quoted) -> implied YoY; prev_yoy_pct = previous quarter's actual YoY of the SAME metric
+# (company-stated unless `prev_from` names a repo table). Guided direction = sign(midpoint - prev).
+# applies_to_targets: which live-call targets this guidance is the benchmark for.
+
+guidance:
+  - name: BKNG
+    quarter: 2026Q4
+    metric: Room nights
+    target: k
+    applies_to_targets: [k]
+    basis: reported
+    low_yoy_pct: 1
+    high_yoy_pct: 3
+    quote: "Room Nights Growth 1% - 3%"
+    prev_yoy_pct: 7
+    prev_quote: "Room nights grew 7% compared to the third quarter of 2025."
+    snapshot: data/raw/sec_filings/2026-11-11/BKNG_0001075531-26-000044_q3-26bkngearningsrelease.htm.gz
+    source_url: https://www.sec.gov/Archives/edgar/data/1075531/000107553126000044/q3-26bkngearningsrelease.htm
+  - name: BKNG
+    quarter: 2026Q4
+    metric: Adjusted Revenue
+    target: null                  # GAAP revenue y is not guided; hypotheses 3.12: the call is also stated vs Adjusted Revenue
+    applies_to_targets: [y]
+    basis: reported (constant currency 2% - 4%)
+    low_yoy_pct: 0
+    high_yoy_pct: 2
+    quote: "Adjusted Revenue Growth (1)(2) 0% - 2%"
+    prev_yoy_pct: 9
+    prev_quote: "Revenue declined 1% compared to the third quarter of 2025, while Adjusted Revenue grew 9%, or approximately 10% on a constant currency basis."
+    snapshot: data/raw/sec_filings/2026-11-11/BKNG_0001075531-26-000044_q3-26bkngearningsrelease.htm.gz
+    source_url: https://www.sec.gov/Archives/edgar/data/1075531/000107553126000044/q3-26bkngearningsrelease.htm
+  - name: EXPE
+    quarter: 2026Q4
+    metric: Revenue
+    target: y
+    applies_to_targets: [y, k]
+    basis: reported
+    low_yoy_pct: 4.0
+    high_yoy_pct: 5.7
+    quote: "Revenue $3.69 - $3.75B +4.0-5.7%"
+    prev_from: outputs/tables/revenue_yoy.csv (y 2026Q3, XBRL)
+    snapshot: data/raw/sec_filings/2026-11-11/EXPE_0001324424-26-000059_earningsrelease-q32026.htm.gz
+    source_url: https://www.sec.gov/Archives/edgar/data/1324424/000132442426000059/earningsrelease-q32026.htm
+  - name: ABNB
+    quarter: 2026Q4
+    metric: Revenue
+    target: y
+    applies_to_targets: [y, k]
+    basis: "reported (company: includes an approximate two percentage point FX tailwind)"
+    low_yoy_pct: 16
+    high_yoy_pct: 18
+    quote: "We expect to generate revenue of $3.22 billion to $3.28 billion, representing year-over-year growth of 16% to 18%, inclusive of an approximate two percentage point FX tailwind after factoring in our hedging program."
+    prev_from: outputs/tables/revenue_yoy.csv (y 2026Q3, XBRL)
+    snapshot: data/raw/sec_filings/2026-11-11/ABNB_0001193125-26-449727_d437988dex991.htm.gz
+    source_url: https://www.sec.gov/Archives/edgar/data/1559720/000119312526449727/d437988dex991.htm
+  - name: UBER
+    quarter: 2026Q4
+    metric: Gross Bookings
+    target: null
+    applies_to_targets: [y, k]
+    basis: constant currency
+    low_yoy_pct: 18
+    high_yoy_pct: 22
+    quote: "Gross Bookings of $63.25 billion to $65.25 billion, representing growth of 18% to 22% YoY on a constant-currency basis."
+    prev_yoy_pct: 20
+    prev_quote: "Gross Bookings grew 20% year-over-year on a constant currency basis"
+    snapshot: data/raw/sec_filings/2026-11-11/UBER_0001543151-26-000039_uberq326earningspressrelea.htm.gz
+    source_url: https://www.sec.gov/Archives/edgar/data/1543151/000154315126000039/uberq326earningspressrelea.htm
+  - name: LYFT
+    quarter: 2026Q4
+    metric: Gross Bookings
+    target: null
+    applies_to_targets: [y, k]
+    basis: reported
+    low_yoy_pct: 13
+    high_yoy_pct: 17
+    quote: "Gross Bookings of approximately $5.74 billion to $5.94 billion, up approximately 13% to 17% year over year."
+    prev_level: 5616.9            # Q3 2026, USD m
+    prev_base_level: 4780.4       # Q3 2025, USD m (same release) -> prev YoY = 5616.9 / 4780.4 - 1
+    prev_quote: "Gross Bookings $ 5,616.9 $ 5,504.2 $ 4,780.4"
+    snapshot: data/raw/sec_filings/2026-11-11/LYFT_0001628280-26-071043_lyft-20260930xpressrelease.htm.gz
+    source_url: https://www.sec.gov/Archives/edgar/data/1759509/000162828026071043/lyft-20260930xpressrelease.htm
+  - name: DASH
+    quarter: 2026Q4
+    metric: Marketplace GOV
+    target: null
+    applies_to_targets: [y, k]
+    basis: reported (company gives levels only; implied YoY vs Q4 2025 Marketplace GOV)
+    low_level: 35400              # USD m
+    high_level: 36400
+    base_level: 29683             # Q4 2025 Marketplace GOV, USD m (quarterly table in the same release)
+    quote: "Marketplace GOV Adjusted EBITDA Q4 2026 $35.4 billion - $36.4 billion"
+    base_quote: "Marketplace GOV $ 25,015 $ 29,683 $ 31,604 $ 33,078 $ 33,941"
+    prev_level: 33941             # Q3 2026
+    prev_base_level: 25015        # Q3 2025
+    prev_quote: "Marketplace GOV $ 25,015 $ 29,683 $ 31,604 $ 33,078 $ 33,941"
+    snapshot: data/raw/sec_filings/2026-11-11/DASH_0001792789-26-000062_proddashex991-pressrelease.htm.gz
+    source_url: https://www.sec.gov/Archives/edgar/data/1792789/000179278926000062/proddashex991-pressrelease.htm
+  - name: TCOM
+    quarter: 2026Q4
+    label: pending
+    note: "Trip.com has not filed its Q3 2026 results 6-K by the run date (EDGAR submissions pulled 2026-11-17, data/raw/sec_submissions_live/2026-11-17/); its Q4 2026 guidance, if any, will be in that release."
+    applies_to_targets: [y]
+
+# Base-period events (CLAUDE.md LIVE CALLS: one-offs in the year-earlier period that shift the YoY read).
+# Structural breaks touching q, q-1 or q-4 come from config/breaks.yaml (live.break_notes). Below: events
+# outside breaks.yaml. Windows are base-year calendar days; the TSA sensitivity removes day pairs whose
+# BASE day falls inside the window (a sensitivity, not a model change).
+base_period_events:
+  - id: us_federal_lapse_2025
+    applies_to: [BKNG, EXPE, ABNB, UBER, LYFT, DASH]
+    source_series: tsa
+    window: ["2025-10-01", "2025-11-12"]
+    event: "US federal lapse in appropriations (government shutdown), 1 Oct - 12 Nov 2025; air traffic controllers worked without pay."
+    quote: "Due to a lapse in appropriations, air traffic controllers worked without pay from October 3, 2025, to November 12, 2025."
+    window_note: "end date and controller-pay dates from the FAA order; the 1 Oct start is the start of the lapse as given in the Session 6 brief (the FAA text dates controllers' unpaid work from 3 Oct)."
+    snapshot: data/raw/federal_register/2026-11-17/doc_2025-20308_raw.txt
+    source_url: https://www.federalregister.gov/documents/2025/11/19/2025-20308/cancellation-of-emergency-order-establishing-operating-limitations-on-the-use-of-navigable-airspace
+  - id: faa_flight_reductions_2025
+    applies_to: [BKNG, EXPE, ABNB, UBER, LYFT, DASH]
+    source_series: tsa
+    window: ["2025-11-07", "2025-11-16"]
+    event: "FAA emergency orders required certain air carriers to reduce scheduled domestic operations at high-impact airports (order of 7 Nov 2025, replaced 13 Nov, cancelled effective 6 a.m. 17 Nov 2025)."
+    quote: "This Order takes effect at 6 a.m. EST on November 17, 2025."
+    quote2: "prompting the FAA to issue an order entitled ``Emergency Order Establishing Operating Limitations on the Use of Navigable Airspace'' on November 7, 2025"
+    snapshot: data/raw/federal_register/2026-11-17/doc_2025-20308_raw.txt
+    source_url: https://www.federalregister.gov/documents/2025/11/19/2025-20308/cancellation-of-emergency-order-establishing-operating-limitations-on-the-use-of-navigable-airspace

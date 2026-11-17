@@ -1,0 +1,17 @@
+{
+  "access": "all-access",
+  "agent": "user",
+  "bytes_uncompressed": 405682,
+  "end": "20261116",
+  "headers": {
+    "User-Agent": "sector-nowcast-research/0.1 (non-commercial research tool; python-requests)"
+  },
+  "name": "UBER",
+  "project": "en.wikipedia",
+  "pulled_at_utc": "2026-11-17T03:56:15+00:00",
+  "sha256_uncompressed": "80fe539cc3c77e0a59e3333325eb444025f323e14ddb3df2cf1116a2f07c4b96",
+  "start": "20190101",
+  "stored_as": "Uber__20190101_20261116.json",
+  "title": "Uber",
+  "url": "https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Uber/daily/20190101/20261116"
+}

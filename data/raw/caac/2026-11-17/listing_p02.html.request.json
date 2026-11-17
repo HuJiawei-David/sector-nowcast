@@ -1,0 +1,20 @@
+{
+  "bytes_uncompressed": 25797,
+  "headers": {
+    "User-Agent": "sector-nowcast-research/0.1 (non-commercial research tool; python-requests)"
+  },
+  "params": {
+    "channelid": "211383",
+    "fl": "112",
+    "orderby": "-fabuDate",
+    "outlinepage": "7",
+    "page": "2",
+    "perpage": "10",
+    "selST": "All",
+    "was_custom_expr": " PARENTID='112' or CLASSINFOID='112' "
+  },
+  "pulled_at_utc": "2026-11-17T03:57:17+00:00",
+  "sha256_uncompressed": "a6626bd3f33ec80826e71837c74fbf851fc34e30b046a3f8d8b0ebde0c3fe1d7",
+  "stored_as": "listing_p02.html",
+  "url": "https://www.caac.gov.cn/was5/web/search?page=2&channelid=211383&was_custom_expr=+PARENTID%3D%27112%27+or+CLASSINFOID%3D%27112%27+&perpage=10&outlinepage=7&orderby=-fabuDate&selST=All&fl=112"
+}

@@ -1,0 +1,17 @@
+{
+  "access": "all-access",
+  "agent": "user",
+  "bytes_uncompressed": 416294,
+  "end": "20261116",
+  "headers": {
+    "User-Agent": "sector-nowcast-research/0.1 (non-commercial research tool; python-requests)"
+  },
+  "name": "DASH",
+  "project": "en.wikipedia",
+  "pulled_at_utc": "2026-11-17T03:56:19+00:00",
+  "sha256_uncompressed": "242afa37ee260d9e4305e7faf2109f344e4ef0090bade8ab8f0067e71f527b4b",
+  "start": "20190101",
+  "stored_as": "DoorDash__20190101_20261116.json",
+  "title": "DoorDash",
+  "url": "https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/DoorDash/daily/20190101/20261116"
+}

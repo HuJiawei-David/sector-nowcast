@@ -106,7 +106,7 @@ def test_real_series_truncation_invariance():
     """On the real snapshots: recomputing features from data cut at asof gives identical values."""
     if not (RAW_DIR / "tsa").exists() or not (RAW_DIR / "caac").exists():
         pytest.skip("alt snapshots not present")
-    series = F.load_series()
+    series = F.load_series(snapshots=F.backtest_snapshots())
     for sid in ["tsa", "caac", "wikipedia:EXPE"]:
         s = series[sid]
         for q in [Quarter(2023, 2), Quarter(2024, 3), Quarter(2026, 3)]:

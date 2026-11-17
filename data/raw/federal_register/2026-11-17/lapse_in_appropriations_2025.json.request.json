@@ -1,0 +1,18 @@
+{
+  "bytes_uncompressed": 45094,
+  "headers": {
+    "User-Agent": "sector-nowcast-research/0.1 (non-commercial research tool; python-requests)"
+  },
+  "http_status": 200,
+  "params": {
+    "conditions[publication_date][gte]": "2025-10-01",
+    "conditions[publication_date][lte]": "2025-12-31",
+    "conditions[term]": "\"lapse in appropriations\" October 1, 2025",
+    "per_page": "20"
+  },
+  "pulled_at_utc": "2026-11-17T03:58:18+00:00",
+  "purpose": "citation for base-period events",
+  "sha256_uncompressed": "84ccf87f4f41a4f0c00ea9ddc634350f2402dcc4f2f7619e0cb94b4c75d6cd12",
+  "stored_as": "lapse_in_appropriations_2025.json",
+  "url": "https://www.federalregister.gov/api/v1/documents.json?conditions%5Bterm%5D=%22lapse+in+appropriations%22+October+1%2C+2025&conditions%5Bpublication_date%5D%5Bgte%5D=2025-10-01&conditions%5Bpublication_date%5D%5Blte%5D=2025-12-31&per_page=20"
+}

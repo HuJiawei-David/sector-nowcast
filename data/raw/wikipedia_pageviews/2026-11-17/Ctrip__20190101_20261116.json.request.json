@@ -1,0 +1,17 @@
+{
+  "access": "all-access",
+  "agent": "user",
+  "bytes_uncompressed": 402434,
+  "end": "20261116",
+  "headers": {
+    "User-Agent": "sector-nowcast-research/0.1 (non-commercial research tool; python-requests)"
+  },
+  "name": "TCOM",
+  "project": "en.wikipedia",
+  "pulled_at_utc": "2026-11-17T03:56:21+00:00",
+  "sha256_uncompressed": "ff2bd1428c88c3e3fe2ba6b356e80f9cf5bbf50ce79f44a7775c216c55e9ca3e",
+  "start": "20190101",
+  "stored_as": "Ctrip__20190101_20261116.json",
+  "title": "Ctrip",
+  "url": "https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Ctrip/daily/20190101/20261116"
+}
