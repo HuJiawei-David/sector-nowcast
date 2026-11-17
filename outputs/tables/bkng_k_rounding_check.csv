@@ -1,0 +1,15 @@
+quarter,k_levels_pct,k_prev_levels_pct,d_k_levels_pp,k_stated_pct,k_prev_stated_pct,d_k_stated_pp,sign_differs,stated_source_url
+2023Q2,8.9431,38.3838,-29.4407,8.8000,38.3000,-29.5000,False,https://www.sec.gov/Archives/edgar/data/1075531/000107553123000045/ex99163023.htm
+2023Q3,15.0000,8.9431,6.0569,14.9000,8.8000,6.1000,False,https://www.sec.gov/Archives/edgar/data/1075531/000107553123000060/ex99193023.htm
+2023Q4,9.4787,15.0000,-5.5213,9.2000,14.9000,-5.7000,False,https://www.sec.gov/Archives/edgar/data/1075531/000107553124000011/ex991123123.htm
+2024Q1,8.3942,9.4787,-1.0845,8.5000,9.2000,-0.7000,False,https://www.sec.gov/Archives/edgar/data/1075531/000107553124000026/ex99133124.htm
+2024Q2,7.0896,8.3942,-1.3046,7.1000,8.5000,-1.4000,False,https://www.sec.gov/Archives/edgar/data/1075531/000107553124000039/ex99163024.htm
+2024Q3,8.3333,7.0896,1.2438,8.1000,7.1000,1.0000,False,https://www.sec.gov/Archives/edgar/data/1075531/000107553124000047/ex99193024.htm
+2024Q4,12.9870,8.3333,4.6537,13.2000,8.1000,5.1000,False,https://www.sec.gov/Archives/edgar/data/1075531/000107553125000009/bnkgq42024earningspressr.htm
+2025Q1,7.4074,12.9870,-5.5796,7.2000,13.2000,-6.0000,False,https://www.sec.gov/Archives/edgar/data/1075531/000107553125000021/bkngq12025earningspressr.htm
+2025Q2,7.6655,7.4074,0.2581,7.7000,7.2000,0.5000,False,https://www.sec.gov/Archives/edgar/data/1075531/000107553125000035/bkngq22025earningspressr.htm
+2025Q3,8.0268,7.6655,0.3613,8.2000,7.7000,0.5000,False,https://www.sec.gov/Archives/edgar/data/1075531/000107553125000050/q3-25bkngearningsrelease.htm
+2025Q4,9.1954,8.0268,1.1686,9.0000,8.2000,0.8000,False,https://www.sec.gov/Archives/edgar/data/1075531/000107553126000008/q4-25bkngearningsrelease.htm
+2026Q1,5.9561,9.1954,-3.2393,5.9000,9.0000,-3.1000,False,https://www.sec.gov/Archives/edgar/data/1075531/000107553126000024/q1-26bkngearningsrelease.htm
+2026Q2,5.1780,5.9561,-0.7781,5.3000,5.9000,-0.6000,False,https://www.sec.gov/Archives/edgar/data/1075531/000107553126000036/q2-26bkngearningsrelease.htm
+2026Q3,6.8111,5.1780,1.6332,6.7000,5.3000,1.4000,False,https://www.sec.gov/Archives/edgar/data/1075531/000107553126000044/q3-26bkngearningsrelease.htm
