@@ -6,6 +6,10 @@ GREEN rule holds, otherwise grey; multiple-testing line underneath), Lead time (
 """
 from __future__ import annotations
 
+import datetime as dt
+import io
+import re
+import zipfile
 from pathlib import Path
 
 import pandas as pd
@@ -162,4 +166,24 @@ def build(path: Path, live: pd.DataFrame, results: pd.DataFrame, lead: pd.DataFr
     _widths(ws)
     notes_sheet(wb.create_sheet("Notes"), method, limits)
     path.parent.mkdir(parents=True, exist_ok=True)
-    wb.save(path)
+    stamp = dt.datetime(2026, 1, 1)
+    wb.properties.created = wb.properties.modified = stamp
+    buf = io.BytesIO()
+    wb.save(buf)
+    _deterministic_zip(buf.getvalue(), path)
+
+
+def _deterministic_zip(data: bytes, path: Path) -> None:
+    """Rewrite the xlsx with fixed zip timestamps and document dates, so a rebuild from the same inputs gives
+    the same bytes (the committed tracker is then reproducible)."""
+    src = zipfile.ZipFile(io.BytesIO(data))
+    out = io.BytesIO()
+    with zipfile.ZipFile(out, "w", zipfile.ZIP_DEFLATED) as z:
+        for info in src.infolist():
+            body = src.read(info.filename)
+            if info.filename == "docProps/core.xml":
+                body = re.sub(rb"(<dcterms:(created|modified)[^>]*>)[^<]*", rb"\g<1>2026-01-01T00:00:00Z", body)
+            zi = zipfile.ZipInfo(info.filename, date_time=(1980, 1, 1, 0, 0, 0))
+            zi.compress_type = zipfile.ZIP_DEFLATED
+            z.writestr(zi, body)
+    path.write_bytes(out.getvalue())
