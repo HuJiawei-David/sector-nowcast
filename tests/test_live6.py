@@ -24,7 +24,35 @@ def test_every_guidance_and_event_quote_is_in_its_snapshot():
             if k in e:
                 assert norm(e[k]) in text, (e.get("name", e.get("id")), k)
                 n += 1
-    assert n >= 15
+        if "start_quote" in e:                      # Session 8: official source for the start of an event window
+            assert norm(e["start_quote"]) in LC.snapshot_text(e["start_snapshot"]), e["id"]
+            n += 1
+    assert n >= 16
+
+
+def test_event_windows_are_sourced_not_from_a_brief():
+    """Rule 6 (coach review 2026-11-17): every base-period event date must come from a saved official document."""
+    for e in LC.guidance_config()["base_period_events"]:
+        blob = " ".join(str(v) for v in e.values()).lower()
+        assert "brief" not in blob, e["id"]
+    lapse = next(e for e in LC.guidance_config()["base_period_events"] if e["id"] == "us_federal_lapse_2025")
+    assert lapse["window"] == ["2025-10-01", "2025-11-12"]
+    assert "October 1, 2025, through November 12, 2025" in lapse["start_quote"]
+
+
+def test_public_hashes_of_the_timestamped_files():
+    """The three SHA-256 values posted publicly (gist) must never change."""
+    import hashlib
+    want = {"docs/hypotheses.md": "28056437cdfd7c3baeb512aeb764adbc25457a0d4562ab0647eee400db35fb4d",
+            "outputs/tables/live_calls_tcom_2026Q3.csv": "8dbd2227c16a33a2c7607eeb83dabb2482d041b83c323c00549fe0bc9db24f84",
+            "outputs/tables/live_calls.csv": "875b9a34f69033d64acd1057db635c890c202b749fe5fd5ce4d7a392310c08fd"}
+    for path, sha in want.items():
+        assert hashlib.sha256((REPO_ROOT / path).read_bytes()).hexdigest() == sha, path
+
+
+def test_live_calls_read_pinned_snapshots():
+    assert F.live_snapshots() == {"tsa": "2026-11-17", "wikipedia_pageviews": "2026-11-17", "caac": "2026-11-17"}
+    assert "F.load_series(snapshots=F.live_snapshots())" in (REPO_ROOT / "scripts/s6_live.py").read_text()
 
 
 @pytest.mark.parametrize("call,prev,label", [("accelerate", 10.0, "above guidance"), ("decelerate", 10.0, "in line"),

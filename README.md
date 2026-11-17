@@ -51,7 +51,7 @@ companies tend to guide conservatively, so "above guidance" is the common case.
 | LYFT | 2026Q4 | TSA accelerate | decelerate | decelerate | decelerate (Gross Bookings) | above guidance |
 | DASH | 2026Q4 | TSA accelerate | decelerate | accelerate | decelerate (Marketplace GOV) | above guidance |
 | TCOM | 2026Q4 | CAAC insufficient data | accelerate | insufficient data | pending | – |
-| TCOM | 2026Q3 (locked) | CAAC accelerate | accelerate | accelerate | no guidance | – |
+| TCOM | 2026Q3 (locked) | CAAC accelerate | accelerate | accelerate | no guidance | score pending (no Q3 6-K on EDGAR, 2026-11-17) |
 
 Memos: outputs/memos/<TICKER>.md and outputs/memos/SECTOR.md. Tracker: outputs/tracker/sector_nowcast_tracker.xlsx.
 
@@ -100,6 +100,12 @@ the "## Deviations" heading has changed (the file's SHA-256 is checked at every 
 - **Structural breaks.** 22 listed breaks (13 MAJOR) that no demand proxy can see, e.g. Uber's accounting
   changes (removing them leaves N = 1 for Uber revenue), Booking's −$900m FTC item, DoorDash's Deliveroo
   (config/breaks.yaml, outputs/tables/robustness.csv).
+- **One TSA call is a knife-edge.** The 2024Q2 TSA d_alt is -0.0004; computed one day earlier it is +0.0001, which
+  flips that quarter for all six U.S. names (e.g. LYFT revenue 11 → 12 of 14, placebo percentile 93.8 → 98.2;
+  EXPE revenue 10 → 9). No other call changes. The pre-registered quarter-end results stand; the U.S. cells are that
+  close to the line (outputs/tables/audit_asof_minus_1_cells.csv, docs/audit.md).
+- **Trip.com's 9 hits include small moves.** 3 of the 9 were on |d_y| < 1 pp or |d_alt| < 0.01 (descriptive, not
+  pre-registered; outputs/tables/tcom_caac_small_moves.csv).
 - **Authors not blind.** David and an AI assistant had seen historical reported revenue before the
   pre-registration; it guards against specification search, not against prior knowledge of outcomes
   (docs/hypotheses.md §0).
@@ -117,6 +123,9 @@ the "## Deviations" heading has changed (the file's SHA-256 is checked at every 
   `calls_at`); a test reproduces the locked Trip.com forward call byte for byte.
 - **SQL.** Portable schema and queries in sql/*.sql (SQLite file data/nowcast.db; PostgreSQL-compatible);
   the relevancy matrix is produced by sql/results_summary.sql.
+- **Independent audit.** docs/audit.md (Session 8, a different model than the builder): every as-of moved one
+  day earlier, restated quarters, CAAC publication dates, spec drift, number traceability, fresh-clone rebuild
+  (scripts/s8_audit_*.py, outputs/tables/audit_*.csv).
 - **Tests.** pytest suite (tests/) covering point-in-time cut-offs, data validations, reconciliation
   against company-stated figures, the scoring rules and the quotes behind every guidance number.
 

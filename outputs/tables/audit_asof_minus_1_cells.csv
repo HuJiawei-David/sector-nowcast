@@ -1,0 +1,89 @@
+name,source,target,model,family_member,status,status_m1,N_realised,N_realised_m1,hits,hits_m1,momentum_hits,momentum_hits_m1,meets_min_hits,meets_min_hits_m1,beats_both_baselines,beats_both_baselines_m1,placebo_percentile,placebo_percentile_m1,green,green_m1,mae_pp,mae_pp_m1,hits_diff,mae_diff_pp
+BKNG,tsa,y,direction,True,ok,ok,14,14,8.000000,7.000000,7.000000,7.000000,False,False,True,False,23.800000,12.800000,False,False,,,-1.000000,
+BKNG,tsa,y,magnitude,False,ok,ok,13,13,,,,,,,,,24.200000,22.400000,False,False,5.336375,5.353622,,0.017247
+BKNG,wikipedia,y,direction,True,ok,ok,14,14,5.000000,5.000000,7.000000,7.000000,False,False,False,False,3.000000,3.000000,False,False,,,0.000000,
+BKNG,wikipedia,y,magnitude,False,ok,ok,13,13,,,,,,,,,3.600000,3.800000,False,False,6.503805,6.503018,,-0.000787
+BKNG,combined,y,direction,True,ok,ok,11,11,4.000000,4.000000,5.000000,5.000000,False,False,False,False,0.000000,0.000000,False,False,,,0.000000,
+BKNG,combined,y,magnitude,False,not run (spec defines the combined source as a direction call only; no magnitude model),not run (spec defines the combined source as a direction call only; no magnitude model),0,0,,,,,,,,,,,False,False,,,,
+BKNG,tsa,k,direction,True,ok,ok,14,14,8.000000,7.000000,7.000000,7.000000,False,False,True,False,51.200000,31.600000,False,False,,,-1.000000,
+BKNG,tsa,k,magnitude,False,ok,ok,13,13,,,,,,,,,59.700000,54.900000,False,False,4.238193,4.318504,,0.080311
+BKNG,wikipedia,k,direction,True,ok,ok,14,14,7.000000,7.000000,7.000000,7.000000,False,False,False,False,31.600000,31.600000,False,False,,,0.000000,
+BKNG,wikipedia,k,magnitude,False,ok,ok,13,13,,,,,,,,,14.900000,15.700000,False,False,6.454049,6.417789,,-0.036260
+BKNG,combined,k,direction,True,ok,ok,11,11,5.000000,5.000000,6.000000,6.000000,False,False,False,False,17.000000,17.000000,False,False,,,0.000000,
+BKNG,combined,k,magnitude,False,not run (spec defines the combined source as a direction call only; no magnitude model),not run (spec defines the combined source as a direction call only; no magnitude model),0,0,,,,,,,,,,,False,False,,,,
+EXPE,tsa,y,direction,True,ok,ok,14,14,10.000000,9.000000,7.000000,7.000000,False,False,True,True,90.700000,72.800000,False,False,,,-1.000000,
+EXPE,tsa,y,magnitude,False,ok,ok,13,13,,,,,,,,,96.200000,94.000000,False,False,2.749201,2.807191,,0.057990
+EXPE,wikipedia,y,direction,True,ok,ok,14,14,7.000000,7.000000,7.000000,7.000000,False,False,False,False,29.700000,29.700000,False,False,,,0.000000,
+EXPE,wikipedia,y,magnitude,False,ok,ok,13,13,,,,,,,,,60.800000,60.900000,False,False,4.474969,4.493170,,0.018201
+EXPE,combined,y,direction,True,ok,ok,11,11,7.000000,7.000000,6.000000,6.000000,False,False,True,True,60.400000,60.400000,False,False,,,0.000000,
+EXPE,combined,y,magnitude,False,not run (spec defines the combined source as a direction call only; no magnitude model),not run (spec defines the combined source as a direction call only; no magnitude model),0,0,,,,,,,,,,,False,False,,,,
+EXPE,tsa,k,direction,True,ok,ok,14,14,9.000000,10.000000,4.000000,4.000000,False,False,True,True,62.500000,81.900000,False,False,,,1.000000,
+EXPE,tsa,k,magnitude,False,ok,ok,13,13,,,,,,,,,79.000000,81.700000,False,False,2.379808,2.363805,,-0.016003
+EXPE,wikipedia,k,direction,True,ok,ok,14,14,8.000000,8.000000,4.000000,4.000000,False,False,True,True,52.700000,52.700000,False,False,,,0.000000,
+EXPE,wikipedia,k,magnitude,False,ok,ok,13,13,,,,,,,,,67.000000,67.500000,False,False,4.010924,3.996518,,-0.014406
+EXPE,combined,k,direction,True,ok,ok,11,11,7.000000,7.000000,4.000000,4.000000,False,False,True,True,61.600000,61.600000,False,False,,,0.000000,
+EXPE,combined,k,magnitude,False,not run (spec defines the combined source as a direction call only; no magnitude model),not run (spec defines the combined source as a direction call only; no magnitude model),0,0,,,,,,,,,,,False,False,,,,
+ABNB,tsa,y,direction,True,ok,ok,14,14,7.000000,6.000000,5.000000,5.000000,False,False,False,False,16.500000,7.200000,False,False,,,-1.000000,
+ABNB,tsa,y,magnitude,False,ok,ok,13,13,,,,,,,,,23.600000,23.700000,False,False,3.395213,3.397793,,0.002580
+ABNB,wikipedia,y,direction,True,ok,ok,14,14,6.000000,6.000000,5.000000,5.000000,False,False,False,False,16.600000,16.600000,False,False,,,0.000000,
+ABNB,wikipedia,y,magnitude,False,ok,ok,13,13,,,,,,,,,89.300000,89.400000,False,False,3.093528,3.093914,,0.000386
+ABNB,combined,y,direction,True,ok,ok,11,11,5.000000,5.000000,2.000000,2.000000,False,False,False,False,17.200000,17.200000,False,False,,,0.000000,
+ABNB,combined,y,magnitude,False,not run (spec defines the combined source as a direction call only; no magnitude model),not run (spec defines the combined source as a direction call only; no magnitude model),0,0,,,,,,,,,,,False,False,,,,
+ABNB,tsa,k,direction,True,ok,ok,14,14,9.000000,8.000000,7.000000,7.000000,False,False,True,True,62.200000,41.400000,False,False,,,-1.000000,
+ABNB,tsa,k,magnitude,False,ok,ok,13,13,,,,,,,,,91.800000,91.700000,False,False,2.042017,2.056830,,0.014813
+ABNB,wikipedia,k,direction,True,ok,ok,14,14,10.000000,10.000000,7.000000,7.000000,False,False,True,True,88.500000,88.500000,False,False,,,0.000000,
+ABNB,wikipedia,k,magnitude,False,ok,ok,13,13,,,,,,,,,74.800000,74.000000,False,False,2.485985,2.493391,,0.007406
+ABNB,combined,k,direction,True,ok,ok,11,11,8.000000,8.000000,6.000000,6.000000,False,False,True,True,81.300000,81.300000,False,False,,,0.000000,
+ABNB,combined,k,magnitude,False,not run (spec defines the combined source as a direction call only; no magnitude model),not run (spec defines the combined source as a direction call only; no magnitude model),0,0,,,,,,,,,,,False,False,,,,
+UBER,tsa,y,direction,True,ok,ok,14,14,8.000000,9.000000,8.000000,8.000000,False,False,False,True,21.500000,53.500000,False,False,,,1.000000,
+UBER,tsa,y,magnitude,False,ok,ok,13,13,,,,,,,,,70.800000,67.700000,False,False,3.064771,3.102324,,0.037553
+UBER,wikipedia,y,direction,True,ok,ok,14,14,9.000000,9.000000,8.000000,8.000000,False,False,True,True,78.000000,78.000000,False,False,,,0.000000,
+UBER,wikipedia,y,magnitude,False,ok,ok,13,13,,,,,,,,,18.100000,18.000000,False,False,4.054639,4.078113,,0.023474
+UBER,combined,y,direction,True,ok,ok,11,11,8.000000,8.000000,6.000000,6.000000,False,False,True,True,68.800000,68.800000,False,False,,,0.000000,
+UBER,combined,y,magnitude,False,not run (spec defines the combined source as a direction call only; no magnitude model),not run (spec defines the combined source as a direction call only; no magnitude model),0,0,,,,,,,,,,,False,False,,,,
+UBER,tsa,k,direction,True,ok,ok,14,14,9.000000,10.000000,7.000000,7.000000,False,False,True,True,60.700000,82.700000,False,False,,,1.000000,
+UBER,tsa,k,magnitude,False,ok,ok,13,13,,,,,,,,,97.600000,97.700000,False,False,1.371781,1.366581,,-0.005200
+UBER,wikipedia,k,direction,True,ok,ok,14,14,10.000000,10.000000,7.000000,7.000000,False,False,True,True,87.200000,87.200000,False,False,,,0.000000,
+UBER,wikipedia,k,magnitude,False,ok,ok,13,13,,,,,,,,,16.800000,16.000000,False,False,5.514191,5.511400,,-0.002791
+UBER,combined,k,direction,True,ok,ok,11,11,7.000000,7.000000,7.000000,7.000000,False,False,False,False,55.800000,55.800000,False,False,,,0.000000,
+UBER,combined,k,magnitude,False,not run (spec defines the combined source as a direction call only; no magnitude model),not run (spec defines the combined source as a direction call only; no magnitude model),0,0,,,,,,,,,,,False,False,,,,
+LYFT,tsa,y,direction,True,ok,ok,14,14,11.000000,12.000000,6.000000,6.000000,True,True,True,True,93.800000,98.200000,False,True,,,1.000000,
+LYFT,tsa,y,magnitude,False,ok,ok,13,13,,,,,,,,,47.100000,54.300000,False,False,8.388326,8.336253,,-0.052073
+LYFT,wikipedia,y,direction,True,ok,ok,14,14,8.000000,8.000000,6.000000,6.000000,False,False,True,True,52.200000,52.200000,False,False,,,0.000000,
+LYFT,wikipedia,y,magnitude,False,ok,ok,13,13,,,,,,,,,43.200000,42.800000,False,False,9.394125,9.410521,,0.016396
+LYFT,combined,y,direction,True,ok,ok,11,11,7.000000,7.000000,5.000000,5.000000,False,False,True,True,53.900000,53.900000,False,False,,,0.000000,
+LYFT,combined,y,magnitude,False,not run (spec defines the combined source as a direction call only; no magnitude model),not run (spec defines the combined source as a direction call only; no magnitude model),0,0,,,,,,,,,,,False,False,,,,
+LYFT,tsa,k,direction,True,ok,ok,12,12,7.000000,6.000000,3.000000,3.000000,False,False,True,False,28.800000,14.000000,False,False,,,-1.000000,
+LYFT,tsa,k,magnitude,False,ok,ok,12,12,,,,,,,,,92.900000,91.200000,False,False,2.759499,2.805124,,0.045625
+LYFT,wikipedia,k,direction,True,ok,ok,12,12,7.000000,7.000000,3.000000,3.000000,False,False,True,True,49.500000,49.500000,False,False,,,0.000000,
+LYFT,wikipedia,k,magnitude,False,ok,ok,12,12,,,,,,,,,30.700000,30.100000,False,False,4.373004,4.385354,,0.012350
+LYFT,combined,k,direction,True,ok,ok,11,11,6.000000,6.000000,2.000000,2.000000,False,False,True,True,21.600000,21.600000,False,False,,,0.000000,
+LYFT,combined,k,magnitude,False,not run (spec defines the combined source as a direction call only; no magnitude model),not run (spec defines the combined source as a direction call only; no magnitude model),0,0,,,,,,,,,,,False,False,,,,
+DASH,tsa,y,direction,True,ok,ok,14,14,8.000000,7.000000,8.000000,8.000000,False,False,False,False,22.000000,13.800000,False,False,,,-1.000000,
+DASH,tsa,y,magnitude,False,ok,ok,13,13,,,,,,,,,69.300000,66.500000,False,False,3.182253,3.211892,,0.029639
+DASH,wikipedia,y,direction,True,ok,ok,14,14,7.000000,7.000000,8.000000,8.000000,False,False,False,False,26.000000,26.000000,False,False,,,0.000000,
+DASH,wikipedia,y,magnitude,False,ok,ok,13,13,,,,,,,,,19.700000,19.000000,False,False,3.959704,3.961887,,0.002183
+DASH,combined,y,direction,True,ok,ok,11,11,5.000000,5.000000,5.000000,5.000000,False,False,False,False,13.700000,13.700000,False,False,,,0.000000,
+DASH,combined,y,magnitude,False,not run (spec defines the combined source as a direction call only; no magnitude model),not run (spec defines the combined source as a direction call only; no magnitude model),0,0,,,,,,,,,,,False,False,,,,
+DASH,tsa,k,direction,True,ok,ok,14,14,7.000000,6.000000,8.000000,8.000000,False,False,False,False,14.400000,7.100000,False,False,,,-1.000000,
+DASH,tsa,k,magnitude,False,ok,ok,13,13,,,,,,,,,52.100000,49.900000,False,False,2.141164,2.140175,,-0.000989
+DASH,wikipedia,k,direction,True,ok,ok,14,14,8.000000,8.000000,8.000000,8.000000,False,False,False,False,46.600000,46.600000,False,False,,,0.000000,
+DASH,wikipedia,k,magnitude,False,ok,ok,13,13,,,,,,,,,47.400000,47.700000,False,False,3.614679,3.593155,,-0.021524
+DASH,combined,k,direction,True,ok,ok,11,11,6.000000,6.000000,6.000000,6.000000,False,False,False,False,42.900000,42.900000,False,False,,,0.000000,
+DASH,combined,k,magnitude,False,not run (spec defines the combined source as a direction call only; no magnitude model),not run (spec defines the combined source as a direction call only; no magnitude model),0,0,,,,,,,,,,,False,False,,,,
+TCOM,caac,y,direction,True,ok,ok,9,9,9.000000,9.000000,3.000000,3.000000,True,True,True,True,99.000000,99.000000,True,True,,,0.000000,
+TCOM,caac,y,magnitude,False,ok,ok,5,5,,,,,,,,,94.700000,94.700000,False,False,2.968519,2.968519,,-0.000000
+TCOM,hkia,y,direction,False,not run (fallback not triggered; docs/decisions_log.md),not run (fallback not triggered; docs/decisions_log.md),0,0,,,,,,,,,,,False,False,,,,
+TCOM,hkia,y,magnitude,False,not run (fallback not triggered; docs/decisions_log.md),not run (fallback not triggered; docs/decisions_log.md),0,0,,,,,,,,,,,False,False,,,,
+TCOM,wikipedia,y,direction,True,ok,ok,9,9,3.000000,3.000000,3.000000,3.000000,False,False,False,False,0.000000,0.000000,False,False,,,0.000000,
+TCOM,wikipedia,y,magnitude,False,ok,ok,9,9,,,,,,,,,84.400000,85.200000,False,False,6.061997,6.076839,,0.014842
+TCOM,combined,y,direction,True,ok,ok,6,6,5.000000,5.000000,1.000000,1.000000,False,False,True,True,65.700000,65.700000,False,False,,,0.000000,
+TCOM,combined,y,magnitude,False,not run (spec defines the combined source as a direction call only; no magnitude model),not run (spec defines the combined source as a direction call only; no magnitude model),0,0,,,,,,,,,,,False,False,,,,
+TCOM,caac,k,direction,False,not run (company discloses no volume KPI: revenue only),not run (company discloses no volume KPI: revenue only),0,0,,,,,,,,,,,False,False,,,,
+TCOM,caac,k,magnitude,False,not run (company discloses no volume KPI: revenue only),not run (company discloses no volume KPI: revenue only),0,0,,,,,,,,,,,False,False,,,,
+TCOM,hkia,k,direction,False,not run (company discloses no volume KPI: revenue only),not run (company discloses no volume KPI: revenue only),0,0,,,,,,,,,,,False,False,,,,
+TCOM,hkia,k,magnitude,False,not run (company discloses no volume KPI: revenue only),not run (company discloses no volume KPI: revenue only),0,0,,,,,,,,,,,False,False,,,,
+TCOM,wikipedia,k,direction,False,not run (company discloses no volume KPI: revenue only),not run (company discloses no volume KPI: revenue only),0,0,,,,,,,,,,,False,False,,,,
+TCOM,wikipedia,k,magnitude,False,not run (company discloses no volume KPI: revenue only),not run (company discloses no volume KPI: revenue only),0,0,,,,,,,,,,,False,False,,,,
+TCOM,combined,k,direction,False,not run (company discloses no volume KPI: revenue only),not run (company discloses no volume KPI: revenue only),0,0,,,,,,,,,,,False,False,,,,
+TCOM,combined,k,magnitude,False,not run (company discloses no volume KPI: revenue only),not run (company discloses no volume KPI: revenue only),0,0,,,,,,,,,,,False,False,,,,

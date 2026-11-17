@@ -1,0 +1,26 @@
+check,result,detail
+"headline windows = rule 4 (US 2023Q2-2026Q3, TCOM 2024Q2-2026Q2, clean d only)",PASS,"39 (name, target, source) series checked"
+robustness window = rule 4 (US 2024Q1-2026Q3; TCOM none),PASS,
+"clean flag = rule 4 exclusion windows (US 2020Q1-2021Q4, TCOM 2020Q1-2022Q4)",PASS,
+scored quarters of every headline cell are inside the headline window,PASS,39 cells
+magnitude fitting pairs start at the first clean quarter or later (pooled Wikipedia may use US pairs),PASS,327 calls with a fitted beta; earliest pair quarter 2023Q2
+combined std uses clean d_alt values only,PASS,"std windows start at ['2023Q2', '2024Q2']"
+TSA: one identical call for all six US names in every quarter,PASS,"28 (quarter, target) groups"
+tsa_dependence.csv counts each quarter once (one row per quarter and target),PASS,28 rows = 14 quarters x 2 targets
+no document quotes a TSA hit rate pooled across names (denominators 80/82/84/168),PASS,[]
+every TSA results row carries the not-independent note,PASS,
+"results.csv has every (name, source, target) direction cell incl. not-run ones",PASS,"44 direction cells, 5 not run: not run (company discloses no volume KPI: revenue only); not run (fallback not triggered; docs/decisions_log.md)"
+HKIA and TCOM k cells are present as 'not run' with a reason,PASS,
+every not-run / excluded quarter is counted (n_excluded_same_sample + N = window length),PASS,single-source headline cells
+multiple-testing family = 39 cells,PASS,
+robustness.csv has the same cells for each of the 3 robustness analyses,PASS,"{'robustness (i) US 2024Q1-2026Q3': 88, 'robustness (ii) MAJOR structural-break quarters removed': 88, 'robustness (iii) Wikipedia earnings-day windows removed': 88}"
+README.md: TCOM CAAC y '9 of 9' = results.csv hits/N,PASS,
+outputs/memos/TCOM.md: TCOM CAAC y '9 of 9' = results.csv hits/N,PASS,
+outputs/memos/SECTOR.md: TCOM CAAC y '9 of 9' = results.csv hits/N,PASS,
+docs/cv_bullets.md: TCOM CAAC y '9 of 9' = results.csv hits/N,PASS,
+"README.md: need 8, momentum 3 of 9, placebo 99.0, lead 8.1 weeks, BH q 0.43",PASS,
+"outputs/memos/TCOM.md: need 8, momentum 3 of 9, placebo 99.0, lead 8.1 weeks, BH q 0.43",PASS,
+"README: '1.95 would pass by chance', 39 cells, 1 GREEN = multiple_testing.csv",PASS,
+only GREEN cell is TCOM caac y,PASS,
+cv_bullets bullet 2 states the BH q-value from results.csv and is under 30 words,PASS,"29 words: China air-traffic data called Trip.com revenue direction 9 of 9 quarters (99th placebo percentile), not significant after multiple-testing correction (BH q = 0.43); 1 of 39 passed, 1.95 expected."
+"TCOM CAAC y small-moves table has the 9 headline quarters, all hits",PASS,

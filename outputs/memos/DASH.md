@@ -24,4 +24,4 @@
 
 **What would change my mind.** A card-spend or app-usage panel on food delivery, by country, that clears the placebo test on Total Orders.
 
-Sources: [R] outputs/tables/results.csv · [RB] robustness.csv · [LT] lead_time.csv · [LV] live_calls.csv · [S] live_tsa_sensitivity.csv · [G] config/guidance.yaml · [B] config/breaks.yaml · [D] docs/drivers.md · [H] docs/hypotheses.md
+Sources: [R] outputs/tables/results.csv · [RB] robustness.csv · [LT] lead_time.csv · [LV] live_calls.csv · [S] live_tsa_sensitivity.csv (sensitivity, not pre-registered) · [G] config/guidance.yaml · [B] config/breaks.yaml · [D] docs/drivers.md · [H] docs/hypotheses.md

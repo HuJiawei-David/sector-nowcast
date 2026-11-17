@@ -4,7 +4,7 @@
 
 **Current read vs company guidance.** Locked 2026Q3 forward call (asof 2026-11-10, commit 03746aa): CAAC, Wikipedia and combined all say *accelerate*; the CAAC magnitude model gives 11.50% vs Q2's 5.52% [LV]. The Q2 release gives no quantitative guidance, so the label is "no guidance". 2026Q4: CAAC "insufficient data" (October not yet published), Wikipedia *accelerate*, guidance "pending" [LV].
 
-**What would prove me wrong.** Q3 2026 revenue growth at or below Q2's 5.52% in the Q3 results 6-K (estimate 2026-11-17 [LV]).
+**What would prove me wrong.** Q3 2026 revenue growth at or below Q2's 5.52% in the Q3 results 6-K (estimate 2026-11-17 [LV]). Score of the locked call: **pending**. EDGAR listed no Q3 2026 results 6-K on 2026-11-17 (data/raw/sec_submissions_s8/2026-11-17/); when it is filed the call is scored as made in outputs/tables/live_calls_scored.csv, and the locked files are never edited.
 
 ---
 
@@ -16,6 +16,8 @@
 
 **What the data said.** As predicted, and the strongest cell in the study: 9 of 9, all 6 revenue inflections caught, 8 of 9 at day 56 (~13.3 weeks before the print), 8 of 8 with break quarters removed [R, INF, LT, RB]. The magnitude model beats "same as last quarter" (MAE 2.97 vs 4.27 pp, N = 5) [R]. CAAC sees two months of the quarter at quarter end; no month is published by day 28 [LT].
 
+**How big were the moves (descriptive, not pre-registered).** Of the 9 headline hits, 3 were on very small moves: 2025Q2 (d_y +0.05 pp) and 2025Q3 (d_y -0.69 pp) have |d_y| < 1 pp, and 2024Q3 has |d_alt| < 0.01 (d_alt +0.0054; d_y +1.96 pp). In the other 6 quarters growth moved by 3.6 to 15.9 pp [SM].
+
 **Useless source here.** Wikipedia: 3 of 9, placebo percentile 0.0 [R]. English Wikipedia is blocked in mainland China, so it sees only non-mainland attention.
 
 **Structural breaks.** SAMR contra-revenue in 2026Q2 and the "operational adjustments" from 2026Q2 (both MAJOR) [B].
@@ -24,4 +26,4 @@
 
 **What would change my mind.** A Q3 miss; a run of misses would take the cell back towards chance.
 
-Sources: [R] outputs/tables/results.csv · [RB] robustness.csv · [LT] lead_time.csv · [INF] inflections_summary.csv · [LV] live_calls.csv (incl. the locked rows from live_calls_tcom_2026Q3.csv) · [MT] multiple_testing.csv · [B] config/breaks.yaml · [D] docs/drivers.md · [H] docs/hypotheses.md
+Sources: [R] outputs/tables/results.csv · [RB] robustness.csv · [LT] lead_time.csv · [INF] inflections_summary.csv · [LV] live_calls.csv (incl. the locked rows from live_calls_tcom_2026Q3.csv) · [SM] tcom_caac_small_moves.csv · [MT] multiple_testing.csv · [B] config/breaks.yaml · [D] docs/drivers.md · [H] docs/hypotheses.md

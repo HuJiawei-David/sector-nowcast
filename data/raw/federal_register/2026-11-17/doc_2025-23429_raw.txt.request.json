@@ -1,0 +1,12 @@
+{
+  "bytes_uncompressed": 12525,
+  "headers": {
+    "User-Agent": "sector-nowcast-research/0.1 (non-commercial research tool; python-requests)"
+  },
+  "http_status": 200,
+  "pulled_at_utc": "2026-11-17T06:58:09+00:00",
+  "purpose": "citation for the start of the 2025 lapse in appropriations",
+  "sha256_uncompressed": "a072ceaec18a01ecfa1af93341a5cd8e96d27a2ad6fcbdde10ee8cca57590897",
+  "stored_as": "doc_2025-23429_raw.txt",
+  "url": "https://www.federalregister.gov/documents/full_text/text/2025/12/19/2025-23429.txt"
+}

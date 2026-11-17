@@ -24,4 +24,4 @@
 
 **What would change my mind.** The placebo test is rerun as each quarter is reported; a TSA miss on Q4 would weaken the case, a hit alone would not make it significant.
 
-Sources: [R] outputs/tables/results.csv · [RB] robustness.csv · [LT] lead_time.csv · [INF] inflections_summary.csv · [LV] live_calls.csv · [S] live_tsa_sensitivity.csv · [G] config/guidance.yaml · [B] config/breaks.yaml · [D] docs/drivers.md · [H] docs/hypotheses.md
+Sources: [R] outputs/tables/results.csv · [RB] robustness.csv · [LT] lead_time.csv · [INF] inflections_summary.csv · [LV] live_calls.csv · [S] live_tsa_sensitivity.csv (sensitivity, not pre-registered) · [G] config/guidance.yaml · [B] config/breaks.yaml · [D] docs/drivers.md · [H] docs/hypotheses.md

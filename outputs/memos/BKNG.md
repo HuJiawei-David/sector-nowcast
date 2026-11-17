@@ -24,4 +24,4 @@
 
 **What would change my mind.** A Europe/Asia volume source (e.g. card spend outside the U.S.) that clears the placebo test on room nights.
 
-Sources: [R] outputs/tables/results.csv · [RB] robustness.csv · [LT] lead_time.csv · [INF] inflections_summary.csv · [LV] live_calls.csv · [S] live_tsa_sensitivity.csv · [BK] bkng_k_rounding_check.csv · [G] config/guidance.yaml (quotes from the Q3 2026 release snapshot) · [B] config/breaks.yaml · [D] docs/drivers.md · [H] docs/hypotheses.md
+Sources: [R] outputs/tables/results.csv · [RB] robustness.csv · [LT] lead_time.csv · [INF] inflections_summary.csv · [LV] live_calls.csv · [S] live_tsa_sensitivity.csv (sensitivity, not pre-registered) · [BK] bkng_k_rounding_check.csv · [G] config/guidance.yaml (quotes from the Q3 2026 release snapshot) · [B] config/breaks.yaml · [D] docs/drivers.md · [H] docs/hypotheses.md

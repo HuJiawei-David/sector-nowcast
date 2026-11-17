@@ -3,7 +3,7 @@ scripts/s3_pull.py and scripts/s6_pull_events.py).
 
     .venv/bin/python scripts/s6_live.py
 
-Live-call asof = features.data_run_date() of the LATEST snapshots: the latest date on which every daily
+Live-call asof = features.data_run_date() of the pinned live snapshots (config/pipeline.yaml live_snapshots): the latest date on which every daily
 source has all its observations published. The S4/S5 backtest stays on the pinned S3 snapshots.
 Outputs
   outputs/tables/live_calls.csv               (a) 2026Q4 QTD, all names, y and k; (b) locked TCOM 2026Q3 rows
@@ -73,7 +73,7 @@ def adjusted_notes(td: live.TargetData, versions: pd.DataFrame, asof) -> dict:
 
 def main() -> None:
     cos = config.companies()
-    series = F.load_series()                                     # latest pull
+    series = F.load_series(snapshots=F.live_snapshots())         # pinned 2026-11-17 pull (config/pipeline.yaml)
     for s in series.values():
         F.validate_series(s)
     asof = F.data_run_date(series)

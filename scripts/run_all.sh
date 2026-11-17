@@ -13,4 +13,7 @@ $PY scripts/s3_charts.py
 $PY scripts/s4_evaluate.py
 $PY scripts/s5_placebo.py
 $PY scripts/s6_live.py
+$PY scripts/s8_audit_lookahead.py
+$PY scripts/s8_audit_checks.py
+$PY scripts/s8_audit_trace.py >/dev/null
 .venv/bin/pytest -q

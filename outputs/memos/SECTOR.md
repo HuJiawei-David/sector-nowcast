@@ -34,4 +34,4 @@ US single-source cells need 11 of 14, combined 9 of 11, TCOM 8 of 9 (combined 6 
 
 **What would change my mind.** A name-level, non-U.S. source (card spend, app usage) that clears the same pre-registered test; or a run of TCOM misses.
 
-Sources: [R] outputs/tables/results.csv · [RM] relevancy_matrix.csv · [RB] robustness.csv · [MT] multiple_testing.csv · [LT] lead_time.csv · [LV] live_calls.csv · [S] live_tsa_sensitivity.csv · [TD] tsa_dependence.csv · [P] power_table.csv · [G] config/guidance.yaml · [B] config/breaks.yaml · [D] docs/drivers.md · [H] docs/hypotheses.md
+Sources: [R] outputs/tables/results.csv · [RM] relevancy_matrix.csv · [RB] robustness.csv · [MT] multiple_testing.csv · [LT] lead_time.csv · [LV] live_calls.csv · [S] live_tsa_sensitivity.csv (sensitivity, not pre-registered) · [TD] tsa_dependence.csv · [P] power_table.csv · [G] config/guidance.yaml · [B] config/breaks.yaml · [D] docs/drivers.md · [H] docs/hypotheses.md

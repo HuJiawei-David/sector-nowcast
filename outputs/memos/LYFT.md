@@ -14,7 +14,7 @@
 
 **Pre-registered hypothesis (quoted).** TSA k: "**signal expected** (weak)", "96% U.S.; rides are travel-time U.S. ground mobility including airport trips"; TSA y: "signal NOT expected" because of incentives, reserve items and acquisitions [H §5].
 
-**What the data said.** The opposite of the prediction. Revenue: 11 of 14, 7 of 8 inflections caught, 12 of 14 at day 56, 8 of 11 in the 2024Q1–2026Q3 window and with break quarters removed [R, INF, LT, RB]. Rides: 7 of 12 vs momentum 3 of 12, placebo percentile 28.8 [R]. I do not reinterpret this as a finding: it fails the placebo bar, it is one of 39 tests, and the six U.S. TSA cells share one call series [MT].
+**What the data said.** The opposite of the prediction. Revenue: 11 of 14, 7 of 8 inflections caught, 12 of 14 at day 56, 8 of 11 in the 2024Q1–2026Q3 window and with break quarters removed [R, INF, LT, RB]. Rides: 7 of 12 vs momentum 3 of 12, placebo percentile 28.8 [R]. I do not reinterpret this as a finding: it fails the placebo bar, it is one of 39 tests, and the six U.S. TSA cells share one call series [MT]. One of the 14 TSA calls is a knife-edge: 2024Q2 d_alt is -0.0004, and with one day less data it is +0.0001 (revenue would score 12 of 14); the pre-registered quarter-end call stands [AU].
 
 **Useless source here.** Wikipedia for rides: 7 of 12, placebo percentile 49.5 [R]; it measures attention.
 
@@ -24,4 +24,4 @@
 
 **What would change my mind.** Rides calls (not revenue) clearing the placebo test as quarters are added.
 
-Sources: [R] outputs/tables/results.csv · [RB] robustness.csv · [LT] lead_time.csv · [INF] inflections_summary.csv · [LV] live_calls.csv · [S] live_tsa_sensitivity.csv · [MT] multiple_testing.csv · [G] config/guidance.yaml · [B] config/breaks.yaml · [D] docs/drivers.md · [H] docs/hypotheses.md
+Sources: [R] outputs/tables/results.csv · [RB] robustness.csv · [LT] lead_time.csv · [INF] inflections_summary.csv · [LV] live_calls.csv · [S] live_tsa_sensitivity.csv (sensitivity, not pre-registered) · [AU] audit_asof_minus_1.csv, audit_asof_minus_1_cells.csv · [MT] multiple_testing.csv · [G] config/guidance.yaml · [B] config/breaks.yaml · [D] docs/drivers.md · [H] docs/hypotheses.md

@@ -1,0 +1,10 @@
+quarter,asof,d_alt,prediction,t_q_minus_1_first_pct,t_q_first_pct,d_t_actual_pp,actual,correct,abs_d_y_pp,abs_d_alt,small_d_y,small_d_alt,small_either,label
+2024Q2,2024-06-30,-0.251294,decelerate,29.430311,13.559171,-15.871140,decelerate,True,15.871140,0.251294,False,False,False,"descriptive, not pre-registered"
+2024Q3,2024-09-30,0.005365,accelerate,13.559171,15.524017,1.964846,accelerate,True,1.964846,0.005365,False,True,True,"descriptive, not pre-registered"
+2024Q4,2024-12-31,0.024538,accelerate,15.524017,23.428571,7.904554,accelerate,True,7.904554,0.024538,False,False,False,"descriptive, not pre-registered"
+2025Q1,2025-03-31,-0.085290,decelerate,23.428571,16.169677,-7.258895,decelerate,True,7.258895,0.085290,False,False,False,"descriptive, not pre-registered"
+2025Q2,2025-06-30,0.036476,accelerate,16.169677,16.215158,0.045482,accelerate,True,0.045482,0.036476,True,False,True,"descriptive, not pre-registered"
+2025Q3,2025-09-30,-0.035048,decelerate,16.215158,15.529516,-0.685643,decelerate,True,0.685643,0.035048,True,False,True,"descriptive, not pre-registered"
+2025Q4,2025-12-31,0.023111,accelerate,15.529516,20.825487,5.295971,accelerate,True,5.295971,0.023111,False,False,False,"descriptive, not pre-registered"
+2026Q1,2026-03-31,-0.023933,decelerate,20.825487,17.194505,-3.630982,decelerate,True,3.630982,0.023933,False,False,False,"descriptive, not pre-registered"
+2026Q2,2026-06-30,-0.099259,decelerate,17.194505,5.524490,-11.670015,decelerate,True,11.670015,0.099259,False,False,False,"descriptive, not pre-registered"

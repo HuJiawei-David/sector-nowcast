@@ -19,6 +19,14 @@ backtest_snapshots:
   wikipedia_pageviews: "2026-11-11"
   caac: "2026-11-11"
 
+# Snapshot folders the Session 6 live calls (outputs/tables/live_calls.csv, SHA-256 posted publicly) were computed
+# from. Pinned in Session 8 (audit): scripts/s6_live.py used to read "the latest pull", so any later refresh would
+# have silently rewritten a timestamped file. A new live call = a new output file, never a rerun of this one.
+live_snapshots:
+  tsa: "2026-11-17"
+  wikipedia_pageviews: "2026-11-17"
+  caac: "2026-11-17"
+
 fy_sum_tolerance: 0.005                # rule 9: |Q1+Q2+Q3+Q4 - FY| / FY <= 0.5%
 
 xbrl:

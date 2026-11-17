@@ -213,6 +213,11 @@ def backtest_snapshots() -> dict[str, str]:
     return dict(config.load_yaml("pipeline.yaml")["backtest_snapshots"])
 
 
+def live_snapshots() -> dict[str, str]:
+    """Snapshot folders the Session 6 live calls were computed from (config/pipeline.yaml)."""
+    return dict(config.load_yaml("pipeline.yaml")["live_snapshots"])
+
+
 def load_series(run_end: dt.date | None = None, snapshots: dict[str, str] | None = None) -> dict[str, Series]:
     """All configured alt series, keyed by series_id: 'tsa', 'caac', 'wikipedia:<NAME>'.
     snapshots: {raw_dir: pull_date} to read specific snapshot folders (default: latest pull of each)."""

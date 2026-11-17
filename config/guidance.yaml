@@ -120,7 +120,10 @@ base_period_events:
     window: ["2025-10-01", "2025-11-12"]
     event: "US federal lapse in appropriations (government shutdown), 1 Oct - 12 Nov 2025; air traffic controllers worked without pay."
     quote: "Due to a lapse in appropriations, air traffic controllers worked without pay from October 3, 2025, to November 12, 2025."
-    window_note: "end date and controller-pay dates from the FAA order; the 1 Oct start is the start of the lapse as given in the Session 6 brief (the FAA text dates controllers' unpaid work from 3 Oct)."
+    window_note: "start (1 Oct 2025) and end (12 Nov 2025) of the lapse from the Federal Register notice quoted in start_quote; the FAA order (quote) gives the same end date and dates controllers' unpaid work from 3 Oct."
+    start_quote: "Due to a lapse in appropriations for the U.S. federal government, the United States Section of the USMCA Secretariat was closed from October 1, 2025, through November 12, 2025."
+    start_snapshot: data/raw/federal_register/2026-11-17/doc_2025-20331_raw.txt
+    start_source_url: https://www.federalregister.gov/documents/2025/11/19/2025-20331/united-states-mexico-canada-agreement-usmca-article-1012-binational-panel-review-notice-of-request
     snapshot: data/raw/federal_register/2026-11-17/doc_2025-20308_raw.txt
     source_url: https://www.federalregister.gov/documents/2025/11/19/2025-20308/cancellation-of-emergency-order-establishing-operating-limitations-on-the-use-of-navigable-airspace
   - id: faa_flight_reductions_2025
