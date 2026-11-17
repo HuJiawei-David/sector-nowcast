@@ -1,0 +1,118 @@
+name,source,target,checkpoint,checkpoint_order,N,hits,hit_rate,min_hits_p05,binom_p_one_sided,n_not_run,not_run_reasons,not_run_quarters,median_weeks_to_release,min_weeks_to_release,max_weeks_to_release
+ABNB,combined,k,day28,0,11,6,0.545455,9.000000,0.500000,3,"not run (tsa has 1 clean d_alt values, needs >= 4); not run (tsa has 2 clean d_alt values, needs >= 4); not run (tsa has 3 clean d_alt values, needs >= 4)","2023Q2,2023Q3,2023Q4",14.285714,13.285714,15.428571
+ABNB,combined,k,day56,1,11,5,0.454545,9.000000,0.725586,3,"not run (tsa has 1 clean d_alt values, needs >= 4); not run (tsa has 2 clean d_alt values, needs >= 4); not run (tsa has 3 clean d_alt values, needs >= 4)","2023Q2,2023Q3,2023Q4",10.285714,9.285714,11.428571
+ABNB,combined,k,qend,2,11,8,0.727273,9.000000,0.113281,3,"not run (tsa has 1 clean d_alt values, needs >= 4); not run (tsa has 2 clean d_alt values, needs >= 4); not run (tsa has 3 clean d_alt values, needs >= 4)","2023Q2,2023Q3,2023Q4",5.285714,4.428571,6.285714
+ABNB,tsa,k,day28,0,14,7,0.500000,11.000000,0.604736,0,,,14.285714,13.285714,15.428571
+ABNB,tsa,k,day56,1,14,8,0.571429,11.000000,0.395264,0,,,10.285714,9.285714,11.428571
+ABNB,tsa,k,qend,2,14,9,0.642857,11.000000,0.211975,0,,,5.285714,4.428571,6.285714
+ABNB,wikipedia,k,day28,0,14,10,0.714286,11.000000,0.089783,0,,,14.285714,13.285714,15.428571
+ABNB,wikipedia,k,day56,1,14,10,0.714286,11.000000,0.089783,0,,,10.285714,9.285714,11.428571
+ABNB,wikipedia,k,qend,2,14,10,0.714286,11.000000,0.089783,0,,,5.285714,4.428571,6.285714
+ABNB,combined,y,day28,0,11,3,0.272727,9.000000,0.967285,3,"not run (tsa has 1 clean d_alt values, needs >= 4); not run (tsa has 2 clean d_alt values, needs >= 4); not run (tsa has 3 clean d_alt values, needs >= 4)","2023Q2,2023Q3,2023Q4",14.285714,13.285714,15.428571
+ABNB,combined,y,day56,1,11,2,0.181818,9.000000,0.994141,3,"not run (tsa has 1 clean d_alt values, needs >= 4); not run (tsa has 2 clean d_alt values, needs >= 4); not run (tsa has 3 clean d_alt values, needs >= 4)","2023Q2,2023Q3,2023Q4",10.285714,9.285714,11.428571
+ABNB,combined,y,qend,2,11,5,0.454545,9.000000,0.725586,3,"not run (tsa has 1 clean d_alt values, needs >= 4); not run (tsa has 2 clean d_alt values, needs >= 4); not run (tsa has 3 clean d_alt values, needs >= 4)","2023Q2,2023Q3,2023Q4",5.285714,4.428571,6.285714
+ABNB,tsa,y,day28,0,14,7,0.500000,11.000000,0.604736,0,,,14.285714,13.285714,15.428571
+ABNB,tsa,y,day56,1,14,6,0.428571,11.000000,0.788025,0,,,10.285714,9.285714,11.428571
+ABNB,tsa,y,qend,2,14,7,0.500000,11.000000,0.604736,0,,,5.285714,4.428571,6.285714
+ABNB,wikipedia,y,day28,0,14,6,0.428571,11.000000,0.788025,0,,,14.285714,13.285714,15.428571
+ABNB,wikipedia,y,day56,1,14,4,0.285714,11.000000,0.971313,0,,,10.285714,9.285714,11.428571
+ABNB,wikipedia,y,qend,2,14,6,0.428571,11.000000,0.788025,0,,,5.285714,4.428571,6.285714
+BKNG,combined,k,day28,0,11,6,0.545455,9.000000,0.500000,3,"not run (tsa has 1 clean d_alt values, needs >= 4); not run (tsa has 2 clean d_alt values, needs >= 4); not run (tsa has 3 clean d_alt values, needs >= 4)","2023Q2,2023Q3,2023Q4",13.571429,12.857143,16.428571
+BKNG,combined,k,day56,1,11,5,0.454545,9.000000,0.725586,3,"not run (tsa has 1 clean d_alt values, needs >= 4); not run (tsa has 2 clean d_alt values, needs >= 4); not run (tsa has 3 clean d_alt values, needs >= 4)","2023Q2,2023Q3,2023Q4",9.571429,8.857143,12.428571
+BKNG,combined,k,qend,2,11,5,0.454545,9.000000,0.725586,3,"not run (tsa has 1 clean d_alt values, needs >= 4); not run (tsa has 2 clean d_alt values, needs >= 4); not run (tsa has 3 clean d_alt values, needs >= 4)","2023Q2,2023Q3,2023Q4",4.571429,4.000000,7.285714
+BKNG,tsa,k,day28,0,14,8,0.571429,11.000000,0.395264,0,,,13.714286,12.857143,16.714286
+BKNG,tsa,k,day56,1,14,7,0.500000,11.000000,0.604736,0,,,9.714286,8.857143,12.714286
+BKNG,tsa,k,qend,2,14,8,0.571429,11.000000,0.395264,0,,,4.642857,4.000000,7.571429
+BKNG,wikipedia,k,day28,0,14,7,0.500000,11.000000,0.604736,0,,,13.714286,12.857143,16.714286
+BKNG,wikipedia,k,day56,1,14,7,0.500000,11.000000,0.604736,0,,,9.714286,8.857143,12.714286
+BKNG,wikipedia,k,qend,2,14,7,0.500000,11.000000,0.604736,0,,,4.642857,4.000000,7.571429
+BKNG,combined,y,day28,0,11,7,0.636364,9.000000,0.274414,3,"not run (tsa has 1 clean d_alt values, needs >= 4); not run (tsa has 2 clean d_alt values, needs >= 4); not run (tsa has 3 clean d_alt values, needs >= 4)","2023Q2,2023Q3,2023Q4",13.571429,12.857143,16.428571
+BKNG,combined,y,day56,1,11,6,0.545455,9.000000,0.500000,3,"not run (tsa has 1 clean d_alt values, needs >= 4); not run (tsa has 2 clean d_alt values, needs >= 4); not run (tsa has 3 clean d_alt values, needs >= 4)","2023Q2,2023Q3,2023Q4",9.571429,8.857143,12.428571
+BKNG,combined,y,qend,2,11,4,0.363636,9.000000,0.886719,3,"not run (tsa has 1 clean d_alt values, needs >= 4); not run (tsa has 2 clean d_alt values, needs >= 4); not run (tsa has 3 clean d_alt values, needs >= 4)","2023Q2,2023Q3,2023Q4",4.571429,4.000000,7.285714
+BKNG,tsa,y,day28,0,14,8,0.571429,11.000000,0.395264,0,,,13.714286,12.857143,16.714286
+BKNG,tsa,y,day56,1,14,7,0.500000,11.000000,0.604736,0,,,9.714286,8.857143,12.714286
+BKNG,tsa,y,qend,2,14,8,0.571429,11.000000,0.395264,0,,,4.642857,4.000000,7.571429
+BKNG,wikipedia,y,day28,0,14,5,0.357143,11.000000,0.910217,0,,,13.714286,12.857143,16.714286
+BKNG,wikipedia,y,day56,1,14,7,0.500000,11.000000,0.604736,0,,,9.714286,8.857143,12.714286
+BKNG,wikipedia,y,qend,2,14,5,0.357143,11.000000,0.910217,0,,,4.642857,4.000000,7.571429
+DASH,combined,k,day28,0,11,7,0.636364,9.000000,0.274414,3,"not run (tsa has 1 clean d_alt values, needs >= 4); not run (tsa has 2 clean d_alt values, needs >= 4); not run (tsa has 3 clean d_alt values, needs >= 4)","2023Q2,2023Q3,2023Q4",14.000000,13.285714,16.142857
+DASH,combined,k,day56,1,11,8,0.727273,9.000000,0.113281,3,"not run (tsa has 1 clean d_alt values, needs >= 4); not run (tsa has 2 clean d_alt values, needs >= 4); not run (tsa has 3 clean d_alt values, needs >= 4)","2023Q2,2023Q3,2023Q4",10.000000,9.285714,12.142857
+DASH,combined,k,qend,2,11,6,0.545455,9.000000,0.500000,3,"not run (tsa has 1 clean d_alt values, needs >= 4); not run (tsa has 2 clean d_alt values, needs >= 4); not run (tsa has 3 clean d_alt values, needs >= 4)","2023Q2,2023Q3,2023Q4",5.142857,4.142857,7.000000
+DASH,tsa,k,day28,0,14,7,0.500000,11.000000,0.604736,0,,,14.000000,13.285714,16.142857
+DASH,tsa,k,day56,1,14,6,0.428571,11.000000,0.788025,0,,,10.000000,9.285714,12.142857
+DASH,tsa,k,qend,2,14,7,0.500000,11.000000,0.604736,0,,,5.142857,4.142857,7.000000
+DASH,wikipedia,k,day28,0,14,7,0.500000,11.000000,0.604736,0,,,14.000000,13.285714,16.142857
+DASH,wikipedia,k,day56,1,14,7,0.500000,11.000000,0.604736,0,,,10.000000,9.285714,12.142857
+DASH,wikipedia,k,qend,2,14,8,0.571429,11.000000,0.395264,0,,,5.142857,4.142857,7.000000
+DASH,combined,y,day28,0,11,6,0.545455,9.000000,0.500000,3,"not run (tsa has 1 clean d_alt values, needs >= 4); not run (tsa has 2 clean d_alt values, needs >= 4); not run (tsa has 3 clean d_alt values, needs >= 4)","2023Q2,2023Q3,2023Q4",14.000000,13.285714,16.142857
+DASH,combined,y,day56,1,11,7,0.636364,9.000000,0.274414,3,"not run (tsa has 1 clean d_alt values, needs >= 4); not run (tsa has 2 clean d_alt values, needs >= 4); not run (tsa has 3 clean d_alt values, needs >= 4)","2023Q2,2023Q3,2023Q4",10.000000,9.285714,12.142857
+DASH,combined,y,qend,2,11,5,0.454545,9.000000,0.725586,3,"not run (tsa has 1 clean d_alt values, needs >= 4); not run (tsa has 2 clean d_alt values, needs >= 4); not run (tsa has 3 clean d_alt values, needs >= 4)","2023Q2,2023Q3,2023Q4",5.142857,4.142857,7.000000
+DASH,tsa,y,day28,0,14,8,0.571429,11.000000,0.395264,0,,,14.000000,13.285714,16.142857
+DASH,tsa,y,day56,1,14,7,0.500000,11.000000,0.604736,0,,,10.000000,9.285714,12.142857
+DASH,tsa,y,qend,2,14,8,0.571429,11.000000,0.395264,0,,,5.142857,4.142857,7.000000
+DASH,wikipedia,y,day28,0,14,6,0.428571,11.000000,0.788025,0,,,14.000000,13.285714,16.142857
+DASH,wikipedia,y,day56,1,14,6,0.428571,11.000000,0.788025,0,,,10.000000,9.285714,12.142857
+DASH,wikipedia,y,qend,2,14,7,0.500000,11.000000,0.604736,0,,,5.142857,4.142857,7.000000
+EXPE,combined,k,day28,0,11,8,0.727273,9.000000,0.113281,3,"not run (tsa has 1 clean d_alt values, needs >= 4); not run (tsa has 2 clean d_alt values, needs >= 4); not run (tsa has 3 clean d_alt values, needs >= 4)","2023Q2,2023Q3,2023Q4",14.428571,13.571429,15.285714
+EXPE,combined,k,day56,1,11,7,0.636364,9.000000,0.274414,3,"not run (tsa has 1 clean d_alt values, needs >= 4); not run (tsa has 2 clean d_alt values, needs >= 4); not run (tsa has 3 clean d_alt values, needs >= 4)","2023Q2,2023Q3,2023Q4",10.428571,9.571429,11.285714
+EXPE,combined,k,qend,2,11,7,0.636364,9.000000,0.274414,3,"not run (tsa has 1 clean d_alt values, needs >= 4); not run (tsa has 2 clean d_alt values, needs >= 4); not run (tsa has 3 clean d_alt values, needs >= 4)","2023Q2,2023Q3,2023Q4",5.285714,4.571429,6.142857
+EXPE,tsa,k,day28,0,14,7,0.500000,11.000000,0.604736,0,,,14.357143,13.571429,15.285714
+EXPE,tsa,k,day56,1,14,10,0.714286,11.000000,0.089783,0,,,10.357143,9.571429,11.285714
+EXPE,tsa,k,qend,2,14,9,0.642857,11.000000,0.211975,0,,,5.285714,4.571429,6.142857
+EXPE,wikipedia,k,day28,0,14,9,0.642857,11.000000,0.211975,0,,,14.357143,13.571429,15.285714
+EXPE,wikipedia,k,day56,1,14,7,0.500000,11.000000,0.604736,0,,,10.357143,9.571429,11.285714
+EXPE,wikipedia,k,qend,2,14,8,0.571429,11.000000,0.395264,0,,,5.285714,4.571429,6.142857
+EXPE,combined,y,day28,0,11,6,0.545455,9.000000,0.500000,3,"not run (tsa has 1 clean d_alt values, needs >= 4); not run (tsa has 2 clean d_alt values, needs >= 4); not run (tsa has 3 clean d_alt values, needs >= 4)","2023Q2,2023Q3,2023Q4",14.428571,13.571429,15.285714
+EXPE,combined,y,day56,1,11,7,0.636364,9.000000,0.274414,3,"not run (tsa has 1 clean d_alt values, needs >= 4); not run (tsa has 2 clean d_alt values, needs >= 4); not run (tsa has 3 clean d_alt values, needs >= 4)","2023Q2,2023Q3,2023Q4",10.428571,9.571429,11.285714
+EXPE,combined,y,qend,2,11,7,0.636364,9.000000,0.274414,3,"not run (tsa has 1 clean d_alt values, needs >= 4); not run (tsa has 2 clean d_alt values, needs >= 4); not run (tsa has 3 clean d_alt values, needs >= 4)","2023Q2,2023Q3,2023Q4",5.285714,4.571429,6.142857
+EXPE,tsa,y,day28,0,14,12,0.857143,11.000000,0.006470,0,,,14.357143,13.571429,15.285714
+EXPE,tsa,y,day56,1,14,9,0.642857,11.000000,0.211975,0,,,10.357143,9.571429,11.285714
+EXPE,tsa,y,qend,2,14,10,0.714286,11.000000,0.089783,0,,,5.285714,4.571429,6.142857
+EXPE,wikipedia,y,day28,0,14,6,0.428571,11.000000,0.788025,0,,,14.357143,13.571429,15.285714
+EXPE,wikipedia,y,day56,1,14,6,0.428571,11.000000,0.788025,0,,,10.357143,9.571429,11.285714
+EXPE,wikipedia,y,qend,2,14,7,0.500000,11.000000,0.604736,0,,,5.285714,4.571429,6.142857
+LYFT,combined,k,day28,0,11,5,0.454545,9.000000,0.725586,3,"not run (tsa has 1 clean d_alt values, needs >= 4); not run (tsa has 2 clean d_alt values, needs >= 4); not run (tsa has 3 clean d_alt values, needs >= 4)","2023Q2,2023Q3,2023Q4",14.285714,14.142857,15.142857
+LYFT,combined,k,day56,1,11,6,0.545455,9.000000,0.500000,3,"not run (tsa has 1 clean d_alt values, needs >= 4); not run (tsa has 2 clean d_alt values, needs >= 4); not run (tsa has 3 clean d_alt values, needs >= 4)","2023Q2,2023Q3,2023Q4",10.285714,10.142857,11.142857
+LYFT,combined,k,qend,2,11,6,0.545455,9.000000,0.500000,3,"not run (tsa has 1 clean d_alt values, needs >= 4); not run (tsa has 2 clean d_alt values, needs >= 4); not run (tsa has 3 clean d_alt values, needs >= 4)","2023Q2,2023Q3,2023Q4",5.285714,5.142857,6.000000
+LYFT,tsa,k,day28,0,14,8,0.571429,11.000000,0.395264,0,,,14.357143,14.142857,15.428571
+LYFT,tsa,k,day56,1,14,7,0.500000,11.000000,0.604736,0,,,10.357143,10.142857,11.428571
+LYFT,tsa,k,qend,2,14,8,0.571429,11.000000,0.395264,0,,,5.357143,5.142857,6.285714
+LYFT,wikipedia,k,day28,0,14,6,0.428571,11.000000,0.788025,0,,,14.357143,14.142857,15.428571
+LYFT,wikipedia,k,day56,1,14,8,0.571429,11.000000,0.395264,0,,,10.357143,10.142857,11.428571
+LYFT,wikipedia,k,qend,2,14,9,0.642857,11.000000,0.211975,0,,,5.357143,5.142857,6.285714
+LYFT,combined,y,day28,0,11,6,0.545455,9.000000,0.500000,3,"not run (tsa has 1 clean d_alt values, needs >= 4); not run (tsa has 2 clean d_alt values, needs >= 4); not run (tsa has 3 clean d_alt values, needs >= 4)","2023Q2,2023Q3,2023Q4",14.285714,14.142857,15.142857
+LYFT,combined,y,day56,1,11,7,0.636364,9.000000,0.274414,3,"not run (tsa has 1 clean d_alt values, needs >= 4); not run (tsa has 2 clean d_alt values, needs >= 4); not run (tsa has 3 clean d_alt values, needs >= 4)","2023Q2,2023Q3,2023Q4",10.285714,10.142857,11.142857
+LYFT,combined,y,qend,2,11,7,0.636364,9.000000,0.274414,3,"not run (tsa has 1 clean d_alt values, needs >= 4); not run (tsa has 2 clean d_alt values, needs >= 4); not run (tsa has 3 clean d_alt values, needs >= 4)","2023Q2,2023Q3,2023Q4",5.285714,5.142857,6.000000
+LYFT,tsa,y,day28,0,14,7,0.500000,11.000000,0.604736,0,,,14.357143,14.142857,15.428571
+LYFT,tsa,y,day56,1,14,12,0.857143,11.000000,0.006470,0,,,10.357143,10.142857,11.428571
+LYFT,tsa,y,qend,2,14,11,0.785714,11.000000,0.028687,0,,,5.357143,5.142857,6.285714
+LYFT,wikipedia,y,day28,0,14,7,0.500000,11.000000,0.604736,0,,,14.357143,14.142857,15.428571
+LYFT,wikipedia,y,day56,1,14,7,0.500000,11.000000,0.604736,0,,,10.357143,10.142857,11.428571
+LYFT,wikipedia,y,qend,2,14,8,0.571429,11.000000,0.395264,0,,,5.357143,5.142857,6.285714
+TCOM,caac,y,day28,0,0,0,,,,9,not run (no data),"2024Q2,2024Q3,2024Q4,2025Q1,2025Q2,2025Q3,2025Q4,2026Q1,2026Q2",,,
+TCOM,caac,y,day56,1,9,8,0.888889,8.000000,0.019531,0,,,13.285714,12.000000,17.142857
+TCOM,caac,y,qend,2,9,9,1.000000,8.000000,0.001953,0,,,8.142857,7.000000,12.285714
+TCOM,combined,y,day28,0,0,0,,,,9,not run (no data: caac),"2024Q2,2024Q3,2024Q4,2025Q1,2025Q2,2025Q3,2025Q4,2026Q1,2026Q2",,,
+TCOM,combined,y,day56,1,6,4,0.666667,6.000000,0.343750,3,"not run (caac has 1 clean d_alt values, needs >= 4); not run (caac has 2 clean d_alt values, needs >= 4); not run (caac has 3 clean d_alt values, needs >= 4)","2024Q2,2024Q3,2024Q4",13.357143,12.000000,17.142857
+TCOM,combined,y,qend,2,6,5,0.833333,6.000000,0.109375,3,"not run (caac has 1 clean d_alt values, needs >= 4); not run (caac has 2 clean d_alt values, needs >= 4); not run (caac has 3 clean d_alt values, needs >= 4)","2024Q2,2024Q3,2024Q4",8.285714,7.000000,12.285714
+TCOM,wikipedia,y,day28,0,9,3,0.333333,8.000000,0.910156,0,,,17.285714,16.000000,21.142857
+TCOM,wikipedia,y,day56,1,9,3,0.333333,8.000000,0.910156,0,,,13.285714,12.000000,17.142857
+TCOM,wikipedia,y,qend,2,9,3,0.333333,8.000000,0.910156,0,,,8.142857,7.000000,12.285714
+UBER,combined,k,day28,0,11,8,0.727273,9.000000,0.113281,3,"not run (tsa has 1 clean d_alt values, needs >= 4); not run (tsa has 2 clean d_alt values, needs >= 4); not run (tsa has 3 clean d_alt values, needs >= 4)","2023Q2,2023Q3,2023Q4",14.142857,13.571429,14.428571
+UBER,combined,k,day56,1,11,7,0.636364,9.000000,0.274414,3,"not run (tsa has 1 clean d_alt values, needs >= 4); not run (tsa has 2 clean d_alt values, needs >= 4); not run (tsa has 3 clean d_alt values, needs >= 4)","2023Q2,2023Q3,2023Q4",10.142857,9.571429,10.428571
+UBER,combined,k,qend,2,11,7,0.636364,9.000000,0.274414,3,"not run (tsa has 1 clean d_alt values, needs >= 4); not run (tsa has 2 clean d_alt values, needs >= 4); not run (tsa has 3 clean d_alt values, needs >= 4)","2023Q2,2023Q3,2023Q4",5.142857,4.428571,5.428571
+UBER,tsa,k,day28,0,14,9,0.642857,11.000000,0.211975,0,,,14.142857,13.571429,14.571429
+UBER,tsa,k,day56,1,14,10,0.714286,11.000000,0.089783,0,,,10.142857,9.571429,10.571429
+UBER,tsa,k,qend,2,14,9,0.642857,11.000000,0.211975,0,,,5.142857,4.428571,5.428571
+UBER,wikipedia,k,day28,0,14,11,0.785714,11.000000,0.028687,0,,,14.142857,13.571429,14.571429
+UBER,wikipedia,k,day56,1,14,11,0.785714,11.000000,0.028687,0,,,10.142857,9.571429,10.571429
+UBER,wikipedia,k,qend,2,14,10,0.714286,11.000000,0.089783,0,,,5.142857,4.428571,5.428571
+UBER,combined,y,day28,0,11,7,0.636364,9.000000,0.274414,3,"not run (tsa has 1 clean d_alt values, needs >= 4); not run (tsa has 2 clean d_alt values, needs >= 4); not run (tsa has 3 clean d_alt values, needs >= 4)","2023Q2,2023Q3,2023Q4",14.142857,13.571429,14.428571
+UBER,combined,y,day56,1,11,8,0.727273,9.000000,0.113281,3,"not run (tsa has 1 clean d_alt values, needs >= 4); not run (tsa has 2 clean d_alt values, needs >= 4); not run (tsa has 3 clean d_alt values, needs >= 4)","2023Q2,2023Q3,2023Q4",10.142857,9.571429,10.428571
+UBER,combined,y,qend,2,11,8,0.727273,9.000000,0.113281,3,"not run (tsa has 1 clean d_alt values, needs >= 4); not run (tsa has 2 clean d_alt values, needs >= 4); not run (tsa has 3 clean d_alt values, needs >= 4)","2023Q2,2023Q3,2023Q4",5.142857,4.428571,5.428571
+UBER,tsa,y,day28,0,14,8,0.571429,11.000000,0.395264,0,,,14.142857,13.571429,14.571429
+UBER,tsa,y,day56,1,14,9,0.642857,11.000000,0.211975,0,,,10.142857,9.571429,10.571429
+UBER,tsa,y,qend,2,14,8,0.571429,11.000000,0.395264,0,,,5.142857,4.428571,5.428571
+UBER,wikipedia,y,day28,0,14,10,0.714286,11.000000,0.089783,0,,,14.142857,13.571429,14.571429
+UBER,wikipedia,y,day56,1,14,10,0.714286,11.000000,0.089783,0,,,10.142857,9.571429,10.571429
+UBER,wikipedia,y,qend,2,14,9,0.642857,11.000000,0.211975,0,,,5.142857,4.428571,5.428571

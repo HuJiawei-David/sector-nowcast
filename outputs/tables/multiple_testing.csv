@@ -1,0 +1,2 @@
+direction_cells_tested,expected_to_pass_by_chance,green_found,green_cells,cells_bh_q_placebo_below_0.05,min_bh_q_placebo,note
+39,1.950000,1,TCOM caac y,0,0.428571,"the six TSA cells per target share one call series (identical call for all US names each quarter), so they are not independent tests"

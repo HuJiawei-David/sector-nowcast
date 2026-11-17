@@ -1,0 +1,229 @@
+analysis,name,target,series_of,N,hits,own_hits
+headline,BKNG,y,ABNB,14,3,5
+headline,BKNG,y,DASH,14,7,5
+headline,BKNG,y,EXPE,14,9,5
+headline,BKNG,y,LYFT,14,5,5
+headline,BKNG,y,TCOM,14,4,5
+headline,BKNG,y,UBER,14,5,5
+headline,BKNG,k,ABNB,14,7,7
+headline,BKNG,k,DASH,14,9,7
+headline,BKNG,k,EXPE,14,9,7
+headline,BKNG,k,LYFT,14,7,7
+headline,BKNG,k,TCOM,14,8,7
+headline,BKNG,k,UBER,14,5,7
+headline,EXPE,y,ABNB,14,5,7
+headline,EXPE,y,BKNG,14,7,7
+headline,EXPE,y,DASH,14,9,7
+headline,EXPE,y,LYFT,14,9,7
+headline,EXPE,y,TCOM,14,6,7
+headline,EXPE,y,UBER,14,9,7
+headline,EXPE,k,ABNB,14,8,8
+headline,EXPE,k,BKNG,14,8,8
+headline,EXPE,k,DASH,14,8,8
+headline,EXPE,k,LYFT,14,8,8
+headline,EXPE,k,TCOM,14,11,8
+headline,EXPE,k,UBER,14,8,8
+headline,ABNB,y,BKNG,14,6,6
+headline,ABNB,y,DASH,14,8,6
+headline,ABNB,y,EXPE,14,10,6
+headline,ABNB,y,LYFT,14,6,6
+headline,ABNB,y,TCOM,14,5,6
+headline,ABNB,y,UBER,14,4,6
+headline,ABNB,k,BKNG,14,10,10
+headline,ABNB,k,DASH,14,8,10
+headline,ABNB,k,EXPE,14,8,10
+headline,ABNB,k,LYFT,14,8,10
+headline,ABNB,k,TCOM,14,9,10
+headline,ABNB,k,UBER,14,6,10
+headline,UBER,y,ABNB,14,3,9
+headline,UBER,y,BKNG,14,5,9
+headline,UBER,y,DASH,14,7,9
+headline,UBER,y,EXPE,14,7,9
+headline,UBER,y,LYFT,14,7,9
+headline,UBER,y,TCOM,14,8,9
+headline,UBER,k,ABNB,14,8,10
+headline,UBER,k,BKNG,14,10,10
+headline,UBER,k,DASH,14,8,10
+headline,UBER,k,EXPE,14,6,10
+headline,UBER,k,LYFT,14,6,10
+headline,UBER,k,TCOM,14,9,10
+headline,LYFT,y,ABNB,14,8,8
+headline,LYFT,y,BKNG,14,10,8
+headline,LYFT,y,DASH,14,4,8
+headline,LYFT,y,EXPE,14,8,8
+headline,LYFT,y,TCOM,14,9,8
+headline,LYFT,y,UBER,14,10,8
+headline,LYFT,k,ABNB,12,7,7
+headline,LYFT,k,BKNG,12,8,7
+headline,LYFT,k,DASH,12,6,7
+headline,LYFT,k,EXPE,12,5,7
+headline,LYFT,k,TCOM,12,6,7
+headline,LYFT,k,UBER,12,8,7
+headline,DASH,y,ABNB,14,5,7
+headline,DASH,y,BKNG,14,7,7
+headline,DASH,y,EXPE,14,9,7
+headline,DASH,y,LYFT,14,7,7
+headline,DASH,y,TCOM,14,6,7
+headline,DASH,y,UBER,14,7,7
+headline,DASH,k,ABNB,14,8,8
+headline,DASH,k,BKNG,14,8,8
+headline,DASH,k,EXPE,14,10,8
+headline,DASH,k,LYFT,14,8,8
+headline,DASH,k,TCOM,14,7,8
+headline,DASH,k,UBER,14,6,8
+headline,TCOM,y,ABNB,9,3,3
+headline,TCOM,y,BKNG,9,3,3
+headline,TCOM,y,DASH,9,6,3
+headline,TCOM,y,EXPE,9,5,3
+headline,TCOM,y,LYFT,9,3,3
+headline,TCOM,y,UBER,9,1,3
+robustness (i) US 2024Q1-2026Q3,BKNG,y,ABNB,11,2,3
+robustness (i) US 2024Q1-2026Q3,BKNG,y,DASH,11,6,3
+robustness (i) US 2024Q1-2026Q3,BKNG,y,EXPE,11,6,3
+robustness (i) US 2024Q1-2026Q3,BKNG,y,LYFT,11,5,3
+robustness (i) US 2024Q1-2026Q3,BKNG,y,TCOM,11,3,3
+robustness (i) US 2024Q1-2026Q3,BKNG,y,UBER,11,4,3
+robustness (i) US 2024Q1-2026Q3,BKNG,k,ABNB,11,5,4
+robustness (i) US 2024Q1-2026Q3,BKNG,k,DASH,11,7,4
+robustness (i) US 2024Q1-2026Q3,BKNG,k,EXPE,11,7,4
+robustness (i) US 2024Q1-2026Q3,BKNG,k,LYFT,11,6,4
+robustness (i) US 2024Q1-2026Q3,BKNG,k,TCOM,11,6,4
+robustness (i) US 2024Q1-2026Q3,BKNG,k,UBER,11,3,4
+robustness (i) US 2024Q1-2026Q3,EXPE,y,ABNB,11,4,6
+robustness (i) US 2024Q1-2026Q3,EXPE,y,BKNG,11,5,6
+robustness (i) US 2024Q1-2026Q3,EXPE,y,DASH,11,6,6
+robustness (i) US 2024Q1-2026Q3,EXPE,y,LYFT,11,7,6
+robustness (i) US 2024Q1-2026Q3,EXPE,y,TCOM,11,5,6
+robustness (i) US 2024Q1-2026Q3,EXPE,y,UBER,11,6,6
+robustness (i) US 2024Q1-2026Q3,EXPE,k,ABNB,11,6,6
+robustness (i) US 2024Q1-2026Q3,EXPE,k,BKNG,11,5,6
+robustness (i) US 2024Q1-2026Q3,EXPE,k,DASH,11,6,6
+robustness (i) US 2024Q1-2026Q3,EXPE,k,LYFT,11,7,6
+robustness (i) US 2024Q1-2026Q3,EXPE,k,TCOM,11,9,6
+robustness (i) US 2024Q1-2026Q3,EXPE,k,UBER,11,6,6
+robustness (i) US 2024Q1-2026Q3,ABNB,y,BKNG,11,4,5
+robustness (i) US 2024Q1-2026Q3,ABNB,y,DASH,11,7,5
+robustness (i) US 2024Q1-2026Q3,ABNB,y,EXPE,11,7,5
+robustness (i) US 2024Q1-2026Q3,ABNB,y,LYFT,11,6,5
+robustness (i) US 2024Q1-2026Q3,ABNB,y,TCOM,11,4,5
+robustness (i) US 2024Q1-2026Q3,ABNB,y,UBER,11,3,5
+robustness (i) US 2024Q1-2026Q3,ABNB,k,BKNG,11,7,8
+robustness (i) US 2024Q1-2026Q3,ABNB,k,DASH,11,6,8
+robustness (i) US 2024Q1-2026Q3,ABNB,k,EXPE,11,6,8
+robustness (i) US 2024Q1-2026Q3,ABNB,k,LYFT,11,7,8
+robustness (i) US 2024Q1-2026Q3,ABNB,k,TCOM,11,7,8
+robustness (i) US 2024Q1-2026Q3,ABNB,k,UBER,11,4,8
+robustness (i) US 2024Q1-2026Q3,UBER,y,ABNB,11,3,7
+robustness (i) US 2024Q1-2026Q3,UBER,y,BKNG,11,4,7
+robustness (i) US 2024Q1-2026Q3,UBER,y,DASH,11,5,7
+robustness (i) US 2024Q1-2026Q3,UBER,y,EXPE,11,5,7
+robustness (i) US 2024Q1-2026Q3,UBER,y,LYFT,11,6,7
+robustness (i) US 2024Q1-2026Q3,UBER,y,TCOM,11,8,7
+robustness (i) US 2024Q1-2026Q3,UBER,k,ABNB,11,6,8
+robustness (i) US 2024Q1-2026Q3,UBER,k,BKNG,11,7,8
+robustness (i) US 2024Q1-2026Q3,UBER,k,DASH,11,6,8
+robustness (i) US 2024Q1-2026Q3,UBER,k,EXPE,11,4,8
+robustness (i) US 2024Q1-2026Q3,UBER,k,LYFT,11,5,8
+robustness (i) US 2024Q1-2026Q3,UBER,k,TCOM,11,7,8
+robustness (i) US 2024Q1-2026Q3,LYFT,y,ABNB,11,6,7
+robustness (i) US 2024Q1-2026Q3,LYFT,y,BKNG,11,7,7
+robustness (i) US 2024Q1-2026Q3,LYFT,y,DASH,11,2,7
+robustness (i) US 2024Q1-2026Q3,LYFT,y,EXPE,11,6,7
+robustness (i) US 2024Q1-2026Q3,LYFT,y,TCOM,11,7,7
+robustness (i) US 2024Q1-2026Q3,LYFT,y,UBER,11,8,7
+robustness (i) US 2024Q1-2026Q3,LYFT,k,ABNB,11,7,6
+robustness (i) US 2024Q1-2026Q3,LYFT,k,BKNG,11,8,6
+robustness (i) US 2024Q1-2026Q3,LYFT,k,DASH,11,5,6
+robustness (i) US 2024Q1-2026Q3,LYFT,k,EXPE,11,5,6
+robustness (i) US 2024Q1-2026Q3,LYFT,k,TCOM,11,6,6
+robustness (i) US 2024Q1-2026Q3,LYFT,k,UBER,11,7,6
+robustness (i) US 2024Q1-2026Q3,DASH,y,ABNB,11,4,6
+robustness (i) US 2024Q1-2026Q3,DASH,y,BKNG,11,5,6
+robustness (i) US 2024Q1-2026Q3,DASH,y,EXPE,11,6,6
+robustness (i) US 2024Q1-2026Q3,DASH,y,LYFT,11,7,6
+robustness (i) US 2024Q1-2026Q3,DASH,y,TCOM,11,5,6
+robustness (i) US 2024Q1-2026Q3,DASH,y,UBER,11,6,6
+robustness (i) US 2024Q1-2026Q3,DASH,k,ABNB,11,7,7
+robustness (i) US 2024Q1-2026Q3,DASH,k,BKNG,11,6,7
+robustness (i) US 2024Q1-2026Q3,DASH,k,EXPE,11,7,7
+robustness (i) US 2024Q1-2026Q3,DASH,k,LYFT,11,8,7
+robustness (i) US 2024Q1-2026Q3,DASH,k,TCOM,11,6,7
+robustness (i) US 2024Q1-2026Q3,DASH,k,UBER,11,5,7
+robustness (ii) MAJOR structural-break quarters removed,BKNG,y,ABNB,13,3,4
+robustness (ii) MAJOR structural-break quarters removed,BKNG,y,DASH,13,7,4
+robustness (ii) MAJOR structural-break quarters removed,BKNG,y,EXPE,13,9,4
+robustness (ii) MAJOR structural-break quarters removed,BKNG,y,LYFT,13,5,4
+robustness (ii) MAJOR structural-break quarters removed,BKNG,y,TCOM,13,4,4
+robustness (ii) MAJOR structural-break quarters removed,BKNG,y,UBER,13,4,4
+robustness (ii) MAJOR structural-break quarters removed,BKNG,k,ABNB,14,7,7
+robustness (ii) MAJOR structural-break quarters removed,BKNG,k,DASH,14,9,7
+robustness (ii) MAJOR structural-break quarters removed,BKNG,k,EXPE,14,9,7
+robustness (ii) MAJOR structural-break quarters removed,BKNG,k,LYFT,14,7,7
+robustness (ii) MAJOR structural-break quarters removed,BKNG,k,TCOM,14,8,7
+robustness (ii) MAJOR structural-break quarters removed,BKNG,k,UBER,14,5,7
+robustness (ii) MAJOR structural-break quarters removed,EXPE,y,ABNB,14,5,7
+robustness (ii) MAJOR structural-break quarters removed,EXPE,y,BKNG,14,7,7
+robustness (ii) MAJOR structural-break quarters removed,EXPE,y,DASH,14,9,7
+robustness (ii) MAJOR structural-break quarters removed,EXPE,y,LYFT,14,9,7
+robustness (ii) MAJOR structural-break quarters removed,EXPE,y,TCOM,14,6,7
+robustness (ii) MAJOR structural-break quarters removed,EXPE,y,UBER,14,9,7
+robustness (ii) MAJOR structural-break quarters removed,EXPE,k,ABNB,14,8,8
+robustness (ii) MAJOR structural-break quarters removed,EXPE,k,BKNG,14,8,8
+robustness (ii) MAJOR structural-break quarters removed,EXPE,k,DASH,14,8,8
+robustness (ii) MAJOR structural-break quarters removed,EXPE,k,LYFT,14,8,8
+robustness (ii) MAJOR structural-break quarters removed,EXPE,k,TCOM,14,11,8
+robustness (ii) MAJOR structural-break quarters removed,EXPE,k,UBER,14,8,8
+robustness (ii) MAJOR structural-break quarters removed,ABNB,y,BKNG,14,6,6
+robustness (ii) MAJOR structural-break quarters removed,ABNB,y,DASH,14,8,6
+robustness (ii) MAJOR structural-break quarters removed,ABNB,y,EXPE,14,10,6
+robustness (ii) MAJOR structural-break quarters removed,ABNB,y,LYFT,14,6,6
+robustness (ii) MAJOR structural-break quarters removed,ABNB,y,TCOM,14,5,6
+robustness (ii) MAJOR structural-break quarters removed,ABNB,y,UBER,14,4,6
+robustness (ii) MAJOR structural-break quarters removed,ABNB,k,BKNG,8,6,5
+robustness (ii) MAJOR structural-break quarters removed,ABNB,k,DASH,8,5,5
+robustness (ii) MAJOR structural-break quarters removed,ABNB,k,EXPE,8,5,5
+robustness (ii) MAJOR structural-break quarters removed,ABNB,k,LYFT,8,5,5
+robustness (ii) MAJOR structural-break quarters removed,ABNB,k,TCOM,8,5,5
+robustness (ii) MAJOR structural-break quarters removed,ABNB,k,UBER,8,4,5
+robustness (ii) MAJOR structural-break quarters removed,UBER,y,ABNB,1,0,0
+robustness (ii) MAJOR structural-break quarters removed,UBER,y,BKNG,1,0,0
+robustness (ii) MAJOR structural-break quarters removed,UBER,y,DASH,1,0,0
+robustness (ii) MAJOR structural-break quarters removed,UBER,y,EXPE,1,1,0
+robustness (ii) MAJOR structural-break quarters removed,UBER,y,LYFT,1,1,0
+robustness (ii) MAJOR structural-break quarters removed,UBER,y,TCOM,1,1,0
+robustness (ii) MAJOR structural-break quarters removed,UBER,k,ABNB,8,5,6
+robustness (ii) MAJOR structural-break quarters removed,UBER,k,BKNG,8,6,6
+robustness (ii) MAJOR structural-break quarters removed,UBER,k,DASH,8,5,6
+robustness (ii) MAJOR structural-break quarters removed,UBER,k,EXPE,8,3,6
+robustness (ii) MAJOR structural-break quarters removed,UBER,k,LYFT,8,3,6
+robustness (ii) MAJOR structural-break quarters removed,UBER,k,TCOM,8,5,6
+robustness (ii) MAJOR structural-break quarters removed,LYFT,y,ABNB,11,7,6
+robustness (ii) MAJOR structural-break quarters removed,LYFT,y,BKNG,11,8,6
+robustness (ii) MAJOR structural-break quarters removed,LYFT,y,DASH,11,4,6
+robustness (ii) MAJOR structural-break quarters removed,LYFT,y,EXPE,11,6,6
+robustness (ii) MAJOR structural-break quarters removed,LYFT,y,TCOM,11,8,6
+robustness (ii) MAJOR structural-break quarters removed,LYFT,y,UBER,11,7,6
+robustness (ii) MAJOR structural-break quarters removed,LYFT,k,ABNB,12,7,7
+robustness (ii) MAJOR structural-break quarters removed,LYFT,k,BKNG,12,8,7
+robustness (ii) MAJOR structural-break quarters removed,LYFT,k,DASH,12,6,7
+robustness (ii) MAJOR structural-break quarters removed,LYFT,k,EXPE,12,5,7
+robustness (ii) MAJOR structural-break quarters removed,LYFT,k,TCOM,12,6,7
+robustness (ii) MAJOR structural-break quarters removed,LYFT,k,UBER,12,8,7
+robustness (ii) MAJOR structural-break quarters removed,DASH,y,ABNB,8,3,4
+robustness (ii) MAJOR structural-break quarters removed,DASH,y,BKNG,8,3,4
+robustness (ii) MAJOR structural-break quarters removed,DASH,y,EXPE,8,6,4
+robustness (ii) MAJOR structural-break quarters removed,DASH,y,LYFT,8,6,4
+robustness (ii) MAJOR structural-break quarters removed,DASH,y,TCOM,8,5,4
+robustness (ii) MAJOR structural-break quarters removed,DASH,y,UBER,8,4,4
+robustness (ii) MAJOR structural-break quarters removed,DASH,k,ABNB,8,5,4
+robustness (ii) MAJOR structural-break quarters removed,DASH,k,BKNG,8,5,4
+robustness (ii) MAJOR structural-break quarters removed,DASH,k,EXPE,8,6,4
+robustness (ii) MAJOR structural-break quarters removed,DASH,k,LYFT,8,6,4
+robustness (ii) MAJOR structural-break quarters removed,DASH,k,TCOM,8,5,4
+robustness (ii) MAJOR structural-break quarters removed,DASH,k,UBER,8,4,4
+robustness (ii) MAJOR structural-break quarters removed,TCOM,y,ABNB,8,3,2
+robustness (ii) MAJOR structural-break quarters removed,TCOM,y,BKNG,8,3,2
+robustness (ii) MAJOR structural-break quarters removed,TCOM,y,DASH,8,5,2
+robustness (ii) MAJOR structural-break quarters removed,TCOM,y,EXPE,8,5,2
+robustness (ii) MAJOR structural-break quarters removed,TCOM,y,LYFT,8,3,2
+robustness (ii) MAJOR structural-break quarters removed,TCOM,y,UBER,8,1,2

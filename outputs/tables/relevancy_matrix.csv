@@ -1,15 +1,15 @@
-name,target,tsa,caac,hkia,wikipedia,combined
-BKNG,y,8/14 (need 11; momentum 7) beats both baselines,,,5/14 (need 11; momentum 7),4/11 (need 9; momentum 5)
-BKNG,k,8/14 (need 11; momentum 7) beats both baselines,,,7/14 (need 11; momentum 7),5/11 (need 9; momentum 6)
-EXPE,y,10/14 (need 11; momentum 7) beats both baselines,,,7/14 (need 11; momentum 7),7/11 (need 9; momentum 6) beats both baselines
-EXPE,k,9/14 (need 11; momentum 4) beats both baselines,,,8/14 (need 11; momentum 4) beats both baselines,7/11 (need 9; momentum 4) beats both baselines
-ABNB,y,7/14 (need 11; momentum 5),,,6/14 (need 11; momentum 5),5/11 (need 9; momentum 2)
-ABNB,k,9/14 (need 11; momentum 7) beats both baselines,,,10/14 (need 11; momentum 7) beats both baselines,8/11 (need 9; momentum 6) beats both baselines
-UBER,y,8/14 (need 11; momentum 8),,,9/14 (need 11; momentum 8) beats both baselines,8/11 (need 9; momentum 6) beats both baselines
-UBER,k,9/14 (need 11; momentum 7) beats both baselines,,,10/14 (need 11; momentum 7) beats both baselines,7/11 (need 9; momentum 7)
-LYFT,y,11/14 (need 11; momentum 6) beats both baselines,,,8/14 (need 11; momentum 6) beats both baselines,7/11 (need 9; momentum 5) beats both baselines
-LYFT,k,7/12 (need 10; momentum 3) beats both baselines,,,7/12 (need 10; momentum 3) beats both baselines,6/11 (need 9; momentum 2) beats both baselines
-DASH,y,8/14 (need 11; momentum 8),,,7/14 (need 11; momentum 8),5/11 (need 9; momentum 5)
-DASH,k,7/14 (need 11; momentum 8),,,8/14 (need 11; momentum 8),6/11 (need 9; momentum 6)
-TCOM,y,,9/9 (need 8; momentum 3) beats both baselines,not run (fallback not triggered; docs/decisions_log.md),3/9 (need 8; momentum 3),5/6 (need 6; momentum 1) beats both baselines
-TCOM,k,,not run (company discloses no volume KPI: revenue only),not run (company discloses no volume KPI: revenue only),not run (company discloses no volume KPI: revenue only),not run (company discloses no volume KPI: revenue only)
+name,target,tsa,caac,hkia,wikipedia,combined,green_cells
+BKNG,y,8/14 (need 11; momentum 7; placebo pct 23) beats both baselines,,,5/14 (need 11; momentum 7; placebo pct 3),4/11 (need 9; momentum 5; placebo pct 0),0
+BKNG,k,8/14 (need 11; momentum 7; placebo pct 51) beats both baselines,,,7/14 (need 11; momentum 7; placebo pct 31),5/11 (need 9; momentum 6; placebo pct 17),0
+EXPE,y,10/14 (need 11; momentum 7; placebo pct 90) beats both baselines,,,7/14 (need 11; momentum 7; placebo pct 29),7/11 (need 9; momentum 6; placebo pct 60) beats both baselines,0
+EXPE,k,9/14 (need 11; momentum 4; placebo pct 62) beats both baselines,,,8/14 (need 11; momentum 4; placebo pct 52) beats both baselines,7/11 (need 9; momentum 4; placebo pct 61) beats both baselines,0
+ABNB,y,7/14 (need 11; momentum 5; placebo pct 16),,,6/14 (need 11; momentum 5; placebo pct 16),5/11 (need 9; momentum 2; placebo pct 17),0
+ABNB,k,9/14 (need 11; momentum 7; placebo pct 62) beats both baselines,,,10/14 (need 11; momentum 7; placebo pct 88) beats both baselines,8/11 (need 9; momentum 6; placebo pct 81) beats both baselines,0
+UBER,y,8/14 (need 11; momentum 8; placebo pct 21),,,9/14 (need 11; momentum 8; placebo pct 78) beats both baselines,8/11 (need 9; momentum 6; placebo pct 68) beats both baselines,0
+UBER,k,9/14 (need 11; momentum 7; placebo pct 60) beats both baselines,,,10/14 (need 11; momentum 7; placebo pct 87) beats both baselines,7/11 (need 9; momentum 7; placebo pct 55),0
+LYFT,y,11/14 (need 11; momentum 6; placebo pct 93) beats both baselines,,,8/14 (need 11; momentum 6; placebo pct 52) beats both baselines,7/11 (need 9; momentum 5; placebo pct 53) beats both baselines,0
+LYFT,k,7/12 (need 10; momentum 3; placebo pct 28) beats both baselines,,,7/12 (need 10; momentum 3; placebo pct 49) beats both baselines,6/11 (need 9; momentum 2; placebo pct 21) beats both baselines,0
+DASH,y,8/14 (need 11; momentum 8; placebo pct 22),,,7/14 (need 11; momentum 8; placebo pct 26),5/11 (need 9; momentum 5; placebo pct 13),0
+DASH,k,7/14 (need 11; momentum 8; placebo pct 14),,,8/14 (need 11; momentum 8; placebo pct 46),6/11 (need 9; momentum 6; placebo pct 42),0
+TCOM,y,,9/9 (need 8; momentum 3; placebo pct 99) GREEN,not run (fallback not triggered; docs/decisions_log.md),3/9 (need 8; momentum 3; placebo pct 0),5/6 (need 6; momentum 1; placebo pct 65) beats both baselines,1
+TCOM,k,,not run (company discloses no volume KPI: revenue only),not run (company discloses no volume KPI: revenue only),not run (company discloses no volume KPI: revenue only),not run (company discloses no volume KPI: revenue only),0

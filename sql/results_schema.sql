@@ -1,5 +1,5 @@
--- Session 4: per-cell evaluation results (outputs/tables/results.csv + robustness.csv), loaded by
--- scripts/s4_evaluate.py. Portable SQL (SQLite and PostgreSQL).
+-- Per-cell evaluation results (outputs/tables/results.csv + robustness.csv), loaded by
+-- evaluate.results_db() (Sessions 4-5). Portable SQL (SQLite and PostgreSQL).
 DROP TABLE IF EXISTS results_cells;
 
 CREATE TABLE results_cells (
@@ -21,5 +21,8 @@ CREATE TABLE results_cells (
     bh_q_binom            NUMERIC,
     mae_pp                NUMERIC,
     mae_baseline_pp       NUMERIC,
+    placebo_percentile    NUMERIC,                 -- shuffle placebo (Session 5)
+    bh_q_placebo          NUMERIC,
+    green                 INTEGER,                 -- beats both baselines AND placebo percentile >= 95
     PRIMARY KEY (analysis, name, source, target, model)
 );

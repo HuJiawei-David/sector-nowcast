@@ -34,6 +34,8 @@ from __future__ import annotations
 
 import datetime as dt
 import re
+import sqlite3
+from pathlib import Path
 
 import numpy as np
 import pandas as pd
@@ -131,8 +133,9 @@ def targets_of(co: dict) -> list[str]:
     return ["y"] + (["k"] if co.get("kpi") else [])
 
 
-def make_calls(inp: dict, variants=("base", "ewr")) -> pd.DataFrame:
-    """One row per (name, quarter, source, target, variant) call, asof = quarter end."""
+def make_calls(inp: dict, variants=("base", "ewr"), checkpoints=("qend",)) -> pd.DataFrame:
+    """One row per (name, quarter, source, target, variant, checkpoint) call. Backtest asof = quarter end;
+    the lead-time checkpoints day28 / day56 (quarter start + 27 / + 55 days) use the same call."""
     series, td, cos = inp["series"], inp["td"], inp["cos"]
     cache = DaltCache(release_dates(inp["releases"]), inp["releases_since"])
     rows = []
@@ -144,8 +147,8 @@ def make_calls(inp: dict, variants=("base", "ewr")) -> pd.DataFrame:
             major = major_break_quarters(name, target)
             for variant in variants:
                 dfn = cache.fn(variant)
-                for q in qrange(CALL_FIRST_Q, head[1]):
-                    asof = F.checkpoint_asof(q, "qend")
+                for q, cp in [(q, cp) for q in qrange(CALL_FIRST_Q, head[1]) for cp in checkpoints]:
+                    asof = F.checkpoint_asof(q, cp)
                     core = live.calls_at(name, q, asof, series, td, cos, target, dalt_fn=dfn)
                     a_cur, a_prev = td.get(name, target, q, "first"), td.get(name, target, q - 1, "first")
                     d_act = None if a_cur is None or a_prev is None else a_cur["yoy_pct"] - a_prev["yoy_pct"]
@@ -165,7 +168,7 @@ def make_calls(inp: dict, variants=("base", "ewr")) -> pd.DataFrame:
                         base = c["t_q_minus_1_pct"]
                         rows.append({
                             "name": name, "quarter": str(q), "source": c["source"], "target": target,
-                            "variant": variant, "checkpoint": "qend", "asof": asof,
+                            "variant": variant, "checkpoint": cp, "asof": asof,
                             "clean": d_clean(q, excl), "in_headline": head[0] <= q <= head[1] and d_clean(q, excl),
                             "in_robustness_window": bool(rob and rob[0] <= q <= rob[1] and d_clean(q, excl)),
                             "major_break_dropped": (q in major) or ((q - 1) in major),
@@ -189,7 +192,7 @@ def make_calls(inp: dict, variants=("base", "ewr")) -> pd.DataFrame:
                             "abs_err_baseline_pp": None if base is None or a_cur is None else abs(base - a_cur["yoy_pct"]),
                         })
     df = pd.DataFrame(rows)
-    if df.duplicated(["name", "quarter", "source", "target", "variant"]).any():
+    if df.duplicated(["name", "quarter", "source", "target", "variant", "checkpoint"]).any():
         raise F.DataError("duplicate call keys")
     return df
 
@@ -378,3 +381,28 @@ def bkng_k_rounding_check(inp: dict) -> pd.DataFrame:
                      "sign_differs": None if d_st is None else bool(np.sign(d_lv) != np.sign(d_st)),
                      "stated_source_url": None if sa is None else sa.source_url})
     return pd.DataFrame(rows)
+
+
+def results_db(res: pd.DataFrame, cos: dict, db: Path = REPO_ROOT / "data" / "nowcast.db",
+               sql_dir: Path = REPO_ROOT / "sql") -> pd.DataFrame:
+    """Load the results into data/nowcast.db (sql/results_schema.sql) and run sql/results_summary.sql
+    (name x source relevancy matrix). Placebo / GREEN columns are filled once Session 5 has run."""
+    order = {n: i for i, n in enumerate(cos)}
+    col = lambda c: res[c] if c in res.columns else pd.Series([None] * len(res), index=res.index)
+    t = pd.DataFrame({
+        "analysis": res.analysis, "name_order": res.name.map(order), "name": res.name, "source": res.source,
+        "target": res.target, "model": res.model, "status": res.status,
+        "family_member": res.family_member.astype(int), "n_prereg": res.N_prereg,
+        "n_realised": res.N_realised.astype(int), "hits": res.hits, "min_hits_p05": res.min_hits_p05_realised,
+        "momentum_hits": res.momentum_hits, "beats_both": res.beats_both_baselines.map({True: 1, False: 0}),
+        "binom_p": res.binom_p_one_sided, "bh_q_binom": res.bh_q_binom, "mae_pp": res.mae_pp,
+        "mae_baseline_pp": res.mae_baseline_pp, "placebo_percentile": col("placebo_percentile"),
+        "bh_q_placebo": col("bh_q_placebo"),
+        "green": col("green").map({True: 1, False: 0})})
+    con = sqlite3.connect(db)
+    con.executescript((sql_dir / "results_schema.sql").read_text())
+    t.to_sql("results_cells", con, if_exists="append", index=False)
+    con.commit()
+    m = pd.read_sql_query((sql_dir / "results_summary.sql").read_text(), con)
+    con.close()
+    return m
